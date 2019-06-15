@@ -1,0 +1,843 @@
+﻿<!DOCTYPE html>
+<!--[if IE]><![endif]-->
+<html>
+  
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>Class BatReferenceDBLinqDataContext
+   </title>
+    <meta name="viewport" content="width=device-width">
+    <meta name="title" content="Class BatReferenceDBLinqDataContext
+   ">
+    <meta name="generator" content="docfx 2.29.1.0">
+    
+    <link rel="shortcut icon" href="../favicon.ico">
+    <link rel="stylesheet" href="../styles/docfx.vendor.css">
+    <link rel="stylesheet" href="../styles/docfx.css">
+    <link rel="stylesheet" href="../styles/main.css">
+    <meta property="docfx:navrel" content="../toc.html">
+    <meta property="docfx:tocrel" content="toc.html">
+    
+    
+    
+  </head>
+  <body data-spy="scroll" data-target="#affix">
+    <div id="wrapper">
+      <header>
+        
+        <nav id="autocollapse" class="navbar navbar-inverse ng-scope" role="navigation">
+          <div class="container">
+            <div class="navbar-header">
+              <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+              </button>
+              
+              <a class="navbar-brand" href="../index.html">
+                <img id="logo" class="svg" src="../logo.svg" alt="">
+              </a>
+            </div>
+            <div class="collapse navbar-collapse" id="navbar">
+              <form class="navbar-form navbar-right" role="search" id="search">
+                <div class="form-group">
+                  <input type="text" class="form-control" id="search-query" placeholder="Search" autocomplete="off">
+                </div>
+              </form>
+            </div>
+          </div>
+        </nav>
+        
+        <div class="subnav navbar navbar-default">
+          <div class="container hide-when-search" id="breadcrumb">
+            <ul class="breadcrumb">
+              <li></li>
+            </ul>
+          </div>
+        </div>
+      </header>
+      <div role="main" class="container body-content hide-when-search">
+        
+        <div class="sidenav hide-when-search">
+          <a class="btn toc-toggle collapse" data-toggle="collapse" href="#sidetoggle" aria-expanded="false" aria-controls="sidetoggle">Show / Hide Table of Contents</a>
+          <div class="sidetoggle collapse" id="sidetoggle">
+            <div id="sidetoc"></div>
+          </div>
+        </div>
+        <div class="article row grid-right">
+          <div class="col-md-10">
+            <article class="content wrap" id="_content" data-uid="BatRecordingManager.BatReferenceDBLinqDataContext">
+  
+  
+  <h1 id="BatRecordingManager_BatReferenceDBLinqDataContext" data-uid="BatRecordingManager.BatReferenceDBLinqDataContext" class="text-break">Class BatReferenceDBLinqDataContext
+  </h1>
+  <div class="markdown level0 summary"></div>
+  <div class="markdown level0 conceptual"></div>
+  <div class="inheritance">
+    <h5>Inheritance</h5>
+    <div class="level0"><span class="xref">System.Object</span></div>
+    <div class="level1"><span class="xref">System.Data.Linq.DataContext</span></div>
+    <div class="level2"><span class="xref">BatReferenceDBLinqDataContext</span></div>
+  </div>
+  <div classs="implements">
+    <h5>Implements</h5>
+    <div><span class="xref">System.IDisposable</span></div>
+  </div>
+  <div class="inheritedMembers">
+    <h5>Inherited Members</h5>
+    <div>
+      <span class="xref">System.Data.Linq.DataContext.Dispose()</span>
+    </div>
+    <div>
+      <span class="xref">System.Data.Linq.DataContext.Dispose(System.Boolean)</span>
+    </div>
+    <div>
+      <span class="xref">System.Data.Linq.DataContext.GetTable&lt;TEntity&gt;()</span>
+    </div>
+    <div>
+      <span class="xref">System.Data.Linq.DataContext.GetTable(System.Type)</span>
+    </div>
+    <div>
+      <span class="xref">System.Data.Linq.DataContext.DatabaseExists()</span>
+    </div>
+    <div>
+      <span class="xref">System.Data.Linq.DataContext.CreateDatabase()</span>
+    </div>
+    <div>
+      <span class="xref">System.Data.Linq.DataContext.DeleteDatabase()</span>
+    </div>
+    <div>
+      <span class="xref">System.Data.Linq.DataContext.SubmitChanges()</span>
+    </div>
+    <div>
+      <span class="xref">System.Data.Linq.DataContext.SubmitChanges(System.Data.Linq.ConflictMode)</span>
+    </div>
+    <div>
+      <span class="xref">System.Data.Linq.DataContext.Refresh(System.Data.Linq.RefreshMode, System.Object)</span>
+    </div>
+    <div>
+      <span class="xref">System.Data.Linq.DataContext.Refresh(System.Data.Linq.RefreshMode, System.Object[])</span>
+    </div>
+    <div>
+      <span class="xref">System.Data.Linq.DataContext.Refresh(System.Data.Linq.RefreshMode, System.Collections.IEnumerable)</span>
+    </div>
+    <div>
+      <span class="xref">System.Data.Linq.DataContext.GetCommand(System.Linq.IQueryable)</span>
+    </div>
+    <div>
+      <span class="xref">System.Data.Linq.DataContext.GetChangeSet()</span>
+    </div>
+    <div>
+      <span class="xref">System.Data.Linq.DataContext.ExecuteCommand(System.String, System.Object[])</span>
+    </div>
+    <div>
+      <span class="xref">System.Data.Linq.DataContext.ExecuteQuery&lt;TResult&gt;(System.String, System.Object[])</span>
+    </div>
+    <div>
+      <span class="xref">System.Data.Linq.DataContext.ExecuteQuery(System.Type, System.String, System.Object[])</span>
+    </div>
+    <div>
+      <span class="xref">System.Data.Linq.DataContext.ExecuteMethodCall(System.Object, System.Reflection.MethodInfo, System.Object[])</span>
+    </div>
+    <div>
+      <span class="xref">System.Data.Linq.DataContext.CreateMethodCallQuery&lt;TResult&gt;(System.Object, System.Reflection.MethodInfo, System.Object[])</span>
+    </div>
+    <div>
+      <span class="xref">System.Data.Linq.DataContext.ExecuteDynamicInsert(System.Object)</span>
+    </div>
+    <div>
+      <span class="xref">System.Data.Linq.DataContext.ExecuteDynamicUpdate(System.Object)</span>
+    </div>
+    <div>
+      <span class="xref">System.Data.Linq.DataContext.ExecuteDynamicDelete(System.Object)</span>
+    </div>
+    <div>
+      <span class="xref">System.Data.Linq.DataContext.Translate&lt;TResult&gt;(System.Data.Common.DbDataReader)</span>
+    </div>
+    <div>
+      <span class="xref">System.Data.Linq.DataContext.Translate(System.Type, System.Data.Common.DbDataReader)</span>
+    </div>
+    <div>
+      <span class="xref">System.Data.Linq.DataContext.Translate(System.Data.Common.DbDataReader)</span>
+    </div>
+    <div>
+      <span class="xref">System.Data.Linq.DataContext.Connection</span>
+    </div>
+    <div>
+      <span class="xref">System.Data.Linq.DataContext.Transaction</span>
+    </div>
+    <div>
+      <span class="xref">System.Data.Linq.DataContext.CommandTimeout</span>
+    </div>
+    <div>
+      <span class="xref">System.Data.Linq.DataContext.Log</span>
+    </div>
+    <div>
+      <span class="xref">System.Data.Linq.DataContext.ObjectTrackingEnabled</span>
+    </div>
+    <div>
+      <span class="xref">System.Data.Linq.DataContext.DeferredLoadingEnabled</span>
+    </div>
+    <div>
+      <span class="xref">System.Data.Linq.DataContext.Mapping</span>
+    </div>
+    <div>
+      <span class="xref">System.Data.Linq.DataContext.LoadOptions</span>
+    </div>
+    <div>
+      <span class="xref">System.Data.Linq.DataContext.ChangeConflicts</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.ToString()</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.Equals(System.Object)</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.Equals(System.Object, System.Object)</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.ReferenceEquals(System.Object, System.Object)</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.GetHashCode()</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.GetType()</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.MemberwiseClone()</span>
+    </div>
+  </div>
+  <h6><strong>Namespace</strong>: <a class="xref" href="BatRecordingManager.html">BatRecordingManager</a></h6>
+  <h6><strong>Assembly</strong>: BatRecordingManager.dll</h6>
+  <h5 id="BatRecordingManager_BatReferenceDBLinqDataContext_syntax">Syntax</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">[Database(Name = &quot;BatReferenceDB&quot;)]
+public class BatReferenceDBLinqDataContext : DataContext, IDisposable</code></pre>
+  </div>
+  <h3 id="constructors">Constructors
+  </h3>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/jathalls/BRM_v5.4-Alpha/new/master/apiSpec/new?filename=BatRecordingManager_BatReferenceDBLinqDataContext__ctor.md&amp;value=---%0Auid%3A%20BatRecordingManager.BatReferenceDBLinqDataContext.%23ctor%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/jathalls/BRM_v5.4-Alpha/blob/master/BatRecordingManager/BatReferenceDBLinq.designer.cs/#L77">View Source</a>
+  </span>
+  <a id="BatRecordingManager_BatReferenceDBLinqDataContext__ctor_" data-uid="BatRecordingManager.BatReferenceDBLinqDataContext.#ctor*"></a>
+  <h4 id="BatRecordingManager_BatReferenceDBLinqDataContext__ctor" data-uid="BatRecordingManager.BatReferenceDBLinqDataContext.#ctor">BatReferenceDBLinqDataContext()</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public BatReferenceDBLinqDataContext()</code></pre>
+  </div>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/jathalls/BRM_v5.4-Alpha/new/master/apiSpec/new?filename=BatRecordingManager_BatReferenceDBLinqDataContext__ctor_System_Data_IDbConnection_.md&amp;value=---%0Auid%3A%20BatRecordingManager.BatReferenceDBLinqDataContext.%23ctor(System.Data.IDbConnection)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/jathalls/BRM_v5.4-Alpha/blob/master/BatRecordingManager/BatReferenceDBLinq.designer.cs/#L89">View Source</a>
+  </span>
+  <a id="BatRecordingManager_BatReferenceDBLinqDataContext__ctor_" data-uid="BatRecordingManager.BatReferenceDBLinqDataContext.#ctor*"></a>
+  <h4 id="BatRecordingManager_BatReferenceDBLinqDataContext__ctor_System_Data_IDbConnection_" data-uid="BatRecordingManager.BatReferenceDBLinqDataContext.#ctor(System.Data.IDbConnection)">BatReferenceDBLinqDataContext(IDbConnection)</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public BatReferenceDBLinqDataContext(IDbConnection connection)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Data.IDbConnection</span></td>
+        <td><span class="parametername">connection</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/jathalls/BRM_v5.4-Alpha/new/master/apiSpec/new?filename=BatRecordingManager_BatReferenceDBLinqDataContext__ctor_System_Data_IDbConnection_System_Data_Linq_Mapping_MappingSource_.md&amp;value=---%0Auid%3A%20BatRecordingManager.BatReferenceDBLinqDataContext.%23ctor(System.Data.IDbConnection%2CSystem.Data.Linq.Mapping.MappingSource)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/jathalls/BRM_v5.4-Alpha/blob/master/BatRecordingManager/BatReferenceDBLinq.designer.cs/#L101">View Source</a>
+  </span>
+  <a id="BatRecordingManager_BatReferenceDBLinqDataContext__ctor_" data-uid="BatRecordingManager.BatReferenceDBLinqDataContext.#ctor*"></a>
+  <h4 id="BatRecordingManager_BatReferenceDBLinqDataContext__ctor_System_Data_IDbConnection_System_Data_Linq_Mapping_MappingSource_" data-uid="BatRecordingManager.BatReferenceDBLinqDataContext.#ctor(System.Data.IDbConnection,System.Data.Linq.Mapping.MappingSource)">BatReferenceDBLinqDataContext(IDbConnection, MappingSource)</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public BatReferenceDBLinqDataContext(IDbConnection connection, MappingSource mappingSource)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Data.IDbConnection</span></td>
+        <td><span class="parametername">connection</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.Data.Linq.Mapping.MappingSource</span></td>
+        <td><span class="parametername">mappingSource</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/jathalls/BRM_v5.4-Alpha/new/master/apiSpec/new?filename=BatRecordingManager_BatReferenceDBLinqDataContext__ctor_System_String_.md&amp;value=---%0Auid%3A%20BatRecordingManager.BatReferenceDBLinqDataContext.%23ctor(System.String)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/jathalls/BRM_v5.4-Alpha/blob/master/BatRecordingManager/BatReferenceDBLinq.designer.cs/#L83">View Source</a>
+  </span>
+  <a id="BatRecordingManager_BatReferenceDBLinqDataContext__ctor_" data-uid="BatRecordingManager.BatReferenceDBLinqDataContext.#ctor*"></a>
+  <h4 id="BatRecordingManager_BatReferenceDBLinqDataContext__ctor_System_String_" data-uid="BatRecordingManager.BatReferenceDBLinqDataContext.#ctor(System.String)">BatReferenceDBLinqDataContext(String)</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public BatReferenceDBLinqDataContext(string connection)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td><span class="parametername">connection</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/jathalls/BRM_v5.4-Alpha/new/master/apiSpec/new?filename=BatRecordingManager_BatReferenceDBLinqDataContext__ctor_System_String_System_Data_Linq_Mapping_MappingSource_.md&amp;value=---%0Auid%3A%20BatRecordingManager.BatReferenceDBLinqDataContext.%23ctor(System.String%2CSystem.Data.Linq.Mapping.MappingSource)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/jathalls/BRM_v5.4-Alpha/blob/master/BatRecordingManager/BatReferenceDBLinq.designer.cs/#L95">View Source</a>
+  </span>
+  <a id="BatRecordingManager_BatReferenceDBLinqDataContext__ctor_" data-uid="BatRecordingManager.BatReferenceDBLinqDataContext.#ctor*"></a>
+  <h4 id="BatRecordingManager_BatReferenceDBLinqDataContext__ctor_System_String_System_Data_Linq_Mapping_MappingSource_" data-uid="BatRecordingManager.BatReferenceDBLinqDataContext.#ctor(System.String,System.Data.Linq.Mapping.MappingSource)">BatReferenceDBLinqDataContext(String, MappingSource)</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public BatReferenceDBLinqDataContext(string connection, MappingSource mappingSource)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td><span class="parametername">connection</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.Data.Linq.Mapping.MappingSource</span></td>
+        <td><span class="parametername">mappingSource</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h3 id="properties">Properties
+  </h3>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/jathalls/BRM_v5.4-Alpha/new/master/apiSpec/new?filename=BatRecordingManager_BatReferenceDBLinqDataContext_BatCalls.md&amp;value=---%0Auid%3A%20BatRecordingManager.BatReferenceDBLinqDataContext.BatCalls%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/jathalls/BRM_v5.4-Alpha/blob/master/BatRecordingManager/BatReferenceDBLinq.designer.cs/#L123">View Source</a>
+  </span>
+  <a id="BatRecordingManager_BatReferenceDBLinqDataContext_BatCalls_" data-uid="BatRecordingManager.BatReferenceDBLinqDataContext.BatCalls*"></a>
+  <h4 id="BatRecordingManager_BatReferenceDBLinqDataContext_BatCalls" data-uid="BatRecordingManager.BatReferenceDBLinqDataContext.BatCalls">BatCalls</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Table&lt;BatCall&gt; BatCalls { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Data.Linq.Table</span>&lt;<a class="xref" href="BatRecordingManager.BatCall.html">BatCall</a>&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/jathalls/BRM_v5.4-Alpha/new/master/apiSpec/new?filename=BatRecordingManager_BatReferenceDBLinqDataContext_BatPictures.md&amp;value=---%0Auid%3A%20BatRecordingManager.BatReferenceDBLinqDataContext.BatPictures%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/jathalls/BRM_v5.4-Alpha/blob/master/BatRecordingManager/BatReferenceDBLinq.designer.cs/#L131">View Source</a>
+  </span>
+  <a id="BatRecordingManager_BatReferenceDBLinqDataContext_BatPictures_" data-uid="BatRecordingManager.BatReferenceDBLinqDataContext.BatPictures*"></a>
+  <h4 id="BatRecordingManager_BatReferenceDBLinqDataContext_BatPictures" data-uid="BatRecordingManager.BatReferenceDBLinqDataContext.BatPictures">BatPictures</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Table&lt;BatPicture&gt; BatPictures { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Data.Linq.Table</span>&lt;<a class="xref" href="BatRecordingManager.BatPicture.html">BatPicture</a>&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/jathalls/BRM_v5.4-Alpha/new/master/apiSpec/new?filename=BatRecordingManager_BatReferenceDBLinqDataContext_Bats.md&amp;value=---%0Auid%3A%20BatRecordingManager.BatReferenceDBLinqDataContext.Bats%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/jathalls/BRM_v5.4-Alpha/blob/master/BatRecordingManager/BatReferenceDBLinq.designer.cs/#L107">View Source</a>
+  </span>
+  <a id="BatRecordingManager_BatReferenceDBLinqDataContext_Bats_" data-uid="BatRecordingManager.BatReferenceDBLinqDataContext.Bats*"></a>
+  <h4 id="BatRecordingManager_BatReferenceDBLinqDataContext_Bats" data-uid="BatRecordingManager.BatReferenceDBLinqDataContext.Bats">Bats</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Table&lt;Bat&gt; Bats { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Data.Linq.Table</span>&lt;<a class="xref" href="BatRecordingManager.Bat.html">Bat</a>&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/jathalls/BRM_v5.4-Alpha/new/master/apiSpec/new?filename=BatRecordingManager_BatReferenceDBLinqDataContext_BatSegmentLinks.md&amp;value=---%0Auid%3A%20BatRecordingManager.BatReferenceDBLinqDataContext.BatSegmentLinks%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/jathalls/BRM_v5.4-Alpha/blob/master/BatRecordingManager/BatReferenceDBLinq.designer.cs/#L139">View Source</a>
+  </span>
+  <a id="BatRecordingManager_BatReferenceDBLinqDataContext_BatSegmentLinks_" data-uid="BatRecordingManager.BatReferenceDBLinqDataContext.BatSegmentLinks*"></a>
+  <h4 id="BatRecordingManager_BatReferenceDBLinqDataContext_BatSegmentLinks" data-uid="BatRecordingManager.BatReferenceDBLinqDataContext.BatSegmentLinks">BatSegmentLinks</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Table&lt;BatSegmentLink&gt; BatSegmentLinks { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Data.Linq.Table</span>&lt;<a class="xref" href="BatRecordingManager.BatSegmentLink.html">BatSegmentLink</a>&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/jathalls/BRM_v5.4-Alpha/new/master/apiSpec/new?filename=BatRecordingManager_BatReferenceDBLinqDataContext_BatTags.md&amp;value=---%0Auid%3A%20BatRecordingManager.BatReferenceDBLinqDataContext.BatTags%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/jathalls/BRM_v5.4-Alpha/blob/master/BatRecordingManager/BatReferenceDBLinq.designer.cs/#L147">View Source</a>
+  </span>
+  <a id="BatRecordingManager_BatReferenceDBLinqDataContext_BatTags_" data-uid="BatRecordingManager.BatReferenceDBLinqDataContext.BatTags*"></a>
+  <h4 id="BatRecordingManager_BatReferenceDBLinqDataContext_BatTags" data-uid="BatRecordingManager.BatReferenceDBLinqDataContext.BatTags">BatTags</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Table&lt;BatTag&gt; BatTags { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Data.Linq.Table</span>&lt;<a class="xref" href="BatRecordingManager.BatTag.html">BatTag</a>&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/jathalls/BRM_v5.4-Alpha/new/master/apiSpec/new?filename=BatRecordingManager_BatReferenceDBLinqDataContext_BinaryDatas.md&amp;value=---%0Auid%3A%20BatRecordingManager.BatReferenceDBLinqDataContext.BinaryDatas%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/jathalls/BRM_v5.4-Alpha/blob/master/BatRecordingManager/BatReferenceDBLinq.designer.cs/#L211">View Source</a>
+  </span>
+  <a id="BatRecordingManager_BatReferenceDBLinqDataContext_BinaryDatas_" data-uid="BatRecordingManager.BatReferenceDBLinqDataContext.BinaryDatas*"></a>
+  <h4 id="BatRecordingManager_BatReferenceDBLinqDataContext_BinaryDatas" data-uid="BatRecordingManager.BatReferenceDBLinqDataContext.BinaryDatas">BinaryDatas</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Table&lt;BinaryData&gt; BinaryDatas { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Data.Linq.Table</span>&lt;<a class="xref" href="BatRecordingManager.BinaryData.html">BinaryData</a>&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/jathalls/BRM_v5.4-Alpha/new/master/apiSpec/new?filename=BatRecordingManager_BatReferenceDBLinqDataContext_CallPictures.md&amp;value=---%0Auid%3A%20BatRecordingManager.BatReferenceDBLinqDataContext.CallPictures%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/jathalls/BRM_v5.4-Alpha/blob/master/BatRecordingManager/BatReferenceDBLinq.designer.cs/#L163">View Source</a>
+  </span>
+  <a id="BatRecordingManager_BatReferenceDBLinqDataContext_CallPictures_" data-uid="BatRecordingManager.BatReferenceDBLinqDataContext.CallPictures*"></a>
+  <h4 id="BatRecordingManager_BatReferenceDBLinqDataContext_CallPictures" data-uid="BatRecordingManager.BatReferenceDBLinqDataContext.CallPictures">CallPictures</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Table&lt;CallPicture&gt; CallPictures { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Data.Linq.Table</span>&lt;<a class="xref" href="BatRecordingManager.CallPicture.html">CallPicture</a>&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/jathalls/BRM_v5.4-Alpha/new/master/apiSpec/new?filename=BatRecordingManager_BatReferenceDBLinqDataContext_Calls.md&amp;value=---%0Auid%3A%20BatRecordingManager.BatReferenceDBLinqDataContext.Calls%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/jathalls/BRM_v5.4-Alpha/blob/master/BatRecordingManager/BatReferenceDBLinq.designer.cs/#L155">View Source</a>
+  </span>
+  <a id="BatRecordingManager_BatReferenceDBLinqDataContext_Calls_" data-uid="BatRecordingManager.BatReferenceDBLinqDataContext.Calls*"></a>
+  <h4 id="BatRecordingManager_BatReferenceDBLinqDataContext_Calls" data-uid="BatRecordingManager.BatReferenceDBLinqDataContext.Calls">Calls</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Table&lt;Call&gt; Calls { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Data.Linq.Table</span>&lt;<a class="xref" href="BatRecordingManager.Call.html">Call</a>&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/jathalls/BRM_v5.4-Alpha/new/master/apiSpec/new?filename=BatRecordingManager_BatReferenceDBLinqDataContext_LabelledSegments.md&amp;value=---%0Auid%3A%20BatRecordingManager.BatReferenceDBLinqDataContext.LabelledSegments%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/jathalls/BRM_v5.4-Alpha/blob/master/BatRecordingManager/BatReferenceDBLinq.designer.cs/#L171">View Source</a>
+  </span>
+  <a id="BatRecordingManager_BatReferenceDBLinqDataContext_LabelledSegments_" data-uid="BatRecordingManager.BatReferenceDBLinqDataContext.LabelledSegments*"></a>
+  <h4 id="BatRecordingManager_BatReferenceDBLinqDataContext_LabelledSegments" data-uid="BatRecordingManager.BatReferenceDBLinqDataContext.LabelledSegments">LabelledSegments</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Table&lt;LabelledSegment&gt; LabelledSegments { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Data.Linq.Table</span>&lt;<a class="xref" href="BatRecordingManager.LabelledSegment.html">LabelledSegment</a>&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/jathalls/BRM_v5.4-Alpha/new/master/apiSpec/new?filename=BatRecordingManager_BatReferenceDBLinqDataContext_Recordings.md&amp;value=---%0Auid%3A%20BatRecordingManager.BatReferenceDBLinqDataContext.Recordings%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/jathalls/BRM_v5.4-Alpha/blob/master/BatRecordingManager/BatReferenceDBLinq.designer.cs/#L179">View Source</a>
+  </span>
+  <a id="BatRecordingManager_BatReferenceDBLinqDataContext_Recordings_" data-uid="BatRecordingManager.BatReferenceDBLinqDataContext.Recordings*"></a>
+  <h4 id="BatRecordingManager_BatReferenceDBLinqDataContext_Recordings" data-uid="BatRecordingManager.BatReferenceDBLinqDataContext.Recordings">Recordings</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Table&lt;Recording&gt; Recordings { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Data.Linq.Table</span>&lt;<a class="xref" href="BatRecordingManager.Recording.html">Recording</a>&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/jathalls/BRM_v5.4-Alpha/new/master/apiSpec/new?filename=BatRecordingManager_BatReferenceDBLinqDataContext_RecordingSessions.md&amp;value=---%0Auid%3A%20BatRecordingManager.BatReferenceDBLinqDataContext.RecordingSessions%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/jathalls/BRM_v5.4-Alpha/blob/master/BatRecordingManager/BatReferenceDBLinq.designer.cs/#L187">View Source</a>
+  </span>
+  <a id="BatRecordingManager_BatReferenceDBLinqDataContext_RecordingSessions_" data-uid="BatRecordingManager.BatReferenceDBLinqDataContext.RecordingSessions*"></a>
+  <h4 id="BatRecordingManager_BatReferenceDBLinqDataContext_RecordingSessions" data-uid="BatRecordingManager.BatReferenceDBLinqDataContext.RecordingSessions">RecordingSessions</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Table&lt;RecordingSession&gt; RecordingSessions { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Data.Linq.Table</span>&lt;<a class="xref" href="BatRecordingManager.RecordingSession.html">RecordingSession</a>&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/jathalls/BRM_v5.4-Alpha/new/master/apiSpec/new?filename=BatRecordingManager_BatReferenceDBLinqDataContext_SegmentCalls.md&amp;value=---%0Auid%3A%20BatRecordingManager.BatReferenceDBLinqDataContext.SegmentCalls%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/jathalls/BRM_v5.4-Alpha/blob/master/BatRecordingManager/BatReferenceDBLinq.designer.cs/#L195">View Source</a>
+  </span>
+  <a id="BatRecordingManager_BatReferenceDBLinqDataContext_SegmentCalls_" data-uid="BatRecordingManager.BatReferenceDBLinqDataContext.SegmentCalls*"></a>
+  <h4 id="BatRecordingManager_BatReferenceDBLinqDataContext_SegmentCalls" data-uid="BatRecordingManager.BatReferenceDBLinqDataContext.SegmentCalls">SegmentCalls</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Table&lt;SegmentCall&gt; SegmentCalls { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Data.Linq.Table</span>&lt;<a class="xref" href="BatRecordingManager.SegmentCall.html">SegmentCall</a>&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/jathalls/BRM_v5.4-Alpha/new/master/apiSpec/new?filename=BatRecordingManager_BatReferenceDBLinqDataContext_SegmentDatas.md&amp;value=---%0Auid%3A%20BatRecordingManager.BatReferenceDBLinqDataContext.SegmentDatas%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/jathalls/BRM_v5.4-Alpha/blob/master/BatRecordingManager/BatReferenceDBLinq.designer.cs/#L203">View Source</a>
+  </span>
+  <a id="BatRecordingManager_BatReferenceDBLinqDataContext_SegmentDatas_" data-uid="BatRecordingManager.BatReferenceDBLinqDataContext.SegmentDatas*"></a>
+  <h4 id="BatRecordingManager_BatReferenceDBLinqDataContext_SegmentDatas" data-uid="BatRecordingManager.BatReferenceDBLinqDataContext.SegmentDatas">SegmentDatas</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Table&lt;SegmentData&gt; SegmentDatas { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Data.Linq.Table</span>&lt;<a class="xref" href="BatRecordingManager.SegmentData.html">SegmentData</a>&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/jathalls/BRM_v5.4-Alpha/new/master/apiSpec/new?filename=BatRecordingManager_BatReferenceDBLinqDataContext_Versions.md&amp;value=---%0Auid%3A%20BatRecordingManager.BatReferenceDBLinqDataContext.Versions%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/jathalls/BRM_v5.4-Alpha/blob/master/BatRecordingManager/BatReferenceDBLinq.designer.cs/#L115">View Source</a>
+  </span>
+  <a id="BatRecordingManager_BatReferenceDBLinqDataContext_Versions_" data-uid="BatRecordingManager.BatReferenceDBLinqDataContext.Versions*"></a>
+  <h4 id="BatRecordingManager_BatReferenceDBLinqDataContext_Versions" data-uid="BatRecordingManager.BatReferenceDBLinqDataContext.Versions">Versions</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Table&lt;Version&gt; Versions { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Data.Linq.Table</span>&lt;<a class="xref" href="BatRecordingManager.Version.html">Version</a>&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h3 id="implements">Implements</h3>
+  <div>
+      <span class="xref">System.IDisposable</span>
+  </div>
+</article>
+          </div>
+          
+          <div class="hidden-sm col-md-2" role="complementary">
+            <div class="sideaffix">
+              <div class="contribution">
+                <ul class="nav">
+                  <li>
+                    <a href="https://github.com/jathalls/BRM_v5.4-Alpha/new/master/apiSpec/new?filename=BatRecordingManager_BatReferenceDBLinqDataContext.md&amp;value=---%0Auid%3A%20BatRecordingManager.BatReferenceDBLinqDataContext%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A" class="contribution-link">Improve this Doc</a>
+                  </li>
+                  <li>
+                    <a href="https://github.com/jathalls/BRM_v5.4-Alpha/blob/master/BatRecordingManager/BatReferenceDBLinq.designer.cs/#L25" class="contribution-link">View Source</a>
+                  </li>
+                </ul>
+              </div>
+              <nav class="bs-docs-sidebar hidden-print hidden-xs hidden-sm affix" id="affix">
+              <!-- <p><a class="back-to-top" href="#top">Back to top</a><p> -->
+              </nav>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <footer>
+        <div class="grad-bottom"></div>
+        <div class="footer">
+          <div class="container">
+            <span class="pull-right">
+              <a href="#top">Back to top</a>
+            </span>
+            
+            <span>Copyright © 2015-2017 Microsoft<br>Generated by <strong>DocFX</strong></span>
+          </div>
+        </div>
+      </footer>
+    </div>
+    
+    <script type="text/javascript" src="../styles/docfx.vendor.js"></script>
+    <script type="text/javascript" src="../styles/docfx.js"></script>
+    <script type="text/javascript" src="../styles/main.js"></script>
+  </body>
+</html>

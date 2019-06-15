@@ -1,0 +1,133 @@
+﻿<UserControl x:Class="BatRecordingManager.ImageScrollerControl"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+             xmlns:diag="clr-namespace:System.Diagnostics;assembly=WindowsBase"
+             xmlns:local="clr-namespace:BatRecordingManager"
+             mc:Ignorable="d"
+             d:DesignHeight="500" d:DesignWidth="500">
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="25" />
+            <RowDefinition Height="25" />
+            <RowDefinition Height="20" />
+            <RowDefinition Height="277*" />
+            <RowDefinition Height="150*" />
+        </Grid.RowDefinitions>
+        <TextBox
+            x:Name="TitleTextBox"
+            Grid.Row="0"
+            Text=""
+            Style="{StaticResource SimpleTextBox}" />
+        <Grid
+            Grid.Row="1"
+            x:Name="ButtonStackPanel">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="65" />
+                <ColumnDefinition Width="25*" />
+                <ColumnDefinition Width="65" />
+            </Grid.ColumnDefinitions>
+            <StackPanel
+                Grid.Column="0"
+                Orientation="Horizontal"
+                x:Name="MoveLeftStackPanel" HorizontalAlignment="Left">
+                <Button
+                    x:Name="FarLeftButton"
+                    Content="&lt;&lt;"
+                    Width="20"
+                    Style="{StaticResource SimpleButton}" Click="FarLeftButton_Click" />
+                <Button
+                    x:Name="OneLeftButton"
+                    Content="&lt;"
+                    Width="20"
+                    Style="{StaticResource SimpleButton}" Click="OneLeftButton_Click" />
+            </StackPanel>
+            <StackPanel
+                Orientation="Horizontal"
+                x:Name="AddDelStackPanel"
+                HorizontalAlignment="Center"
+                Grid.Column="1">
+                <Label
+                    x:Name="ImageNumberLabel"
+                    Content="" />
+
+                <Button
+                    x:Name="AddImageButton"
+                    Style="{StaticResource SimpleButton}"
+                    ToolTip="Add a new image to the list"
+                    Content="ADD" Click="AddImageButton_Click" />
+
+                <Button
+                    x:Name="EditImageButton"
+                    Style="{StaticResource SimpleButton}"
+                    ToolTip="Modify the caption and description for this image"
+                    Content="EDIT" Click="EditImageButton_Click" />
+
+                <Button
+                    x:Name="DelImageButton"
+                    Style="{StaticResource SimpleButton}"
+                    ToolTip="Delete this image from the list; &lt;SHIFT&gt;&lt;CLICK&gt; to delete from the database"
+                    Content="DEL" Click="DelImageButton_Click" />
+                <Button
+                    x:Name="ImportImageButton"
+                    Style="{StaticResource SimpleButton}"
+                    ToolTip="Import the currently selected image in the Comparison Window and add it to this list"
+                    Content="IMPORT" Click="ImportImageButton_Click"
+                    />
+                <Button
+                    x:Name="FullScreenButton"
+                    Style="{StaticResource SimpleButton}"
+                    ToolTip="Add Image to the Comparison Window"
+                    Content="COMP" Click="FullScreenButton_Click" />
+                <Button
+                    x:Name="OpenFileButton"
+                    Style="{StaticResource SimpleButton}"
+                    Content="OPEN"
+                    ToolTip="If the caption names a valid file, then open that file"
+                    IsEnabled="{Binding Path=isPlayable,FallbackValue=False}" Click="OpenFileButton_Click" />
+            </StackPanel>
+            <StackPanel
+                Orientation="Horizontal"
+                x:Name="MoveRightStackPanel"
+                HorizontalAlignment="Right"
+                Grid.Column="2">
+                <Button
+                    x:Name="OneRightButton"
+                    Style="{StaticResource SimpleButton}"
+                    Width="20"
+                    Content="&gt;" Click="OneRightButton_Click" />
+                <Button
+                    x:Name="FarRightButton"
+                    Style="{StaticResource SimpleButton}"
+                    Width="20"
+                    Content="&gt;&gt;" Click="FarRightButton_Click" />
+            </StackPanel>
+        </Grid>
+
+        <TextBox
+            x:Name="CaptionTextBox"
+            Grid.Row="2"
+
+            Style="{StaticResource SimpleTextBox}" IsReadOnly="True" MaxLines="1" />
+
+        <!--<Image
+            x:Name="Currentimage"
+            Source="{Binding Path=image, Converter={StaticResource ImageConverter}}"
+            Grid.Row="3" MouseWheel="Currentimage_MouseWheel"
+
+            />-->
+        <Image
+            x:Name="Currentimage"
+            
+            Source="{Binding Path=image}"
+            Grid.Row="3" 
+            MouseWheel="Currentimage_MouseWheel" />
+
+        <TextBox
+            x:Name="DescriptionTextBox"
+            Grid.Row="4"
+
+            Style="{StaticResource SimpleTextBox}" IsReadOnly="True" VerticalScrollBarVisibility="Auto" TextWrapping="Wrap" AcceptsReturn="True" />
+    </Grid>
+</UserControl>

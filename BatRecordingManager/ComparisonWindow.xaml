@@ -1,0 +1,62 @@
+﻿<Window x:Class="BatRecordingManager.ComparisonWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:BatRecordingManager"
+        mc:Ignorable="d"
+        Title="ComparisonWindow" Height="600" Width="800"  ResizeMode="CanResizeWithGrip" Closing="Window_Closing">
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="25" />
+            <RowDefinition Height="500*" />
+        </Grid.RowDefinitions>
+        <StackPanel
+            Orientation="Horizontal"
+            Grid.Row="0"
+            x:Name="ButtonBarStackPanel">
+
+            <Button
+                x:Name="ImportPicturesButton"
+                Style="{StaticResource SimpleButton}"
+                Width="50"
+                Content="Import" Click="ImportPicturesButton_Click"
+                ToolTip="Import pictures for comparison" />
+            <Button
+                x:Name="ExportPicturesButton"
+                Style="{StaticResource SimpleButton}"
+                Width="50"
+                Content="Export" Click="ExportPicturesButton_Click">
+
+                <Button.ToolTip>
+                    <TextBlock>
+                        "Export pictures in comparison window to a folder as .PNG with sidecar .TXT files"<LineBreak/>
+                        "SHIFT-Click to Export as .JPG files with embedded IPTC Title and Subject"
+                    </TextBlock>
+                </Button.ToolTip>
+            </Button>
+            <Button
+                x:Name="SortOnDescButton"
+                Style="{StaticResource SimpleButton}"
+                Width="100"
+                Content="Sort on Desc."
+                 Click="SortOnDescButton_Click"
+                
+                >
+                <Button.ToolTip>
+                    <TextBlock>
+                        "Sort the images on the description text"<LineBreak/>
+                        "CTRL-Click to remove leading numbers from description field"
+                    </TextBlock>
+                </Button.ToolTip>
+            </Button>
+        </StackPanel>
+        <ScrollViewer Grid.Row="1" HorizontalAlignment="Stretch">
+            <ListView
+
+                x:Name="ComparisonStackPanel"
+                ItemsSource="{Binding Path=storedImageList}"
+                MouseWheel="ComparisonStackPanel_MouseWheel" PreviewMouseWheel="ComparisonStackPanel_PreviewMouseWheel" />
+        </ScrollViewer>
+    </Grid>
+</Window>

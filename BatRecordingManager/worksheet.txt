@@ -1,0 +1,419 @@
+﻿3 Feb 2017
+created worksheet to log programming activity
+In Searched event handler in RecordingsDetailControl used the returned information
+to select the recording and if appropraite the labelled segment that had been found
+and scrolled the item into view.
+NB the Search button does not enable until a recording is selected
+NB changing a search parameter does not reset the search list to the beginning
+NB the close button does not close the search box
+
+If [GUANO] is included in the header file, then each .wav file is checked for
+the presence of a Guano metadata chunk and that is copied into the Recording
+Notes section.
+
+Fixed a problem with null reference exceptions due to the imageList being null
+when calling UpdateRecording.
+4 Feb 2017
+Made sure that the recording and segment are unselected before advancing the 
+focus to the newly found search target.
+Allowed the Search button to tbe used as an alternative to Next button and also
+'activates' the search dialog bringing it to the top.
+NB if the search moves the segment focus out of view the window does not scroll to bring
+it into view because the segment listview is not scrollable within the recording window
+and the recording windo is already in view even though the bottom of it is hidden.  Not sure
+it will be esy to do anything about that - just one of the quirks of nested lists.
+NB Call frequency breakdown fails when it gets a single number - treats it as n/2 +/- n/2
+rather than n +/- 0
+Re-factored call parameter parsing to use a new class of ParameterSet, using the old
+functions extracted from DBAccess.  Also ensured that when a comment is parsed to extract
+parameters and add them to the database all old calls for that segment are first deleted.
+(Untested)
+Fixed problems with parsing call parameters when reading the comments during import.
+NB if comment is edited in the Segment editing form then the parameters are not re-read!
+
+10 Feb 2017
+fixed import bug trying to read non-existent guano location into a recording
+
+11 Feb 2017
+Uploaded to Figshare
+EditBatForm was not adding a new bat - fixed
+
+10/11 March 2017
+Allowed filename date and time to be separated by a hyphen as well as an underline
+File duration is calculated from the .wav file data if the .wav file is present and
+then overwrites the start time with the end time - the .wav duration.
+The duration from the .wav file is appended to the raw Guano text which is then
+incorporated into the recording.notes
+The display of duration and start and end times in the recordingDetailsListControl
+is improved to eliminate lots of fractional seconds - either just displaying whole
+seconds or seconds with two fraction digits.
+new release is 6279.
+
+12 March 2017
+Empty text files caused an exception with bypassed all further processing of text files.
+Used a try/catch in the ProcessLabelOrManualFile function to catch such exceptions lower
+in the processing tree allowing the foreach file loop to continue processing the rest of
+the text files.
+new release 6280
+
+20 March 2017
+Noticed that in List By Bats the image counts in all three windows all show 0 even when there
+are recordings with images.  Also need to indicate whether image counts relate to the bat
+(images shown in the lower left pane) or the recording/segment (images shown in the lower right
+pane).
+Corrected DBAccess.GetImagesForRecording(rec,bat) to return images for the recording which also
+link to the specified bat (for better genrality should really return all images for the recording
+if the bat field is null)
+Fixed problem so that ListByBats now shows correct numbers for images in all three lists including
+ensuring that DBAccess.GetBatStatistics does include the bat itself.
+Added titles to the various ImageScroller windows to make clear which images are on display and made
+the image list for the recordings an ImageScroller not a BatAndCallImageScroller.
+new Release 6288
+
+22 March 2017
+Added a section to FileProcessor to cope with Audacity 2.1.3 which now includes spectral information
+(fmax and fmin) into labels if the spectral selection mode is enabled.  If you drag down into the lbael
+track then fmin is negative.  
+/// When reading a line from an Audacity Label file, since Audacity 2.1.3
+        /// the label may include a second line starting with a '\' containing the
+        /// upper and lower frequencies of the selection when the label was added.
+        /// This function is passed as parameters the label text line and the second line
+        /// starting with the '\'.
+        /// If the label includes the string "{}" the selection parameters are ignored.
+        /// If the label does not include a parameter section in {} then the frequency
+        /// parameters are added as start and end frequencies.
+        /// If the label includes a parameters section which includes s= or e= then the 
+        /// selection parameters are ignored.
+        /// If the label includes a parameters section which starts with a number and includes
+        /// a comma then it is assumed to be an implicit parameter section and the selection
+        /// parameters are ignored.
+        /// Otherwise the selection parameters are trimmed to two decimal places and inserted
+        /// as {s=high,end=low}
+	so - if you want to skip the spectral data, include {} in the comment or drag down into the label track.
+	If you insert your 	own spectral parameters they won't get replaced. 
+	new release 6290
+
+17 May 2017
+Added a constant dbVersionDec in DBAccess and the capability to update the database by the addition of
+tables or columns.  GetDataContext checks to see if the database actually contains a table called
+dbo.Version and if not adds such a table to the database in the selected DataContext.
+Then Looks to see if the VersionTable contains a record (the first and only record) with a version
+the same as that stored in dbVersionDec.  If there is no record adds one with a version number of 5.31.
+If the version number does not match the dbVersionRec, then the database is updated.
+The database updater succsesively checks aginst intermediate versions and performs operations for each
+version > than the storedversion until the current version is reached.  Thus adding all non-implemented 
+versions (need to check to see if columns can be identified in the same way as tables through Mapping).
+Additions are executed by dataContext.ExecuteCommand with a SQL string generated by modifying the reference
+database and extracting the SQL string generated by the IDE.
+
+Database version 6.0 marks a version increase to 6.0 and adds EndDate to RecordingSession and RecordingDate
+to Recording.  This accompanies modifications throughout to allow the import (via an import wav button) to
+import a set of .wav files recorded by wildlifeAcoustics devices and which have metadata stored in a wamd
+chunk of the wav file.  These are typically large numbers of triggered recordings each with just a single pass.
+Each file is considered to be a recording with a single labelled segment going from start to end witha 
+label which is the concatenation of the Kaleidoscope Identification field and the Kaleidoscope Notes field.
+Normally the Kaleidoscope Identification field is adequate.
+
+
+24 July 2017
+Modified getWAMDData to parse the wamd data section more precisely and to store all the data by field in a special
+WAMD_Data structure/class.  The full data is passed by 'out' back to the level of ProcessText but only the
+Note and Identification fields are currently used.  The full structure is avaialable to higher levels so that it can be 
+incorporated into the Recording/Notes field at a later date.
+
+October 2017
+Adding the ability to generate reports in the form of an excel compatible csv file.
+The report definition forma allows selection of data type, date range, session, recording and bat but the range and effects
+are variable.  Initially the session, recording and bat drop-downs are empty and the date range is wide.  Data type is unselected.
+In this state changing date range has no effect.
+
+Select data Type as Session - 
+	
+	sessions drop-down is all sessions in date range, default is selected if present
+	recordings drop-down is all recordings in selected session if any, default is selected if present
+	bat drop down is all known bats, default is selected if present
+
+Select data Type as Recording - 
+	sessions drop-down is all sessions in date range, default is selected if present
+	recordings drop-down is all recordings in selected session if any, default is selected if present
+	bat dropdown is all known bats, default is selected if present
+
+Select data Type as Bat -
+	sessions drop-down is all sessions in date range, default is selected if present
+	recordings drop-down is all recordings in selected session if any, default is selected if present
+	bat drop down is all known bats, default is selected if present
+
+27 Nov - replacing multi-selection list boxes with combo-boxes plus a multi-purpose combo box.
+Using the 'Add' button enables the multi-function combo and populates it with a list of whichever
+items need to be selected from.  Then the combo selection and Add button add items to the specific
+combo box which can be dropped down to view the items selected so far.  Delete buttons allow selections
+to be removed.  So far just the Bat items replacedd and the old functions need to be replaced.
+
+29 Nov Re-thinking the report generation process.
+	1st allow the ListByBats screen to permit multi-selection of bats, populating the sessions panel
+	with the sum of all sessions for the bats selected. DONE
+	2nd allow the sessions panel to have multi-selection populating the recordings panel with the sum of 
+	all recordings for the selected sessions that include the selected bats.  DONE
+
+	2b - BatStatsDataGrid_MouseDoubleClick needs to be modified to work for multiple selection
+
+	3rd permit right-clicking on the bats multi-selection to provide a report for the selected bats
+	covering all or the selected sessions and/or recordings.
+	4th permit right-clicking on the multi-selected sessions to provide a session based report for those
+	sessions and all or the selected recordings for the selected bats.
+	5th repeat the procedures for the main list by sessions panel.
+	(Actually implemented by a report button rather than a right click)
+
+13/12/17 - ReportMainWindow.xaml.cs - report shows far more passes for a recording than the total
+passes for the session
+
+23/12/2017 - Re-entering Early manual files they were being identified as label files even though the
+times were specified as n'ss.dd" .This has been corrected by allowing the manual file parser to spot the
+presence of the ' in the time offset string and then calls GetTimeOffset() to convert the complex time string to
+a TimeSpan and extract the time as a string representing the total number of seconds.  This is then parsed in the usual
+way.  The fault is really in the discrimination of label files ad manual files but due tot he possibility of
+side effects this solution was prefferred.
+
+=============================================================================================================================
+Installed version is 6.0.6566
+Renamed the working development version as 6.1.* in folder BRM_v6.1
+
+9/1/18
+Various optimizations including the inclusion and use of IEnumerable<T>.IsNullOrEmpty() in Tools.
+
+In ListByBats View the number of Recordings is blank and the number of Images in all panels is zero even
+when there are images, and no images are shown in the Bat and Call Images pane.
+
+- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+15/1/18
+Tried to insert pictures (screen clippings) into the bat call area.  Several times it went through the process
+but no image was inserted and the current screen listings didn't update.  On one occasion when trying to insert
+an image the programme crashed.
+
+5/2/18
+Fixed a problem deleting images from a segment and did some general code tidying.
+
+Added A versatile button to the recordingsdetailcontrol to add a new segment when a recording is selected or
+a new image if a segment is selected (deselected by selecting a different recording) in both cases without
+having to edit the recording through the editrecordingform.  Both processes are implemented through their
+own sub-forms and can therefore be invoked independently of the editrecordingform.  So far the button is implements
+and it enables/disables and changes its text appropriately but still needs to have the OnClick code written to
+allow it to bring up the relevant dialogs and to save the new dat appropriately.
+
+13/14 Feb 2018
+Renamed development version 6.2
+
+Adding a facility to Import Pictures from the Import Tab.  This displays a control version of the ImageDialog
+which has now been replaced with a parent panel to contain an instance of the ImageDialogControl.  The OKButton click
+now produces an event which can be caught by the parent and acted upon.
+The import picture control allows unaatached images to be imported and as each is OKed it is added to the database
+with no links and is also displayed in a scroller window.  This will allow images to be collectedd during analysis
+and associated later with the relevant recording or segment.  The image caption should contain text identifying
+the recording so that the image can be associated with it when it eventually gets imported.
+
+April 30 2018
+Bug:- editing a tag in BatReference causes a crash.
+Edit bat tag assumed the current datacontext was the datagrid, but in fact the datacontext is set
+to the selected bat.  Additional checks for nulls also incorporated.
+
+IsLabelFileLine modded to replace all occurrences of bat tags in the comments with the common names of the relevant
+bats.  It is therefore possible to use more cryptic tags such as CP and SP and have them replaced in all visible occurences
+in the database with a more user friendly form.  All other uses of DBAccess.GetDescribedBats() are unaffeccted.
+
+7 May 2018
+BUG modifying or adding a tag in the BatReference pane works for the duration of the session, but when the program is next
+run the changes are lost.  This compromises the new feature of allowing ultra-short abreviations as battags to be replaced
+during the import process with the bat's common names.
+The problem is that the program restores the bat reference to match the EditableBatReference.xml file in the database folder.
+This does not get overwritten by the new XML file which lives in the program space since the user may have modified the
+current working file.  The solution to be implemented is to re-write the editableBatReference.xml file in the database location
+whenever the bat reference is edited through the program.  The existing processes should update the database references from the
+xml file whenever the program starts and therefore the two should keep in sync.
+TODO add a DBAccess.WriteXMLReferenceData() function and then call it after any user changes to the BatReference list.
+
+8 June 2018
+Two new expansions to incorporate:-
+1) Import picture screen to be incorporated into a pop-up dialog so that it can be popped up when reviewing recordings and if a
+wav file is opened screen shots can be imported directly without having to move away from the recordings view.  Images added as usual
+dialog has a close & update button.
+2) A new Analyze and import function.  This will access a selected folder, identify the appropriate tag which may or may not already exist, 
+and open each unrecorded wav file in Audacity in turn.  When the file has been analyzed and labelled and closed the 'next' or close button will cause the
+text file to be imported into the database under the pre-identified tag.  During the process the picture import dialog will be displayed
+pre-filled with the name of the file being analyzed.
+
+Part 1 Done
+
+Project resaved to BRMv7.0 and solution renamed to BatRecordingManager_7.0
+Assembly Version set 7.0
+Item 1 above done.
+Item 2 in progress. Works for the first files but the last one is not getting added to the database - needs a more sophisticated update and exit than
+just asking for a new folder.  Also needs to update the Recordings listview after each save and update.  Could make better guesses for filling in a 
+blank recordingSessionForm if there is no header file - e.g. can get dates from the session tag, possible location from the sessiontag.
+
+14/6/18
+Use of an event handler to detect that the Audacity window has closed allows the next file to be opened automatically, while using an event handler
+to force the original caller  to refresh the RecordingSessionListView, making the new session the selected itme and scrolling it into view.
+This leaves some redundant code from the previous flow pattern to be removed.  And still needs to use the date in the sessionTag to pre-fill the new
+RecordingSession.
+
+5/7/18
+New release of 7.0.6760 released to Figshare but not publicised as yet.
+Analyse and Import function uses Nuget InputSimulator to send keystroke sequences to Audacity after it is opened so that the label track is created
+automagically and named using the name of the .wav file with the extension stripped off.  Timing for sending the keystrokes is critical and a 4 second
+delay ensues between opening and naming the label track and switching to the .wav track which is then zoomed in to the first 5 seconds of the track.  In
+practice quite convenient to preview the entire track before the zoom takes effect.  Also changes to the Process label file function. so that if the
+label track is empty it is assumed to contain the string 'start - end No Bats'.  It is therefore no longer necessary to explicitly create a full duration
+label for recordings which are blank.
+
+TODO - create a new 'form' of report showing the rate of incidence for each species of bat and of bats overalls.  This will be a table a row for each bat species in the recording
+and a column for each 10-minute time slot during the recording period.  The value in the cell is the number of minutes in the time slot which contain
+passes or partial passes by that species of bat.  The duration of the time slot may be adjustable rather than fixed at 10-minutes.  Values will range from
+0 to the number of miunutes in the period. DONE
+
+31 Aug 2018
+Instead of ReportMainWindow handling the entirety of the various report formats these are now split into dedicated classes that can concenr themselves
+only with the details of a single report type.  A UserControl of type ReportMaster sets up a grid with a textbox on the left and a datagrid on the
+right with a GridSplitter allowing the relative sizes to be adjusted by the user.  Derived classes that inherit ReportMaster handle each report type.
+They have an override tabHeader and an override SetData.  The former can be used to label the tab item, the latter does all the work of setting the data
+in a ReportDataList which is a BulkObservableCollection<reportDataType>.  The ReportDataType is a class which holds all the data needed for the report.  It
+acts as the ItemsSource for the Datagrid, and SetData dynamically creates a set of DataGrid columns with bindings to display the data.  Normally a sessionHeader
+is displayed in the textbox for each session.  The header comprises the SessionTag and the sessionNotes, and a line of asterisks.  The header is also stored
+(uniquely) in a hidden column at the start of the datagrid so that it will be exported with the rest of the visible data.
+In the case of the Frequencies table the session data comes after the data and forces a blank row of data for each sessionHeader.
+
+Frequncy Table - DONE
+By recordings Table - DONE
+By Sessions Table - DONE
+By Bat Table - DONE
+
+4 sep 2018
+Plan to provide the potential for speed improvements by cacheing of data from the database, especially data which has been heavily filtered or processed.
+To this end the dtabase will maintain a DateTime when it was last updated or modified (or when the program started since the data will not be preserved 
+between sessions).  Then functions such as getStats can internally cache the data they provide and only refresh it from the databse if the last updated
+time has changed.
+
+18 Sept 2018
+Implementing the ability to draw fiducial grid lines on images, non-destructively.  Added two List<int> to StoredImage in order to hold data fror horizontal
+and vertical gridlines in the form of an integer in the range 0 to height or width of the image.  In the database the lists are encoded as a text string
+and stored as Text metadata in the PNG formatted image which gets encoded into the database.  The gridline data is extracted when the BitmapImage from the database
+is converted back from a .png bitmap to a BitmapImage in the StoredImage class.
+For display TODO write a Converter to display a StoredImage which reads the BitmapImage and the gridline data arrays and combines them into a BitmapImage which
+is shown on the screen, but the StoredImage data is not written over.
+When exporting Images the gridlines will need to be drawn prior to writing the .PNG file and the gridline data will also be encoded in the.PNG metadata.
+In future it might be necessary to provide the option of writing the images with or without the gridlines.
+TODO provide a mechanism (right clicking on the image?) to create GridLines and to move them to exactly the right locations and to be able to delete them (possibly
+by right click dragging across the grid line?).
+
+1/11/18
+Adding two new link tables between Bat and Recording and Bat and Session to make bat specific accesses a lot quicker
+Installation routine will also have to add entries for existing data.  And need to incorporate into all relevant update
+/insert/delete functions
+
+CREATE TABLE [dbo].[BatSessionLink] (
+    [Id]        INT NOT NULL,
+    [SessionID] INT DEFAULT ((-1)) NOT NULL,
+    [BatID]     INT DEFAULT ((-1)) NOT NULL,
+    PRIMARY KEY CLUSTERED ([Id] ASC),
+    CONSTRAINT [Bat_BatSessionLink] FOREIGN KEY ([BatID]) REFERENCES [dbo].[Bat] ([Id]),
+    CONSTRAINT [RecordingSession_BatSessionLink] FOREIGN KEY ([SessionID]) REFERENCES [dbo].[RecordingSession] ([Id])
+)
+
+CREATE TABLE [dbo].[BatRecordingLink] (
+    [Id]          INT NOT NULL,
+    [BatID]       INT DEFAULT ((-1)) NOT NULL,
+    [RecordingID] INT DEFAULT ((-1)) NOT NULL,
+    PRIMARY KEY CLUSTERED ([Id] ASC),
+    CONSTRAINT [Bat_BatRecordingLink] FOREIGN KEY ([BatID]) REFERENCES [dbo].[Bat] ([Id]),
+    CONSTRAINT [Recording_BatRecordingLink] FOREIGN KEY ([RecordingID]) REFERENCES [dbo].[Recording] ([Id])
+)
+
+2/12/2018
+In the comparison window, make double-clicks on the buttons affect all the images shown.  For toggle buttons
+the new state for all images is the same as the new state for the selected image.
+
+Jan 2019
+PROPOSAL to add audio replay ability at 1/10 or user selectable speed reduction.
+Stage 1 Provide a floating window dialog with Audio replay controls
+Stage 2 Allow Comparison window to replay a labelled segment at slow speed if the labelled segment is known.
+	Images may relate to a recording but if imported during analysis may not link to a valid segment but
+	only to a zero length segment at position 0.  In that case we need to present a user with the list of
+	labelled segments for that recording and allow them to choose the segment to replay.
+Stage 3 Allow replay of a labelled segment from the Recordings Pane of the by Sessions View.
+
+Replay dialog should allow a list of labelled segments which can be added to.  Any selected segment can be 
+	replayed.  Segments are added from their own displays, but can be removed from the list with a button.
+
+DONEish
+	Using NAudio which is good for the playing part.
+	defined a NaudioWrapper class to handle the Naudio specific details and which can be replaced with an alternative
+	api wrapper.  Implements:-
+	Play(PlayListItem,SpeedFactor,PlayLooped)
+	Heterodyne(PlayListItem)
+	decimal Frequency;
+	Stop() 
+	OnStopped() event
+
+	The Frequency variable shold be updated with the currently selected heterodyning frequency
+	Play plays the item at a speed reduced by SpeedFactor.  It plays just once if PlayLooped is false or repeatedly
+	if PlayLooped is true;
+	Heterodynes simulates a tuned bat detector by resampling at Frequency.  This is like tuning to the selected frequency
+	on a tuned bat detector, but also picks up all harmonics of that frequency, so not as clean at the lower frequencies.
+	Heterodyne always plays looped untilt he Stop() function is called.
+	OnStopped is generated when the player finally stops, not at the end of each loop.
+	For long files initial processing may take a noticeable length of time since the file is read into a memory buffer
+	and then copied into a WaveFileReader at the new speed.  Also very large files may cause this to run out of memory.
+	For heterodyning the same process is done initially at a SpeedFactor of 1, but does not need to be repeated for each loop.
+
+	AudioHost generates a static instance of AudioPlayer so that the player window can be kept open and its contents retained
+	so that additional snippets can be added.  It displays a list of selected audio snippets showing filename, start offset,
+	duration and any comments.  A snippet is usually an entire labelled segment.  AudioHost will automatically create an AudioPlayer
+	and call Show() when the audioPlayer variable is accessed if it does not already exist.
+	Implements:-
+	AudioHost.Instance.audioPlayer.Stop()
+	AudioHost.Instance.audioPlayer.AddToList(LabelledSegment)
+	AudioHost.Instance.audioPlayer.AddToPlayList(filename,startOffset,duration,label)
+	AudioHost.Instance.audioPlayer.AddToPlayList(PlayListItem)
+
+	StoredImage has an additional public property isPlayable.  isPlayable checks to see if the image is associated with a playable
+	LabelledSegment or a Recording.  If so it populates List<LabelledSegment> called segmentsForImage with all labelled segments
+	associated with the image.  If any segment has a 0 length (as in an image which is associated with a recording but not a specific segment
+	which happens when images are imported before the database entry is created) then all segments for that recording are included in the
+	list.
+
+	Play buttons are added to DisplayStoredImageControl and to the Recordings pane of the ListBySessions view.  If a LabelledSegment is selected
+	it is added to the player.  If no LabelledSegment is selected, or the selected segment has a duration of zero, and a recording is selected, then all segments
+	for that recording are added to the player.  if no recording is selected then no player is created.
+
+	Heterodyne is modified to use a pure generated sinewave.  One second of sinewave is created and used against each one second buffer of data.  
+	This is fine for integral frequencies.
+
+	BUG The added segments should have their comments in sqiggly brackets to prevent them being evaluated as new passes.  This does not happen.
+	BUG if editing tyhe recording to add squiggly brackets tot he comments for added segments the comments disappear.
+
+30 March 2019
+	In adding Kaleidoscope based Analyse and Import the image import dialog cannot know the name of the current file being processed, since control does
+	not return until all files have been dealt with and Kaleidoscope is closed.
+	Therefore we need to have the following sequence:-
+		Import dialog gets the focus and raises an event in MainWindow.xaml.cs
+		MainWindow calls analyseAndImport which examines ExternalProcess.MainWindowTitle to obtain a current file name which is returned.
+		MainWindow sets the obtained name into the ImportPicture dialog (by moving the code inside AnalyseAndImport_Analysing() into a separate
+		function which can be called from there or from the initiation of the importpicturedialog event handler).  The importPictureDialog
+		event handler should only be instatiated in MainWindow for Kaleidoscope analysis and not for Audacity Analysis.
+
+15 April 2019
+	Select Folder dialogs either behave oddly if using OpenFileDialog or do not display the files in the folder if using CommonOpenFileDialog or BistaOpenFileDialog.
+	Need to find some way to keep the text in the selected filename box updated with the currently selected folder.  There is no SelectionChanged event.  Or need to find
+	yet another folder selection dialog.
+	In the static function GetDateFromFilename, need to ensure that it will work with a variety of separators such as - and _ between the component parts.
+
+	TODO
+	In ComparisonHost complete the GetSelectedImage function.  Then add a LINK button in the bat and call image scroller so that the current selected image
+	in the comparison window cann be added to the bat or call image lists currently being displayed by linking the image rather than by physically copying it.
+
+24 May 2019
+	7.4 includes data virtualization for the recording sessions table in the recordings view, and for the recordings in the 'by bats' view.  It also provides a debug facility 
+	(enabled in debug mode and in release mode by adding a -debug to the command line.  Can be disabled in debug view with a -undebug on the command line).
+	Remaining problems with the data virtualization are in sorting - the datagrids will sort the entire tables by reading every page which can be slow.  We allow
+	small tables of complex returned data to be sorted this way, but large tables of raw table data can e sorted at the database level.
+	Recording session (and presumably othr datagrids) do not refresh after modification.  Deleting a displayed item in a datagrid crashes as the virtualized collection
+	does not support Remove.

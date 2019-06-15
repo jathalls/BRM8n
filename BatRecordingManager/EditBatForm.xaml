@@ -1,0 +1,231 @@
+﻿<Window x:Class="BatRecordingManager.EditBatForm"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:BatRecordingManager"
+        mc:Ignorable="d"
+        Title="EditBatForm" Height="700" Width="1000" WindowStartupLocation="CenterScreen">
+
+    <Grid
+
+        Background="{StaticResource WindowBackgroundBrush}"
+        x:Name="EditBatFormGrid">
+
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="150" />
+            <ColumnDefinition Width="150*" />
+            <ColumnDefinition Width="5" />
+            <ColumnDefinition Width="150*" />
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="25" />
+            <RowDefinition Height="25" />
+            <RowDefinition Height="25" />
+            <RowDefinition Height="25" />
+            <RowDefinition Height="45*" />
+            <RowDefinition Height="80*" />
+            <RowDefinition Height="45*" />
+            <RowDefinition Height="30" />
+        </Grid.RowDefinitions>
+
+        <GridSplitter Grid.Column="2" Width="5" HorizontalAlignment="Stretch" />
+
+        <Label
+            Content="Common Name"
+            Grid.Row="1"
+            Style="{StaticResource SimpleLabel}"
+            Grid.Column="0" Margin="0,0.2,2.8,24.4" Grid.RowSpan="2" />
+        <!--
+        <TextBox
+            x:Name="CommonNameTextBlock"
+            Grid.Column="1"
+            Grid.Row="1"
+            Text="{Binding Path=BatCommonNames, Converter={StaticResource ConvertFirstCommonName} }"
+            IsManipulationEnabled="True" LostFocus="CommonNameTextBlock_LostFocus" />-->
+        <TextBox
+            Height="25"
+            Grid.Column="1"
+            Grid.Row="1"
+            x:Name="CommonNameTextBox"
+            Style="{StaticResource SimpleTextBox}"
+            Text="{Binding Path=Name}"
+            Background="{StaticResource WindowBackgroundBrushLight}" />
+
+        <Label
+            Content="Genus"
+            Grid.Row="2"
+            Style="{StaticResource SimpleLabel}"
+            Grid.Column="0" Margin="0,0.2,2.8,24.4" Grid.RowSpan="2" />
+        <TextBox
+            x:Name="BatGenusTextBlock"
+            Grid.Column="1"
+            Grid.Row="2"
+            Style="{StaticResource SimpleTextBox}"
+            Background="{StaticResource WindowBackgroundBrushLight}"
+            Text="{Binding Path=Batgenus }" />
+
+        <Label
+            Content="Species"
+            Grid.Row="3"
+            Style="{StaticResource SimpleLabel}"
+            Grid.Column="0" />
+        <TextBox
+            x:Name="BatSpeciesTextBlock"
+            Grid.Column="1"
+            Grid.Row="3"
+            Style="{StaticResource SimpleTextBox}"
+            Background="{StaticResource WindowBackgroundBrushLight}"
+            Text="{Binding Path=BatSpecies }" IsManipulationEnabled="True">
+        </TextBox>
+
+        <Label
+            Content="Tags"
+            Grid.Row="4"
+            Style="{StaticResource SimpleLabel}"
+            Grid.Column="0" />
+        <StackPanel
+            Orientation="Vertical"
+
+            Grid.Row="4"
+            Grid.Column="1">
+            <StackPanel
+                Background="{StaticResource ButtonBarBackground}"
+                Orientation="Horizontal">
+                <TextBox
+                x:Name="TagEditBox"
+                    Style="{StaticResource SimpleTextBox}"
+
+                    Background="{StaticResource WindowBackgroundBrushLight}"
+                Text=""
+                Width="200" HorizontalContentAlignment="Stretch"
+                    BorderThickness="2" BorderBrush="Black" />
+                <Button
+                    x:Name="AddNewTagButton"
+                    Style="{StaticResource SimpleButton}"
+                    Height="20" Width="50"
+                    Content="Add" Margin="12,2,2,2" Click="AddNewTagButton_Click" />
+                <Button
+                    x:Name="DeleteTagButton"
+                    Style="{StaticResource SimpleButton}"
+                    Height="20"
+                    Width="50"
+                    Content="Del"
+                    Margin="2" Click="DeleteTagButton_Click" />
+            </StackPanel>
+            <ListView
+                x:Name="BatTagList"
+                ItemsSource="{Binding Path=BatTags, Converter={StaticResource SortBatTags}}"
+                VerticalAlignment="Stretch"
+                VerticalContentAlignment="Stretch"
+                DisplayMemberPath="BatTag1"
+                Style="{StaticResource SimpleListView}"
+                ToolTip="Type new tag in the text box and click 'Add' or Select a Tag and click 'Del'"
+                Background="{StaticResource WindowBackgroundBrush}" SelectionChanged="BatTagList_SelectionChanged" />
+        </StackPanel>
+
+        <StackPanel
+            x:Name="CallsLabelFieldStackPanel"
+            Grid.Row="5"
+            Grid.Column="0"
+
+            Orientation="Vertical"
+            VerticalAlignment="Center">
+            <Label
+                Style="{StaticResource SimpleLabel}"
+                Content="Calls" />
+            <Label
+                Style="{StaticResource SimpleLabel}">
+                <StackPanel
+                    x:Name="NumberOfCallsStackPanel"
+                    Orientation="Horizontal">
+                    <TextBox
+                        x:Name="CallIndexTextBox"
+                        Style="{StaticResource SimpleTextBox}"
+                        IsReadOnly="True" />
+                    <Label
+                        Style="{StaticResource SimpleLabel}"
+                        Content=" of " />
+                    <TextBox
+                        x:Name="TotalCallsTextBox"
+                        Style="{StaticResource SimpleTextBox}"
+                        IsReadOnly="True" />
+                </StackPanel>
+            </Label>
+
+            <StackPanel
+                x:Name="PrevNextButtonBarStackPanel"
+                Orientation="Horizontal">
+                <Button
+                    x:Name="PrevCallButton"
+                    Style="{StaticResource SimpleButton}"
+                    Content="Prev" Click="PrevCallButton_Click" />
+                <Button
+                    x:Name="NextCallButton"
+                    Style="{StaticResource SimpleButton}"
+                    Content="Next" Click="NextCallButton_Click" />
+            </StackPanel>
+
+            <StackPanel
+                x:Name="AddDeleteButtonStackPanel"
+                Orientation="Horizontal">
+                <Button
+                    x:Name="AddCallButton"
+                    Style="{StaticResource SimpleButton}"
+                    Content="Add" Click="AddCallButton_Click" />
+                <Button
+                    x:Name="DeleteCallButton"
+                    Style="{StaticResource SimpleButton}"
+                    Content="Del" Click="DeleteCallButton_Click" />
+            </StackPanel>
+        </StackPanel>
+        <local:BatCallControl
+            x:Name="batCallControl"
+            Grid.Column="1"
+            Grid.Row="5" />
+
+        <Label
+            x:Name="notesLabel"
+            Grid.Row="6"
+            Grid.Column="0"
+            Style="{StaticResource SimpleLabel}"
+            Content="Notes" />
+        <TextBox
+            x:Name="BatNotesTextBlock"
+            Grid.Row="6"
+            Style="{StaticResource SimpleTextBox}"
+            Text="{Binding Path=Notes}"
+            Background="{StaticResource WindowBackgroundBrushLight}"
+            Grid.Column="1" TextWrapping="Wrap" AcceptsReturn="True" />
+        <DockPanel
+            Width="{Binding Path=ActualWidth, ElementName=EditBatFormGrid}"
+            Grid.Row="7"
+            Grid.Column="0"
+            Grid.RowSpan="3" LastChildFill="True">
+            <StackPanel
+                Orientation="Horizontal"
+                Background="{StaticResource BlueGradientBackground}"
+                HorizontalAlignment="Left"
+                Width="{Binding Path=ActualWidth, ElementName=EditBatFormGrid}">
+                <Button
+                    x:Name="EditBatFormOKButton"
+                    Style="{StaticResource SimpleButton}"
+                    Content="OK"
+                    Width="50"
+                    Height="25" HorizontalAlignment="Right" IsDefault="True" Click="EditBatFormOKButton_Click" />
+                <Button
+                    x:Name="EditBatFormCancelButton"
+                    Style="{StaticResource SimpleButton}"
+                    Content="Cancel"
+                    Width="50"
+                    Height="25" HorizontalAlignment="Right" HorizontalContentAlignment="Center" IsCancel="True" />
+            </StackPanel>
+        </DockPanel>
+        <local:BatAndCallImageScrollerControl
+            x:Name="EditBatFormImageScroller"
+            Grid.Column="3"
+            Grid.Row="0"
+            Grid.RowSpan="7" BorderThickness="2"
+            BorderBrush="Black" />
+    </Grid>
+</Window>

@@ -1,0 +1,38 @@
+﻿<UserControl x:Class="BatRecordingManager.ButtonBarControl"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+             xmlns:local="clr-namespace:BatRecordingManager"
+             mc:Ignorable="d"
+             d:DesignHeight="25" d:DesignWidth="300">
+
+    <Grid>
+        <StackPanel x:Name="ButtonPanel" Orientation="Horizontal" Background="{StaticResource BlueGradientBackground}">
+            <Button
+                    x:Name="AddButton"
+                    Style="{StaticResource SimpleButton}"
+                Width="50"
+                    Content="ADD">
+            </Button>
+            <Button
+                    x:Name="DeleteButton"
+                    Style="{StaticResource SimpleButton}"
+                Width="50"
+                    Content="DEL">
+            </Button>
+            <Button
+                    x:Name="MoveUpButton"
+                    Style="{StaticResource SimpleButton}"
+                Width="50"
+                    Content="UP">
+            </Button>
+            <Button
+                    x:Name="MoveDownButton"
+                    Style="{StaticResource SimpleButton}"
+                Width="50"
+                    Content="DOWN">
+            </Button>
+        </StackPanel>
+    </Grid>
+</UserControl>

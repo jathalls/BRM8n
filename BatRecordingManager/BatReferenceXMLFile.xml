@@ -1,0 +1,385 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<BatLibrary>
+  <Bat Name="CommonPip">
+    <BatGenus>Pipistrellus</BatGenus>
+    <BatSpecies>pipistrellus</BatSpecies>
+    <BatCommonName>Common Pipistrelle</BatCommonName>
+    <BatTag>Common Pip</BatTag>
+    <BatTag>P45</BatTag>
+    <BatTag>Common pipistrelle</BatTag>
+    <BatTag>CP</BatTag>
+    <Call>
+      <fStart>50.8-95.2</fStart>
+      <fEnd>41.2-50.6</fEnd>
+      <fPeak>43.3-49.9</fPeak>
+      <Interval>59.9-211.0</Interval>
+      <Duration>3.2-8.6</Duration>
+      <Function>el</Function>
+      <Type>fm-qCF/qCF</Type>
+    </Call>
+  </Bat>
+  <Bat Name="SopranoPip">
+    <BatGenus>Pipistrellus</BatGenus>
+    <BatSpecies>pygmaeus</BatSpecies>
+    <BatCommonName>Soprano Pipistrelle</BatCommonName>
+    <BatTag>Soprano Pip</BatTag>
+    <BatTag>P55</BatTag>
+    <BatTag>Soprano pipistrelle</BatTag>
+    <BatTag>Soprano</BatTag>
+    <BatTag>SP</BatTag>
+    <Call>
+      <fStart>63.8-108.6</fStart>
+      <fEnd>53.2-60.6</fEnd>
+      <fPeak>50.2-64.1</fPeak>
+      <Interval>51.0-217.1</Interval>
+      <Duration>2.1-8.2</Duration>
+      <Function>el</Function>
+      <Type>fm-qCF/qCF</Type>
+    </Call>
+  </Bat>
+  <Bat Name="Noctule">
+    <BatGenus>Nyctalus</BatGenus>
+    <BatSpecies>noctula</BatSpecies>
+    <BatCommonName>Noctule</BatCommonName>
+    <BatTag>Noctule</BatTag>
+    <BatTag>NN</BatTag>
+    <Call>
+      <fStart>23.8-52.2</fStart>
+      <fEnd>21.4-32.2</fEnd>
+      <fPeak>22.4-33.6</fPeak>
+      <Interval>120.3-413.1</Interval>
+      <Duration>8.8-23.4</Duration>
+      <Function>el</Function>
+      <Type>fm-qCF</Type>
+    </Call>
+    <Call>
+      <fStart>18.2-30.4</fStart>
+      <fEnd>17.1-23.0</fEnd>
+      <fPeak>17.5-23.6</fPeak>
+      <Interval>120.2-413.3</Interval>
+      <Duration>13.2-29.9</Duration>
+      <Function>el</Function>
+      <Type>qCF</Type>
+    </Call>
+  </Bat>
+  <Bat Name="Leislers">
+    <BatGenus>Nyctalus</BatGenus>
+    <BatSpecies>leisleri</BatSpecies>
+    <BatCommonName>Leisler's</BatCommonName>
+    <BatTag>Leislers</BatTag>
+    <BatTag>Leisler's</BatTag>
+    <BatTag>NL</BatTag>
+
+    <Call>
+      <fStart>29.8-61.7</fStart>
+      <fEnd>24.2-30.7</fEnd>
+      <fPeak>25.0-32.1</fPeak>
+      <Interval>107.3-313.1</Interval>
+      <Duration>6.1-18.4</Duration>
+      <Function>el</Function>
+      <Type>fm-qCF</Type>
+    </Call>
+    <Call>
+      <fStart>23.5-29.9</fStart>
+      <fEnd>20.9-24.1</fEnd>
+      <fPeak>21.9-24.6</fPeak>
+      <Interval>100.2-801.2</Interval>
+      <Duration>10.5-25.1</Duration>
+      <Function>el</Function>
+      <Type>qCF</Type>
+    </Call>
+  </Bat>
+  <Bat Name="Daubentons">
+    <BatGenus>Myotis</BatGenus>
+    <BatSpecies>daubentonii</BatSpecies>
+    <BatCommonName>Daubenton's</BatCommonName>
+    <BatTag>Daubentons</BatTag>
+    <BatTag>Daubenton</BatTag>
+    <BatTag>Daub</BatTag>
+    <BatTag>MD</BatTag>
+    <Call>
+      <fStart>50.3-109.7</fStart>
+      <fEnd>22.4-38.6</fEnd>
+      <fPeak>41.8-56.5</fPeak>
+      <Interval>27.5-186.0</Interval>
+      <Duration>1.4-5.8</Duration>
+      <Function>el</Function>
+      <Type>fm r-sig</Type>
+    </Call>
+  </Bat>
+  <Bat Name="Natterers">
+    <BatGenus>Myotis</BatGenus>
+    <BatSpecies>nattereri</BatSpecies>
+    <BatCommonName>Natterer's</BatCommonName>
+    <BatTag>Natterers</BatTag>
+    <BatTag>Natterer's</BatTag>
+    <BatTag>Natt</BatTag>
+    <BatTag>MN</BatTag>
+    <Call>
+      <fStart>72.1-145.3</fStart>
+      <fEnd>14.9-29.0</fEnd>
+      <fPeak>36.0-66.8</fPeak>
+      <Interval>31.6-188.9</Interval>
+      <Duration>1.9-7.1</Duration>
+      <Function>el</Function>
+      <Type>fm2</Type>
+    </Call>
+  </Bat>
+<Bat Name="Serotine">
+    <BatGenus>Eptesicus</BatGenus>
+    <BatSpecies>serotinus</BatSpecies>
+    <BatCommonName>Serotine</BatCommonName>
+    <BatTag>Serotine</BatTag>
+  <BatTag>ES</BatTag>
+  <Call>
+    <fStart>39.1-78.0</fStart>
+    <fEnd>22.4-32.0</fEnd>
+    <fPeak>24.1-32.2</fPeak>
+    <Interval>65.1-159.0</Interval>
+    <Duration>1.6-12.3</Duration>
+    <Function>el</Function>
+    <Type>fm-qCF/qCF</Type>
+  </Call>
+  </Bat>
+<Bat Name="BLE">
+    <BatGenus>Plecotus</BatGenus>
+    <BatSpecies>auritus</BatSpecies>
+    <BatCommonName>Brown Longeared Bat</BatCommonName>
+    <BatTag>BLE</BatTag>
+    <BatTag>Brown Longear</BatTag>
+  <Call>
+    <fStart>31.9-63.8</fStart>
+    <fEnd>19.1-30.9</fEnd>
+    <fPeak>25.5-42.1</fPeak>
+    <Interval>21.4-172.4</Interval>
+    <Duration>1.2-3.8</Duration>
+    <Function>el</Function>
+    <Type>fm2</Type>
+  </Call>
+  </Bat>
+  <Bat Name="GLE">
+    <BatGenus>Plecotus</BatGenus>
+    <BatSpecies>austriacus</BatSpecies>
+    <BatCommonName>Grey Longeared Bat</BatCommonName>
+    <BatTag>GLE</BatTag>
+    <BatTag>Grey Longear</BatTag>
+    <Call>
+      <fStart>35.4-55.9</fStart>
+      <fEnd>17.0-31.7</fEnd>
+      <fPeak>26.3-60.5</fPeak>
+      <Interval>35.8-194.0</Interval>
+      <Duration>1.4-7.0</Duration>
+      <Function>el</Function>
+      <Type>fm2-fm2.5</Type>
+    </Call>
+  </Bat>
+  <Bat Name="Uncertain Longeared">
+    <BatGenus>Plecotus</BatGenus>
+    <BatSpecies>sp.</BatSpecies>
+    <BatCommonName>Long Eared</BatCommonName>
+    <BatTag>Longeared</BatTag>
+    <BatTag>Long Eared</BatTag>
+    <BatTag>Long Ear</BatTag>
+    <BatTag>LE</BatTag>
+    <Call>
+      <fStart>31-64</fStart>
+      <fEnd>17-32</fEnd>
+      <fPeak>25-61</fPeak>
+      <Interval>21-194</Interval>
+      <Duration>1-7</Duration>
+      <Function>el</Function>
+      <Type>fm2</Type>
+    </Call>
+  </Bat>
+  <Bat Name="Barbastelle">
+    <BatGenus>Barbastelle</BatGenus>
+    <BatSpecies>barbastellus</BatSpecies>
+    <BatCommonName>Barbastelle</BatCommonName>
+    <BatTab>Barbastelle</BatTab>
+    <BatTag>Barb</BatTag>
+    <BatTag>BB</BatTag>
+    <Call>
+      <fStart>36.8-47.3</fStart>
+      <fEnd>25.4-31.9</fEnd>
+      <fPeak>33.5-43.8</fPeak>
+      <Interval>43.2-144.9</Interval>
+      <Duration>2.0-6.6</Duration>
+      <Function>el</Function>
+      <Type>qCF-fm</Type>
+    </Call>
+    <Call>
+      <fStart>35.2-49.0</fStart>
+      <fEnd>23.8-36.8</fEnd>
+      <fPeak>29.2-44.7</fPeak>
+      <Interval>41.8-229.0</Interval>
+      <Duration>2.5-5.1</Duration>
+      <Function>el</Function>
+      <Type>fm1/fm2</Type>
+    </Call>
+  </Bat>
+<Bat Name="MyotisSp">
+    <BatGenus>Myotis</BatGenus>
+    <BatSpecies>sp.</BatSpecies>
+    <BatCommonName>unknown Myotis</BatCommonName>
+    <BatTag>Myotis</BatTag>
+    <BatTag>Myotis sp.</BatTag>
+  <BatTag>Myotis sp</BatTag>
+    <BatTag>Myotis ?</BatTag>
+  </Bat>
+<Bat Name="P50">
+    <BatGenus>Pipistrellus</BatGenus>
+    <BatSpecies>sp.</BatSpecies>
+    <BatCommonName>P50</BatCommonName>
+    <BatTag>P50</BatTag>
+    <BatTag>Pip?</BatTag>
+    <BatTag>Pip ?</BatTag>
+  </Bat>
+<Bat Name="Nathusius">
+    <BatGenus>Pipistrellus</BatGenus>
+    <BatSpecies>nathusii</BatSpecies>
+    <BatCommonName>Nathusius' Pipistrelle</BatCommonName>
+    <BatTag>Nathusius</BatTag>
+    <BatTag>Nathusius'</BatTag>
+    <BatTag>Nath</BatTag>
+    <BatTag>Naths</BatTag>
+  <BatTag>NP</BatTag>
+  <Call>
+    <fStart>40.0-66.8</fStart>
+    <fEnd>35.2-38.9</fEnd>
+    <fPeak>35.5-41.9</fPeak>
+    <Interval>88.6-237.0</Interval>
+    <Duration>3.0-7.9</Duration>
+    <Function>el</Function>
+    <Type>fm-qCF/qCF</Type>
+  </Call>
+  </Bat>
+<Bat Name="Savis">
+  <BatGenus>Hypsugo</BatGenus>
+  <BatSpecies>savii</BatSpecies>
+  <BatCommonName>Savi's</BatCommonName>
+  <BatTag>Savis</BatTag>
+</Bat>
+  <Bat Name="GHS">
+    <BatGenus>Rhinolophu</BatGenus>
+    <BatSpecies>ferrumequinum</BatSpecies>
+    <BatCommonName>Greater Horseshoe Bat</BatCommonName>
+    <BatTag>GHB</BatTag>
+    <BatTag>GHS</BatTag>
+    <BatTag>Greater HS</BatTag>
+    <BatTag>Greater Horseshoe</BatTag>
+    <BatTag>Rh Fe</BatTag>
+    <BatTag>rhfe</BatTag>
+    <Call>
+      <fStart>62.2-78.5</fStart>
+      <fEnd>58.1-80.9</fEnd>
+      <fPeak>81.3</fPeak>
+      <Interval>24.9-186.6</Interval>
+      <Duration>16.3-73.8</Duration>
+      <Function>el</Function>
+      <Type>cf/cf-fm/fm-cf-fm</Type>
+    </Call>
+  </Bat>
+  <Bat Name="LHS">
+    <BatGenus>Rhinolophus</BatGenus>
+    <BatSpecies>hipposideros</BatSpecies>
+    <BatCommonName>Lesser Horseshoe Bat</BatCommonName>
+    <BatTag>LHB</BatTag>
+    <BatTag>LHS</BatTag>
+    <BatTag>Lesser HS</BatTag>
+    <BatTag>Lesser Horseshoe</BatTag>
+    <BatTag>Rh hippo</BatTag>
+    <Call>
+      <fStart>92.3-107.8</fStart>
+      <fEnd>83.4-110.3</fEnd>
+      <fPeak>107.3-114</fPeak>
+      <Interval>14.1-113.7</Interval>
+      <Duration>11.9-61.4</Duration>
+      <Function>el</Function>
+      <Type>CF/CF-fm/fm-CF-fm</Type>
+    </Call>
+  </Bat>
+  <Bat Name="Brandts">
+    <BatGenus>Myotis</BatGenus>
+    <BatSpecies>brandtii</BatSpecies>
+    <BatCommonName>Brandt's Bat</BatCommonName>
+    <BatTag>Brandts</BatTag>
+    <BatTag>Brandts</BatTag>
+    <BatTag>MB</BatTag>
+    <Call>
+      <fStart>59.0-121.9</fStart>
+      <fEnd>25.8-41.8</fEnd>
+      <fPeak>38.0-78.4</fPeak>
+      <Interval>56.7-161</Interval>
+      <Duration>1.5-5.0</Duration>
+      <Function>el</Function>
+      <Type>fm1/fm1.2</Type>
+    </Call>
+  </Bat>
+  <Bat Name="Whiskered">
+    <BatGenus>Myotis</BatGenus>
+    <BatSpecies>mystacinus</BatSpecies>
+    <BatCommonName>Whiskered Bat</BatCommonName>
+    <BatTag>Whiskered</BatTag>
+    <BatTag>mystacinus</BatTag>
+    <BatTag>myst</BatTag>
+    <BatTag>WB</BatTag>
+    <Call>
+      <fStart>69.9-101.8</fStart>
+      <fEnd>25.6-43.3</fEnd>
+      <fPeak>39.2-68.5</fPeak>
+      <Interval>66.7-251.5</Interval>
+      <Duration>3.1-6.4</Duration>
+      <Function>el</Function>
+      <Type>fm1/fm1.1</Type>
+    </Call>
+  </Bat>
+  <Bat Name="Alcathoe">
+    <BatGenus>Myotis</BatGenus>
+    <BatSpecies>alcathoe</BatSpecies>
+    <BatCommonName>Alcathoe Bat</BatCommonName>
+    <BatTag>alcathoe</BatTag>
+    <BatTag>MA</BatTag>
+    <Call>
+      <fStart>111.0-120.0</fStart>
+      <fEnd>40.0-50.0</fEnd>
+      <fPeak>42.9-61.9</fPeak>
+      <Interval>47.0-99.0</Interval>
+      <Duration>0.0-4.0</Duration>
+      <Function>el</Function>
+      <Type>fm2</Type>
+    </Call>
+  </Bat>
+  <Bat Name="Bechsteins">
+    <BatGenus>Myotis</BatGenus>
+    <BatSpecies>bechsteinii</BatSpecies>
+    <BatCommonName>Bechstein's Bat</BatCommonName>
+    <BatTag>Bechsteins</BatTag>
+    <BatTag>Bechstein's</BatTag>
+    <BatTag>MB</BatTag>
+    <Call>
+      <fStart>65.0-130.9</fStart>
+      <fEnd>28.0-40.4</fEnd>
+      <fPeak>45.1-55.9</fPeak>
+      <Interval>79.4-188.9</Interval>
+      <Duration>1.6-3.5</Duration>
+      <Function>el</Function>
+      <Type>fm1</Type>
+    </Call>
+  </Bat>
+  <Bat Name="GME">
+    <BatGenus>Myotis</BatGenus>
+    <BatSpecies>myotis</BatSpecies>
+    <BatCommonName>Greater Mouse-eared bat</BatCommonName>
+    <BatTag>Myotis myotis</BatTag>
+    <BatTag>GME</BatTag>
+    <Call>
+      <fStart>52.2-104.5</fStart>
+      <fEnd>24.1-37.0</fEnd>
+      <fPeak>31.5-53.9</fPeak>
+      <Interval>46.6-159.1</Interval>
+      <Duration>2.5-7.1</Duration>
+      <Function>el</Function>
+      <Type>fm2</Type>
+    </Call>
+  </Bat>
+</BatLibrary>

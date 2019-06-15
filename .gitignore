@@ -1,0 +1,17 @@
+
+Dist
+bin
+Properties
+/BatRecordingManager/InnoPublish/*.exe
+/.vs
+/BatRecordingManager/obj
+/BatRecordingManager/bin
+/BatRecordingManager/BRMInstallDB
+/Mm.ExportableDataGrid/obj
+/Mm.ExportableDataGrid/bin
+/packages
+/DataVirtualizationLibrary/obj
+/DataVirtualizationLibrary/bin
+/BatRecordingManager/Log.txt
+*.exe
+

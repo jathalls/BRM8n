@@ -1,0 +1,246 @@
+﻿<UserControl x:Class="BatRecordingManager.RecordingSessionDetailControl"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:BatRecordingManager"
+        xmlns:xctk="http://schemas.xceed.com/wpf/xaml/toolkit"
+        mc:Ignorable="d"
+             Width="800" Height="500">
+
+    <Grid Background="{StaticResource WindowBackgroundBrush}">
+
+        <Grid.RowDefinitions>
+
+            <RowDefinition Height="208*" />
+        </Grid.RowDefinitions>
+
+        <Grid
+            x:Name="MainPanelGrid"
+            Grid.Row="0">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="140" />
+                <ColumnDefinition Width="119*" />
+            </Grid.ColumnDefinitions>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="25" />
+                <RowDefinition Height="25" />
+                <RowDefinition Height="25" />
+                <RowDefinition Height="25" />
+                <RowDefinition Height="25" />
+                <RowDefinition Height="25" />
+                <RowDefinition Height="25" />
+                <RowDefinition Height="25" />
+                <RowDefinition Height="25" />
+                <RowDefinition Height="25" />
+                <RowDefinition Height="25*" />
+            </Grid.RowDefinitions>
+            <Label
+                Style="{StaticResource SimpleLabel}"
+                Grid.Row="0" Content="Session Tag:-" />
+            <TextBox
+                Background="{StaticResource WindowBackgroundBrush}"
+                x:Name="SessionTagTextBlock"
+                Grid.Row="0" Grid.Column="1"
+                IsReadOnly="True"
+                Style="{StaticResource SimpleTextBox}"
+                Text="" />
+
+            <Label
+                Style="{StaticResource SimpleLabel}"
+                Grid.Row="1" Content="Session Start:-" />
+            <StackPanel Orientation="Horizontal" Grid.Row="1" Grid.Column="1">
+                <xctk:DateTimePicker
+                    x:Name="SessionStartDateTime"
+                    Background="{StaticResource WindowBackgroundBrushLight}"
+                    MinWidth="200"
+                    AutoCloseCalendar="True"
+                    IsReadOnly="true"
+                    CultureInfo="en-GB"
+                    Minimum="01/01/1950 01:01:00" />
+                <Label
+                    Content="End:-  "
+                    Margin="10,0,0,0"
+                    Style="{StaticResource SimpleLabel}" />
+                <xctk:DateTimePicker
+                    x:Name="SessionEndDateTime"
+                    MinWidth="200"
+                    Background="{StaticResource WindowBackgroundBrushLight}"
+                    AutoCloseCalendar="True"
+                    IsReadOnly="true"
+                    CultureInfo="en-GB"
+                    Minimum="01/01/1950 01:01:00" />
+                <!--<TextBox
+                Background="{StaticResource WindowBackgroundBrush}"
+                x:Name="SessionDatePicker"
+                MinWidth="150"
+                IsReadOnly="True"
+                    Margin="0,0,5,0"
+                    Style="{StaticResource SimpleTextBox}"
+                Grid.Row="1" Grid.Column="1" />
+
+                <Label Content="Start Time:-" Style="{StaticResource SimpleLabel}" />
+
+                <TextBox
+                Background="{StaticResource WindowBackgroundBrush}"
+                x:Name="StartTimePicker"
+                    Margin="5,0"
+                    IsReadOnly="True"
+                    Style="{StaticResource SimpleTextBox}"
+                MinWidth="100" />
+
+                <Label Content="End Time:-" Style="{StaticResource SimpleLabel}" />
+
+                <TextBox
+                    Background="{StaticResource WindowBackgroundBrush}"
+                    x:Name="EndTimePicker"
+                    Style="{StaticResource SimpleTextBox}"
+                    Margin="5,0"
+                    IsReadOnly="True"
+                    MinWidth="100" />-->
+            </StackPanel>
+
+            <Label Grid.Row="2" Content="Folder:- "   Style="{StaticResource SimpleLabel}" />
+
+            <StackPanel Grid.Row="2" Grid.Column="1" Orientation="Horizontal">
+
+                <TextBox
+                    x:Name="FolderTextBox"
+                    Style="{StaticResource SimpleTextBox}"
+                    Background="{StaticResource WindowBackgroundBrush}"
+
+                    HorizontalAlignment="Stretch"
+                    IsReadOnly="True"
+                    Text="{Binding Path=recordingSession.OriginalFilePath}" MinWidth="200" />
+            </StackPanel>
+
+            <Label
+                Style="{StaticResource SimpleLabel}"
+                Grid.Row="3"
+                Content="Recording Device:-" />
+
+            <TextBox
+                Style="{StaticResource SimpleTextBox}"
+                x:Name="EquipmentComboBox"
+                Grid.Row="3"
+                Grid.Column="1"
+                IsReadOnly="True"
+                Background="{StaticResource WindowBackgroundBrush}" />
+
+            <Label
+                Grid.Row="4" Content="Microphone" Style="{StaticResource SimpleLabel}" />
+
+            <TextBox
+                Style="{StaticResource SimpleTextBox}"
+                x:Name="MicrophoneComboBox"
+                Grid.Row="4" Grid.Column="1"
+                IsReadOnly="True"
+                Background="{StaticResource WindowBackgroundBrush}" />
+
+            <Label
+                Style="{StaticResource SimpleLabel}"
+                Grid.Row="5" Content="Operator:-" />
+
+            <TextBox
+                Style="{StaticResource SimpleTextBox}"
+                x:Name="OperatorComboBox"
+                Background="{StaticResource WindowBackgroundBrush}"
+
+                Grid.Row="5" Grid.Column="1"
+                IsReadOnly="True" />
+
+            <Label
+                Style="{StaticResource SimpleLabel}"
+                Grid.Row="6" Content="Location:-" />
+            <TextBox
+                Style="{StaticResource SimpleTextBox}"
+                x:Name="LocationComboBox"
+                Background="{StaticResource WindowBackgroundBrush}"
+                Grid.Row="6"
+                IsReadOnly="True"
+                Grid.Column="1" />
+
+            <Label
+                Style="{StaticResource SimpleLabel}"
+                Grid.Row="7" Content="GPS Co-ordinates:-" />
+
+            <StackPanel
+                Orientation="Horizontal"
+                Grid.Row="7"
+                Grid.Column="1">
+                <Label Content=" Latitude:-" Style="{StaticResource SimpleLabel}" />
+                <TextBox
+                    Background="{StaticResource WindowBackgroundBrush}"
+                    x:Name="GPSLatitudeTextBox" Width="120"  Style="{StaticResource SimpleTextBox}"
+                    ToolTip="Double-Click to display location map"
+                    IsReadOnly="True"
+                    MouseDoubleClick="GPSLatitudeTextBox_MouseDoubleClick" />
+                <Label Content=" Longitude:-" Style="{StaticResource SimpleLabel}" />
+                
+                <TextBox
+                    Background="{StaticResource WindowBackgroundBrush}"
+                    x:Name="GPSLongitudeTextBox" Width="120" Style="{StaticResource SimpleTextBox}"
+                    ToolTip="Double-Click to display location map"
+                    IsReadOnly="True"
+                    MouseDoubleClick="GPSLatitudeTextBox_MouseDoubleClick" />
+                <Label Content="GridRef:-" Style="{StaticResource SimpleLabel}" Margin="5,0"/>
+                <TextBox
+                    Background="{StaticResource WindowBackgroundBrush}"
+                    x:Name="GridRefTextBox"
+                    Width="100"
+                    Style="{StaticResource SimpleTextBox}"
+                    IsReadOnly="True"
+                    />
+                <Button
+                    x:Name="GPSMapButton"
+                    Style="{StaticResource SimpleButton}"
+                    ToolTip="{Binding Path=GridRef}"
+                    Content="Map" Click="GPSMapButton_Click" />
+            </StackPanel>
+
+            <Label
+                Grid.Row="8" Content="Weather" Style="{StaticResource SimpleLabel}" />
+            <TextBox
+                Grid.Row="8"
+                Grid.Column="1"
+                IsReadOnly="False"
+                Style="{StaticResource SimpleTextBox}"
+                Background="{StaticResource WindowBackgroundBrush}"
+                x:Name="weatherTextBox" />
+
+            <Label
+                Grid.Row="9" Content="Temperature:-" Style="{StaticResource SimpleLabel}" />
+            <StackPanel
+                Grid.Row="9" Grid.Column="10" Orientation="Horizontal">
+                <TextBox
+
+                    x:Name="TemperatureIntegerUpDown"
+
+                    Background="{StaticResource WindowBackgroundBrush}"
+                    MinWidth="100" HorizontalAlignment="Left" />
+                <Label
+                    Content="Sunset:-"
+                    Margin="10,0,0,0"
+                    Style="{StaticResource SimpleLabel}" />
+                <TextBox
+                Background="{StaticResource WindowBackgroundBrush}"
+                x:Name="SunsetTimePicker"
+                    Margin="5,0"
+                MinWidth="100" />
+            </StackPanel>
+
+            <Label
+                Grid.Row="10" Content="Notes:-" Style="{StaticResource SimpleLabel}" />
+
+            <ScrollViewer Grid.Row="10" Grid.Column="1">
+                <TextBox
+                		x:Name="SessionNotesRichtextBox"
+                        Style="{StaticResource SimpleTextBox}"
+                        IsReadOnly="True"
+                        TextWrapping="Wrap"
+
+                        VerticalScrollBarVisibility="Auto" />
+            </ScrollViewer>
+        </Grid>
+    </Grid>
+</UserControl>

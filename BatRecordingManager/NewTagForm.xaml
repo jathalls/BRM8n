@@ -1,0 +1,43 @@
+﻿<Window x:Class="BatRecordingManager.NewTagForm"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:BatRecordingManager"
+        mc:Ignorable="d"
+        Title="NewTagForm" Height="100" Width="300">
+
+    <Grid Background="{StaticResource WindowBackgroundBrush}">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="44*" />
+            <RowDefinition Height="25" />
+        </Grid.RowDefinitions>
+        <StackPanel
+            Orientation="Horizontal"
+            Grid.Row="0"
+
+            VerticalAlignment="Center"
+            HorizontalAlignment="Stretch">
+            <Label Content="New Tag:- " />
+        <TextBox
+            x:Name="TagTextBox"
+            Text=""
+            Style="{StaticResource SimpleTextBox}"
+            Background="{StaticResource WindowBackgroundBrush}"
+            Height="23" MinWidth="200" HorizontalContentAlignment="Stretch" />
+        </StackPanel>
+        <StackPanel
+            Orientation="Horizontal"
+            Background="{StaticResource BlueGradientBackground}"
+            Grid.Row="1">
+            <Button
+                Style="{StaticResource SimpleButton}"
+                Width="50"
+                Content="OK" Click="Button_Click" />
+            <Button
+                Style="{StaticResource SimpleButton}"
+                Width="50"
+                Content="CANCEL" IsCancel="True" />
+        </StackPanel>
+    </Grid>
+</Window>

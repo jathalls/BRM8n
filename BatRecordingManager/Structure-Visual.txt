@@ -1,0 +1,425 @@
+﻿MainWindow.xaml
+	<Menu>MainMenu
+	<Grid>
+		<local:ImportControl>importControl
+		<local:BatListControl>batListControl
+			<local:BatDetailControl>batDetailControl
+				<local:BatCallControl>batCallControl
+		<local:RecordingSessionListDetailControl>recordingSessionListControl
+			<local:RecordingSessionEditableControl>recordingSessionControl
+			<local:RecordingsDetailListControl>RecordingsListControl
+		<local:BatRecordingsListDetailControl>BatRecordingsListDetailControl
+			<local:SessionsAndRecordingsControl>sessionsAndRecordings
+
+ImportControl.xaml
+	<Grid>TextBoxGrid
+		<StackPanel>{various buttons}
+		<ScrollViewer>stackPanelScroller
+			<StackPanel>dpMultiWindowPanel {displays list of opened text files}
+		<ScrollViewer>OutputWindowScrollViewer
+			<TextBox>tbkOutputText {displays the compiled log file text}
+			
+BatListControl.xaml {displays the reference list of known bats and their details}
+	<Grid>BatListGrid
+		<StackPanel> {col 0 - vertical}
+			<StackPanel> {horizontal of ADD EDIT DEL buttons}
+			<ScrollViewer>
+				<DataGrid>BatsDataGrid {with columns for Name and LatinName}
+		<local:BatDetailControl>batDetailControl {Col 2}
+		<GridSplitter> {vertical separating the list and the details}
+
+BatDetailControl.xaml
+	<Grid> {containg labels and text boxes for detail information}
+		<Label>BatCallLabel {column 0 Row 4}
+			<StackPanel> {vertical}
+				<Label>
+				<StackPanel> {horizontal}
+					<TextBox>CallIndexTextBox
+					<Label>
+					<TextBox>CallCountTextBox
+				<StackPanel> {horizontal}
+					<Button>PrevCallButton
+					<Button>NextCallButton
+		<StackPanel> {vertical col 1 row 3}
+			<Button>s {ADD, EDIT, DEL Tags buttons}
+			<ListView>BatTagsListView {Displays BatTag1}
+		<local:BatCallControl>batCallControl { col 1 row 4 }
+
+BatCallControl.xaml
+	<Grid> {9 rows, 4 columns}
+		<Label>s { col 0 naming fields}
+		<xctk:DoubleUpDown> { for values for call parameters}
+		<TextBox>CallTypeTextBox {col 1-3 row 3}
+		<TextBox>CallFunctionTextBox {col 1-3 row 6}
+		<Button>ShowImageButton {col1 row 7}
+		<StackPanel> { col 1-3 row 8 vertical}
+			<TextBox>CallTypeNotesBox
+
+RecordingSessionListDetailControl.xaml
+	<Grid> {3 columns 3 rows}
+		<GridSplitter> {col 1 row 0-2 separates the list from the details}
+		<StackPanel> { horizontal col 0 row 0 left hand list pane}
+			<Label>
+			<Button>s { ADD, EDIT, DEL, EXPORT buttons}
+		<Grid> { col 0 row 1 , 2 rows 1 column}
+			<DataGrid>RecordingSessionListView { col 0 row 1 , data columns: Tag, Location, Date, Time}
+		<Grid> { col 2 row 0-2; 3 rows 1 column, right pane full height of the control}
+			<GridSplitter> {col 0 row 1}
+			<ScrollViewer> { col 0 row 0}
+				<StackPanel> { vertical }
+					<local:RecordingSessionControl>recordingSessionControl {displays the session details}
+					<StackPanel>SessionSummaryStackPanel { vertical ; populated by code with the session summary info}
+			<local:RecordingsDetailListControl>RecordingsListControl { col 0 row 2 displays the individual recordings for the session}
+
+RecordingSessionEditableControl.xaml
+	<Grid 1 column 2 rows>
+		<Label> { col 0 row 0 }
+		<Grid>MainPanelGrid { col 0 row 1; 2 columns 11 rows }
+			{labels and data controls for entering session details}
+
+RecordingsDetailListControl.xaml
+	<Grid> { 1 column 2 rows}
+		<Border> {col 0 row 0}
+			<StackPanel> {horizontal}
+				{ label and buttons ADD, EDIT, DEL, OPEN, Calls}
+		<ListBox>RecordingsListView { col0 row 1}
+			<ListBox.ItemTemplate>
+				<DataTemplate>
+					<StackPanel>RecordingsStackPanel {vertical}
+						<Label>RecordingNameLabel
+						<Label>GPSLabel
+						<Label>RecordingNotesLabel
+						<Border>
+							<StackPanel> {vertical}
+								<TextBlock>RecordingPassSummaryListView
+								<ListView>LabelledSegmentListView
+									<ListView.ItemTemplate>
+										<DataTemplate>
+											<Border>
+												<StackPanel> {vertical}
+													<TextBlock>LabelledSegmentTextBlock
+													{Optional local:BatCallControl not implemented}
+			
+BatRecordingsListDetailControl.xaml
+	<Grid> { 3 columns 3 rows}
+	<StackPanel> {horizontal col 0 row 0}
+		{for future use}
+	<DataGrid>BatStatsDataGrid {col 0 row 1}
+		<DatGrid.Columns> {Name, Genus, Species, numSessions, numRecordings, numPasses}
+	<GridSplitter> {col 1 row 0}
+	<local:SessionsAndRecordingsControl>sessionsAndRecordings { col 1 row 0-2 right pane display of recordings details}
+
+SessionsAndRecordingsControl.xaml
+	<Grid> { 1 column 3 rows}
+		<GridSplitter> {col 0 row 1}
+		<DataGrid>SessionsDataGrid {col 0 row 0 upper pane}
+			<DataGrid.Columns> {Tag, Location, Date, Time}
+		<DataGrid>RecordingsDataGrid { col 0 row 2 }
+			<DataGrid.Columns> { File, start, segments}
+
+			############################################################################################################
+ImportControl
+	ImportFolderButton_Click - loads text files from a folder into the preview screen
+		new FileBrowser()
+		fileBrowser.SelectRootFolder()
+			set folderPath to current directory
+			setup FolderBrower Dialog
+			show FolderBrowser Dialog
+			if OK
+			- set folderPath to selected path
+			- set root folder to selected path
+			- set wavFileFolders to GenerateFolderList(rootFolder);
+				GetWavFileFolder(rootFolder,ref wavFolders)
+					recursively scan directory tree adding folders with (.wav and .txt) files to the collection
+				return(wavFolders)
+			return(rootFolder)
+		enable NextFolder button
+		click next folder button
+	NextFolderButton_Click - loads text files from the next nested folder into the preview screen
+		if folder list is not empty
+		- clear dpMultiWindowPanel
+		- clear tbkOutputText
+		- fileBrowser.PopWavFolder()
+			if the wavFileFolders list is not empty
+			- grab folder[0]
+			- remove it from the list
+			- clear TextFileNames
+			- clear outputLogFileName
+			- return the folder
+		- fileBrowser.ProcessFolder(folder)
+			folderPath=workingFolder
+			if the folder exists
+			- folderPath=folder
+			- clear TextFileNames
+			- get list of .manifest files
+			- for each .manifest file, read/add it into TextFileNames
+			- if TextFileNames only contains 1 file
+			- - folderPath=ExtractCommentFilesFromLogFile(folder) [locking the function to prevent recursion]
+			else
+			- set folderPath to null
+			WorkingFolder=folderPath
+			return(folderPath)
+		- enable SortFile and Process Buttons
+		- set/clear SelectFoldersButton
+		- set/clear NextFolderButton
+		else
+		- disable SortFiles, ProcessFiles, SelectFolder, NextFolder buttons
+	ProcessFilesButton_Click - adds data from the current text or wav files into the database
+		ProcessFiles()
+			if(not processing wav files)
+			- create/clear TotalBatsFound
+			- if(sessionForFolder exists)
+			- - write sessionForFolder to tbkOutputText
+			- - delete all existing recordings for this session
+			- foreach filename in fileBrowser.TextFileNames
+			- - if filename is not equal to HeaderFileName
+			- - - fileProcessor.ProcessFile(filename)
+			- - - TotalBatsFound=BatsConcatenate(TotalBatsFound,fileProcessor.BatsFound)
+			- write delimiter to tbkOutputText
+			- if TotalBatsFound is not empty
+			- - write all batstats to tbkOutputText
+			- if there is output text SaveOutputFile()
+			else [we are processing wav files]
+			- ProcessWavMetadata() ##TODO##
+		SetFolderIconTick()
+	SelectFoldersButton_Click
+	SortFileOrderButton_Click
+	UpdateRecordingButton_Click
+	ImportWavFilesButtonClick - loads wav files from a folder into the preview screen
+
+	miAnalyseFilesClick
+		new AnalyseAndImportClass
+			selectFolder()
+				new FolderSelectionDialog()
+				folderSelector.ShowDialog()
+					folderPath=folderSelector.First()
+			GetFileList()
+				listOfWavFiles=Directory.enumerate wav files
+				listOfTxtFiles=Directory.Enumerate text files
+				wavFileList=wav files without text files
+			GetSessionTag()
+				tagPattern=(alnum)*[-_](alnum)+[-_]20yymmdd
+				foreach(file in wavfilelist) if contains tagPattern, sessionTag=match
+
+			CreateSession()
+				TBD
+		analyseAndImport.AnalyseNextFile()
+			SaveRecording()
+				TBD
+			file=GetNextFile()
+				Remove fileToAnalyse from wavFileList
+				fileToAnlyse=first file in wavFileList that contains sessiontag
+				return(fileToAnalyse)
+			Analyse(file)
+			return(sessionTag)
+		analyseAndImport.Close()
+
+
+		BatRecordingListDetailControl.BatListReportButtonClick
+			(WaitCursor)
+				Foreach selected bat
+					ReportBatStatsList.Add(bat statistics)
+				OR ReportBatStatsGrid.AddRange(BatStatisiticsList)
+				ReportSessionList=sessionsAndRecordings.getSelectedSessions()
+				ReportRecordingList=sesssAndrecordings.GetSelectedRecordings()
+				ReportWindow.SetReportData(ReportBatStatsList,ReportSessionList,ReportRecordingList)
+			reportWindow.ShowDialog()
+
+		RecordingSessionListDetailControl.ReportSessionDataButton_Click
+			(WaitCursor)
+				Foreach selected session
+					StatsForAllSessions.AddRange( session.getStats())
+					ReportSessionList.Add(session)
+				OR ditto for all sessions
+				StatsForAllSessions=CondenseStatsList(StatsForAllSessions)
+				Foreach batStats in StatsForAllSessions
+					bstat=DBAccess.GetBatStatsisticsForBat(batStats.bat)
+					ReportBatStatsList.Add(bstat)
+					recordingsToReport=allRecordings for listed sessions
+					Foreach recording in recordingsToreport
+						ReportRecordingList.Add recording
+				reportWindow.setReportData(ReportBatStatsList,ReportSessionList,reportRecordingList)
+			reportWindow.ShowDialog()
+
+
+		
+StoredImage image conversions and use
+---------------------------------------
+
+StoredImage(BitmapImage image) {BitmapImage : BitmapSource}
+BitmapImage StoredImage.image; (canbe displayed in a WPF)
+
+StoredImage.CreateFromBinary(BinaryData blob) {BinaryData comes from dB}
+	ConvertBinaryPngToBitmapImage(BinaryData blob...)
+		Binary rawImage
+		rawImage.ToArray
+		MemoryStream(Array)
+		PngDecoder(memoryStream)
+			ConvertBitmapSourceToBitmapImage(decoder.Frame[0] {as a BitmapSource})
+	ConvertBinaryToBitmapImage(BinaryData blob)
+
+SetBinaryData(BinaryData blob)
+	ConvertBinaryPngToBitmapImage(blob...)
+
+public static BitmapImage ConvertBitmapSourceToBitmapImage(BitmapSource bmps)
+
+        {
+            BitmapImage bmi = new BitmapImage();
+            if (bmps == null) return (null);
+            BmpBitmapEncoder enc = new BmpBitmapEncoder();
+            using (MemoryStream ms = new MemoryStream())
+            {
+                enc.Frames.Add(BitmapFrame.Create(bmps));
+                enc.Save(ms);
+                bmi.BeginInit();
+                bmi.CacheOption = BitmapCacheOption.OnLoad;
+                bmi.StreamSource = new MemoryStream(ms.ToArray());
+                bmi.EndInit();
+                bmi.Freeze();
+
+            }
+            return (bmi);
+        }
+
+===================================================================================
+RecordingForm.xaml
+	<BatAndCallImageScrollerControl "RecordingFormImageScroller">
+	<ListView "LabelledSegmentsListView" {Binding path=LabelledSegmentsList}
+		SelectionChanged=LabelledSegmentsListView_SelectionChanged
+		<ItemContainerStyle:GotKeyboardFocus=OnListViewItemFocussed
+			<TextBox "FormattedLabelledSegmentTextBox"
+				<Style:GotKeyboardFocus=OnTextBoxFocussed>
+				/TextBox>
+			/ItemContainerStyle>
+			<Item:Button "ButtonSaveSegment"
+				Click=ButtonSaveSegment_Click
+				/Item>
+		/ListView>
+
+RecordingForm.cs
+	RecordingFormImageScroller.ImageScrollerDisplaysBatImages=false;
+	RecordingFormImageScroller.ImageDeleted+=RecordingFormImageScroller_ImageDeleted;
+		ImageDeletedEventArgs contain an imageID
+		finds associated segment and calls DBAccess.DeleteImageForSegment()
+
+RecordingForm:LabelledSegmentListView_SelectionChanged()
+	using WaitCursor
+		RecordingFormImageScroller.ReadOnly=false;
+		RecordigFormImageScroller.CanAdd=true;
+		RecordingFormImageScroller.SelectedCallIndex=LabelledSegmentsListView.SelectedIndex
+			(i.e. makes the images for this segment visible)
+
+BatAndCallImageScrollerControl : ImageScrollerControl.xaml
+	<Image "Currentimage">
+	<TextBox "DescriptionTextBox">
+	<TextBoc "CaptiontextBox">
+	<Button "AddImageButton"
+		AddImageButton_Click()>
+
+BatAndCallImageScrollerControl.cs
+	base.ButtonPressed+=BatAndCallImageScroller_ButtonPressed()
+		if(ButtonPressedEventArgs.Button.Contents==ADD)
+			AddImage()
+				selects appropriate caption and description
+				dialog=new ImageDialog(caption,description)
+				dialog.ShowDialog()
+				if(result==true)
+					dialog.GetStoredImage()
+					add to BatImages or to CallImageList at ListOfCallImageLists[SelectedCallIndex]i
+
+ImageDialog.xaml
+	<ImageDialogControl "imageDialogControl">
+ImageDialog.cs
+	imageDialogControl.OKButtonClicked+=ImageDialogControl_OKButtonClicked()
+		make this Visible
+		set DialogResult=true
+		close the dialog
+
+ImageDialogControl.xaml
+	<Button "PasteImageButton"
+		PasteImageButton_Click()>
+	<Canvas "displayImageCanvas"
+		<Background
+			<ImageBrush Source={Binding Path=image}>
+	<Button "OKButton"
+		OKButton_Click()>
+
+ImageDialogControl.cs
+	DataContext=storedImage
+
+	OKButton_Click()
+		OnOKBUttonClicked event with empty event args
+
+=============================================================================================================
+-------------------------------------------------------------------------------------------------------------
+=============================================================================================================
+
+DBAccess:-
+CopyXMLDataToDatabase
+	XElement.Load(xmlFile).Descendants("Bat"); extracts all bat definitions
+	foreach(bat)
+		MergeXMLBatToDB(bat)
+
+MergXMLBatToDB
+	ConvertXMLBat
+		create a new bat using the XML data ("Name","BatGenus","BatSpecies")
+		extract the tag defiitions from the XML data and add them to the bat
+		XML definition of BatCommonName.First overwrites created bat.Name
+		DBAccess.GetMatchingBat - returns a matching bat from the database if it exists
+		DBAccess.MergeBat(newBat) - merges the newly created bat into the database, returning the 
+			bat that is now in the databse whether new or updated
+
+DeleteSession(session)
+	get sessionstodelete from DB
+	DeleteBatSessionLinks(sessions)
+		get links to delete from DB
+		delete links from DB
+	DeleteAllRecordingsInSession
+		get recordings from DB
+		DeleteBatRecordingLinks(recordings)
+			get links from DB
+			delete links from DB
+		DeleteAllSegmentsInRecording(recordings)
+			get segments from DB
+			foreach segment
+				DeleteLinksForSegmentId(segmentId)
+					get BatSegmentLinks for this segment from DB
+					foreach link
+						get BatSegmentLinks matching this links bat and segment.recording from DB
+						if only 1, DeleteBatRecordingLink(link.bat,link.segment.recording)
+					delete BatSegmentLinks from DB
+					
+					get CallSegmentLinks for segment from DB
+					get CallsToDelete from CallSegmentLinks
+					delete CallSegmentLinks from DB
+					delete CallsToDelete from DB
+
+					get ImageLinksToDelete for segment from DB.SegmentDatas
+					get imagesToDelete from ImageLinksToDelete
+					delete ImageLinksTodelete from DB
+					(for the time being leave the images themselves as orphans in case
+					they are required later.  They can be manually deleted is desired)
+
+			delete segments from DB
+		delete recordings from DB
+	delete sessions from DB
+
+DBAccess.UpdateRecording(recording,listOfSegmentAndBatList,listOfSegmentImageLists)
+	recording.Validate()
+	session=GetSessionForRecording(recording.SessionId)
+	existingRecording=getRecording with matching name or Id
+	if none, save recording to database and use as existingRecording
+	else copy data from recording to existingRecording
+	SubmitChanges
+	DBAccess.UpdateLabelledSegments(listOfSegmentAndBatLists,existingRecordingID,listOfSegmentImageLists,dc)
+		foreach(SegmentAndBatList)
+			UpdateLabelledSegment(SegmentAndBatList,recordingId,matching-ListOfSegmentImages(if any otherwise null),dc)
+				existingSegment=GetNearestMatchingSegment(segmentAndBatList,recordingID,dc)
+				if none
+					create and save existingSegment
+				else
+					copy data to existingSegment
+				SubmitChanges
+				DBAccess.UpdateBatSegmentLinks(segmentAndBatList,existingSegment,dc)
+				if commentChanged:- DBAccess.UpdateSegmentCalls(existingSegment,dc)
+				DBAccess.UpdateSegmentImages(ListOfSegmentImages,existingSegment,dc)

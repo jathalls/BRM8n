@@ -1,0 +1,511 @@
+﻿*	Finish adding Bat Reference File Editor
+*	Add [MERGE] section heading in the middle of the header file
+so that each line is inserted after the file names - one line per file.
+Allows the user to generate a log file, then edit the header file to add
+a brief description of the start location for each .wav file based on the GPS
+co-ordinates.  The merge notes then get added into the final log file whenever
+the program is run.  Possibly subsequently allow a <tag> section at the start of the
+line to explicitly specify the file that the one-line descriptor applies to.
+
+
+----------------------------------------
+2 Dec 2015
+DONE On-Screen summaries now correct, but summaries to the log file are doubled for
+   some species, e.g. Sopranos and Daubenton's while being correct for others. DONE
+DONE Refactor to use common routines with the on-screen calculation of passes. DONE
+
+5-Dec 2015
+Fails to add device, microphone or operator data to session
+DONE Many but not all bats identified as 'No Bats' DONE
+
+Derive textual log file from database stored data, rather than while adding data to the database
+
+DONE Bat summaries should exclude the numbers for 'No bats'
+
+DONE Bat summaries should identify and mark as unknown, segments with no bat tag in the comment
+
+---------------------------
+DONE While loops in ShowDialog fail because you cannot re-open a window that has been closed
+
+RecordingSession Add button does not work
+
+Recording Session Edit button does not update the detail display ?? or the database
+
+Recording Edit button does not populate the editing form
+
+Cancelling the recording edit causes an exception when the window tries to re-open
+
+Recording Edit form Cancel button does not work
+
+DONE RecordingForm needs a DateTime? to TimeSpan two-way converter
+
+DONE Throws an uncaught/caught null reference exception during start-up - not fatal
+
+DONE OperatorList and EquipmentList do not exist
+
+DONE EditBatForm does not save changes
+
+Double clicking a bat in the ListByBats page should switch to BatReference page
+and select the clicked bat
+
+----------------------------------------------------------------------------------
+Feb2016 Testing
+RecordingSessionForm - 
+	DONE Date should default to .Today
+	DONE StartTime and EndTime defaults
+	INHERENT Can't append text to ComboBox editable contents (can but use -> to get to end of line and deselect contents)
+	OK Add, Edit, Delete session work OK
+
+	RecordingForm OK
+		Add OK
+			LabelledSegmentForm - Operates OK but does not save
+			Recording Saved but display not updated
+		EDIT
+			DONE shows blank form, not prefilled with recording
+		DEL
+			DONE does not delete recording
+			Add/Del Segments doesn't work when empty
+
+DONE When Import new session, ListBySession display soes not update - ?Add a REFRESH button
+On import - if GPX file present can use co-ordinates to fill in the session GPS location fields
+
+DONE When you select a Recording Datasection the selection is always for the second
+recording and the RecordingItemsList view moves to the top of the list instead of
+the selected item - so that it is impossible to perform double-clicks on the GPS
+co-ordinates for any but the first two recordings.
+
+
+DONE After creating a new database imported data shows all segments as 'Unknown' instead
+of picking up the correct Tags.
+
+NEW FEATURES
+Add Map button to Recording Form DONE
+
+DONE Add Picture Table to database with link table to bats BinaryData(.jpg)<-BatPicture->Bat
+DONE Add Sonagram table to database with link table to segment BinaryData(.jpg)<-SegmentData->LabelledSegment
+DONE Add Snippet table to database with link table to segment () BinaryData(.wav)<-SegmentData->LabelledSegment
+	(snippets look like segments but do not add to passes)
+	(actually a single blob table which can contain images or
+	.wav sound snippets and has a field to identify the appropriate
+	file extension to define the type.  Link tablse to Bats or segments)
+TODO Add GUI interface and handling for images, sonagrams and .wav snippets.
+
+Add call table with link tables to bats and to labelled segments
+		Call<-BatCall->Bat
+		Call<-SegmentCall->LabelledSegment
+		Call<-CallPicture->BinaryData(.jpg)
+TODO Add GUI and handling for call parameter details
+TODO Add input processing to recognise a string of the form:-
+		{start,end,peak,durn,interval,function,type,notes} in the comment
+		where four commas are required and each parameter
+		is inn the form
+		##0.0+/-##0.0 or simply ##0.0.  the first three inkHz the
+		other two in ms.
+		(added in ProcessLabelledSegment by a call to DBAccess.InsertParamsFromComment())
+
+		NB withi the curly braces permit the form {s=start,e=end,p=peak,d=durn,i=interval,f=function,t=type,c/n=comment which may include commas}
+		the part in front of the '=' may be of any length but the first letter must be as shown
+		the remainder of the tag is unchecked.  The part to the right of the '=' is as before.
+
+v5.3 BUGS
+	DONE GPS co-ordinates not loading correctly from header file lat=0, long=lat
+	DONE No manifest file generated
+	DONE .log.txt file is empty
+	if session tags are identical data gets merged even if in different folders
+		NB should be illegal to have identical tags - so check and warn user
+	v. dependent on file time stamps and date-time in file name. fails if the times are wrong
+		should use data from the edited session form by preference when processing.
+	Second file loaded still uses previous file's header rather than its own - new
+	'Import' click should fully clear old data. DONE
+
+	Problems with database version - installer version is earlier than that used in the code.
+	Added private static string 'version'="v5.3" to DBAccess
+	Changed DBFileName to BatReferenceDBv5.3.mdf in DBAccess
+	The idea is that the program will look for this database name and if it does not find
+	the file will create a database with that name.  Therefore the database will always
+	be generated empty using the installed version of SQLLocaldb whatever that is. - DONE
+
+	CallControl class is a mess and the call and lists do not update properly when the parent list
+	parameter changes. DONE
+
+	Log.txt file is being incorrectly addressed during multiple imports - the original location
+	and file name is used repeatedly instead of fresh for each imported folder.  Also if the
+	overwrite is refused then the .log.txt file ends up empty instead of being untouched.
+	DONE - PopWavFolder now clears the text file list and the outputlogfilename
+
+	Edit recording - modifying a label blanks the contents of all labels for that recording.
+	Also - modifications to a label should be reflected in the bat summary
+		partly done - the changes are now saved when the save button is clicked and displayed in the
+		form.  The recording is saved and the bats in the comment are identified and added
+		to the database, but previously defined bats are left in the database instead of being
+		deleted.
+
+	In BatReference, adding a new tag does not add it to the database.
+
+	For future expansion/refinement should add TimeStamp withe Timestamp property
+	and Version property to all database tables.  This permits the use of dc.Attach()
+	which is a more sophisticated way of doing updates than finding the existing item and
+	reloading all the fields one by one.  Even though Attach may not be implemented yet.
+
+	Adding a new bat with tags and a note to the BatReference page causes a crash and the bat
+	is not added. - DONE
+
+	Need to include an 'unknown Longeared' to the bat reference defaults.  Not always safe to
+	assume BLE and therefore useful to tag as 'long ear' or 'longeared'.  Check that this does
+	not cause confusion with tag 'brown longeared' (if uses GREP should always return the longest
+	available match). - DONE
+
+
+
+
+
+v5.3 Features
+	Debug mode uses a separate database to that used by the Release version by the addition of some
+	conditional compilation in the initialisation of DBAccess.GetWorkingDatabaseLocation.
+
+
+
+>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+searching for a match in a pair of lists (e.g. bat.CommonNames, existingBat.CommonNames):-
+
+var namesToDelete = existingBat.BatCommonNames.Where(
+				p => bat.BatCommonNames.Any(p2 => p2.BatCommonName1 == p.BatCommonName1));
+
+var commonList = list1.Where(list1Element => list2.Any(list2Element => list2Element.item==list1Element.item));
+
+>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+updating a table from a list - deleting all calls in the table that are not in the list
+
+var allCallsForBat = from bc in dc.BatCalls
+									 where bc.BatID == bat.Id
+									 select bc.Call;
+
+				var newCallList = from call in callList
+								  select call;
+
+				var callsToDelete = allCallsForBat.AsEnumerable<Call>().Where(ac => newCallList.All(nc => nc.Id != ac.Id));
+				if (!callsToDelete.IsNullOrEmpty())
+				{
+					foreach (var call in callsToDelete)
+					{
+						dc.BatCalls.DeleteAllOnSubmit(call.BatCalls);
+						dc.Calls.DeleteOnSubmit(call);
+					}
+					dc.SubmitChanges();
+				}
+
+<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
+Updating existing elements:-
+//var matchingCalls = allCallsForBat.Where(oldcall => !newCallList.Contains(newcall => newcall.Id == oldcall.Id));
+				var matchingCalls = newCallList.Where(newcall => allCallsForBat.Any(oldcall => oldcall.Id == newcall.Id));
+				if (matchingCalls != null && matchingCalls.Count() > 0)
+				{
+					foreach (var mcall in matchingCalls)
+					{
+						Call callToUpdate = allCallsForBat.Where(call => call.Id == mcall.Id).SingleOrDefault();
+						Call updatingCall = newCallList.Where(call => call.Id == mcall.Id).SingleOrDefault();
+						if (callToUpdate != null && updatingCall != null)
+						{
+							callToUpdate.CallFunction = updatingCall.CallFunction;
+							callToUpdate.CallNotes = updatingCall.CallNotes;
+							callToUpdate.CallType = updatingCall.CallType;
+							callToUpdate.EndFrequency = updatingCall.EndFrequency;
+							callToUpdate.EndFrequencyVariation = updatingCall.EndFrequencyVariation;
+							callToUpdate.PeakFrequency = updatingCall.PeakFrequency;
+							callToUpdate.PeakFrequencyVariation = updatingCall.PeakFrequencyVariation;
+							callToUpdate.PulseDuration = updatingCall.PulseDuration;
+							callToUpdate.PulseDurationVariation = updatingCall.PulseDurationVariation;
+							callToUpdate.PulseInterval = updatingCall.PulseInterval;
+							callToUpdate.PulseIntervalVariation = updatingCall.PulseIntervalVariation;
+							callToUpdate.StartFrequency = updatingCall.StartFrequency;
+							callToUpdate.StartFrequencyVariation = updatingCall.StartFrequencyVariation;
+						}
+					}
+
+					dc.SubmitChanges();
+				}
+
+<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
+Adding new elements:
+
+			  var callsToAdd = newCallList.Where(newcall => newcall.Id == 0);// ??<=0, or <0 ??
+				if (callsToAdd != null && callsToAdd.Count() > 0)
+				{
+					Bat linkBat = (from b in dc.Bats
+								   where b.Id == bat.Id
+								   select bat).SingleOrDefault();
+					if (linkBat != null)
+					{
+						dc.Calls.InsertAllOnSubmit(callsToAdd);
+						foreach (var call in callsToAdd)
+						{
+							BatCall newLink = new BatCall();
+							newLink.Call = call;
+							newLink.Bat = linkBat;
+							dc.BatCalls.InsertOnSubmit(newLink);
+							//dc.SubmitChanges();
+						}
+						dc.SubmitChanges();
+					}
+----------------------------------------------------------------------------------
+refreshing a list view or similar when the contents have changed
+
+ICollectionView view = CollectionViewSource.GetDefaultView(FolderListView.ItemsSource);
+		   if(view!=null) view.Refresh();
+
+
+
+====================================================================================
+For all Many-to-Many link tables:-
+Implementation
+
+Using the LINQ to SQL designer, we will create the LINQ to SQL entities that correspond to the tables. 
+Once the DBML is created, we need to make an update. We need to add the DeleteOnNull attribute for each 
+association in the UserRole entity. Since the designer doesn't support managing this attribute, we will 
+have to manually update the DBML to make this change. To update the DBML directly, right-click on the 
+DBML file, select Open with and select the XML Editor. Once you are in the DBML file, find the UserRole 
+entity. We need to add the DeleteOnNull attribute for each association and set it to true.
+
+Hide   Copy Code
+<Table Name="dbo.UserRole" Member="UserRoles">
+  <Type Name="UserRole">
+	<Column Name="UserId" Type="System.Int32" 
+	   DbType="Int NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+	<Column Name="RoleId" Type="System.Int32" 
+	   DbType="Int NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+	<Association Name="Role_UserRole" Member="Role" 
+	   ThisKey="RoleId" OtherKey="Id" Type="Role" 
+	   IsForeignKey="true" DeleteOnNull="true" />
+	<Association Name="User_UserRole" Member="User" 
+	   ThisKey="UserId" OtherKey="Id" Type="User" 
+	   IsForeignKey="true" DeleteOnNull="true" />
+  </Type>
+
+Setting DeleteOnNull to true makes it possible to delete the object when the association is set to null. 
+After updating and saving the DBML file, right-click the DBML file in Solution Explorer and select Run 
+Custom Tool. This will recreate the UserRole entity with the updates.
+
+
+
+??????????????????????????????????????????????????????????????????????????????????????
+BingMaps Basic Key:-
+
+AhhVL9x6bq6w0NbyqlwjmXDh3Qd64GbWowQQlFzrqx0ChD1MvaLkMTDQxuh2bhzh
+
+Version 5.3 First Public Release
+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+==============================================================================
+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++=+++++
+Version 5.4
+
+Adding support for images and other binary blobs, starting with images
+Created an ImageScroller class display a set of images and allow the
+displayed image to be selected from the set of images in the class.
+Also added an ImageDialog class to allow a new image to be loaded from a 
+file, rotated if necessary and displayed.  A caption and description can be added
+and the complete assembly is stored in an instance of a StoredImage class which
+is used to handle images throughout.
+The image element of a StoredImage is a BitmapImage and a converter is used to
+change this into a BitmapSource at display time.  A conversion function is
+used to convert BitmapImage to and from Binary for storage in the database and
+these converters are static functions in StoredImage.
+
+To add an image to the comparison window use
+	ComparisonHost.Instance.AddImage(img);
+
+for a wait cursor use:-
+	using(new WaitCursor())
+	{
+	...
+	}
+
+1/9/16 - ImageDialog is not displaying the newly loaded image.
+	DONE - converter needed to change BitmapImage to Bitmap first
+
+	DONE TODO - implement OK/CANCEL buttons in ImageDialog
+
+	DONE TODO - Image Description field is not being stored/displayed
+
+	DONE TODO - ImageScroller needs an 'Edit' facility to modify caption or
+		decription. (Now done by making text boxes editable when !IsReadOnly)
+
+		 DONE (set caption and desc text explicitly, not through binding) TODO - EditBatForm does not display image caption and description
+
+		DONE (remove caption and description bindings) TODO - BatDetailControl does not reflect changes made to image lists by EditBatForm
+
+		DONE TODO - In edit EDIT button should be disabled and Caption and Description should be editable
+
+		DONE TODO editbatform does not save changes to call
+
+		(But preferably calls to Update() should be replaced with corresponding code in relevant getters)
+
+		DONE TODO new bat selection without images doesn't clear the image scroller
+
+		DONE TODO EditBatForm - if OK clicked in call Images, a bat image gets deleted
+
+		DONE TODO Image button toggle state does not match button state after edit
+
+		DONE TODO Selecting a new bat with images they aren't displayed
+
+		DONE TODO changing the bat does not reset the Images toggle button state
+
+		DONE TODO In recordingForm selection of a segment does not load its images and they get deleted on close (without save)
+
+		DONE TODO In RecordingForm segment captions do not include asterisks for segments with images
+
+		DONE TODO In recordingdetail (recordings list) unselecting a recording by selecting a new bat does not clear the iages
+
+		DONE TODO restore EDIT button in ImageScroller so that it is possible to modify a caption/description without
+			having to delete entirely and insert afresh
+
+		DONE TODO DEL image removes the picture from the current ImageScroller but not the caption or description - all deleted from
+			DB so only cosmetic
+
+		DONE TODO Image display capability in ListByBats
+
+		TODO ImageScroller delete is not always consistent - in RecordingForm DEL does not work if the image has not
+			been saved, and clicking the Save button is not necessary to commit to the database on OK although when
+			adding/editing? images it is necessary to click the SAVE button to commit the changes on OK (or on SAVE)
+
+
+13/12/2017
+Report generation:-
+By Bat:-
+name, session, location, start date, start time, session duration, passes in session, mean duration of pass, total duration of passes, Recording, rec start time, rec duration, passes in recording
+
+By Session:-
+Session, location, start date, start time, session duration, total passes in session, bat name, passes in session by bat, mean duration of pass, total duration of passes, Recording, rec start time, rec duration, passes in recording
+
+
+Useful functions:-
+BatStats DBAccess.GetPassesForBat(bat,dc)
+DBAccess.GetStatsForRecording(recID)
+BOC<BatStats> DBAccess.GetStatsForSession(session)
+/*
+BatStatistics GetBatSessionStatistics(batID,sessionID,dc)
+
+public BatStats(TimeSpan duration)
+        {
+            maxDuration = TimeSpan.MinValue;
+            minDuration = TimeSpan.MaxValue;
+            meanDuration = new TimeSpan();
+            totalDuration = new TimeSpan();
+            count = 0;
+            segments = 0;
+            passes = 0;
+            batCommonName = "";
+
+            Add(duration);
+        }
+
+		public partial class Recording : INotifyPropertyChanging, INotifyPropertyChanged
+	{
+		
+		private static PropertyChangingEventArgs emptyChangingEventArgs = new PropertyChangingEventArgs(String.Empty);
+		
+		private int _Id;
+		
+		private string _RecordingName;
+		
+		private System.Nullable<System.TimeSpan> _RecordingStartTime;
+		
+		private System.Nullable<System.TimeSpan> _RecordingEndTime;
+		
+		private string _RecordingGPSLongitude;
+		
+		private string _RecordingGPSLatitude;
+		
+		private System.Nullable<int> _RecordingSessionId;
+		
+		private string _RecordingNotes;
+		
+		private System.Nullable<System.DateTime> _RecordingDate;
+		
+		private EntitySet<LabelledSegment> _LabelledSegments;
+		
+		private EntityRef<RecordingSession> _RecordingSession;
+		
+
+
+
+CREATE TABLE [dbo].[Version]
+(
+	[Id] INT NOT NULL PRIMARY KEY, 
+    [Version] DECIMAL(6, 2) NOT NULL DEFAULT 6.0
+)
+
+getting the number of recording images (for a bat with id )
+
+BatReferenceDBLinqDataContext dc = DBAccess.GetFastDataContext();
+            int result = (from bsLnk in dc.BatSegmentLinks
+                        join sdLnk in dc.SegmentDatas on bsLnk.LabelledSegmentID equals sdLnk.SegmentId
+                        where bsLnk.BatID == id && bsLnk.LabelledSegment.StartOffset != bsLnk.LabelledSegment.EndOffset
+                        select sdLnk.LabelledSegment).Count();
+
+
+            int fullRecordImages = (from sdLnk in dc.SegmentDatas
+                        where sdLnk.LabelledSegment.StartOffset == sdLnk.LabelledSegment.EndOffset
+                        join brLnk in dc.BatRecordingLinks.Where(brl => brl.BatID == id) on sdLnk.LabelledSegment.RecordingID equals brLnk.RecordingID
+                        select sdLnk).Count();
+             
+
+
+==============================================================================================
+Screen capture - movable window:-
+using System;
+using System.Collections.Generic;
+using System.ComponentModel;
+using System.Data;
+using System.Drawing;
+using System.Linq;
+using System.Text;
+using System.Windows.Forms;
+using System.Runtime.InteropServices;
+
+namespace ScreenGrab2 {
+
+    public partial class GrabRegionForm : Form {
+
+        public Rectangle formRect;
+        private Form1 mainForm;
+
+        // Import some API functions and constants to handle form dragging...
+        public const int WM_NCLBUTTONDOWN = 0xA1;
+        public const int HTCAPTION = 0x2;
+        [DllImport("User32.dll")]
+        public static extern bool ReleaseCapture();
+        [DllImport("User32.dll")]
+        public static extern int SendMessage(IntPtr hWnd, int Msg, int wParam, int lParam);
+
+
+
+        public GrabRegionForm(Form1 aForm) {
+            InitializeComponent();
+            mainForm = aForm;
+        }
+
+        // Now when the form is clicked with the mouse, move it just as though its
+        // caption bar had been clicked...
+        private void GrabRegionForm_MouseDown(object sender, System.Windows.Forms.MouseEventArgs e) {
+            if (e.Button == MouseButtons.Left) {
+                ReleaseCapture();
+                SendMessage(Handle, WM_NCLBUTTONDOWN, HTCAPTION, 0);
+            }
+        }
+
+        private void okBtn_Click(object sender, EventArgs e) {
+            formRect = new Rectangle(this.Left, this.Top, this.Left + this.Width, this.Top + this.Height);
+            this.Hide();
+            mainForm.GrabRect(formRect);    
+            mainForm.player.Play();
+            Close();
+        }
+
+        private void okBtn_KeyUp(object sender, KeyEventArgs e) {
+            if (e.KeyCode == Keys.Escape) {
+                this.Hide();
+                Close();
+            }
+        }
+    }
+}

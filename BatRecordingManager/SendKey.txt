@@ -1,0 +1,22 @@
+f notepad is already started, you should write:
+// import the function in your class
+[DllImport ("User32.dll")]
+static extern int SetForegroundWindow(IntPtr point);
+
+//...
+
+Process p = Process.GetProcessesByName("notepad").FirstOrDefault();
+if( p != null)
+{
+    IntPtr h = p.MainWindowHandle;
+    SetForegroundWindow(h);
+    SendKeys.SendWait("k");
+}
+GetProcessesByName returns an array of processes, so you should get the first one (or find the one you want).
+If you want to start notepad and send the key, you should write:
+Process p = Process.Start("notepad.exe");
+p.WaitForInputIdle();
+IntPtr h = p.MainWindowHandle;
+SetForegroundWindow(h);
+SendKeys.SendWait("k");
+The only situation in which the code may not work is when notepad is started as Administrator and your application is not.

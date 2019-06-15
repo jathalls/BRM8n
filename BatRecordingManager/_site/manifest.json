@@ -1,0 +1,1436 @@
+{
+  "homepages": [],
+  "source_base_path": "D:/Documents/Visual Studio 2017/Projects/BRMv7.0/BatRecordingManager",
+  "xrefmap": "xrefmap.yml",
+  "files": [
+    {
+      "type": "Conceptual",
+      "source_relative_path": "api/index.md",
+      "output": {
+        ".html": {
+          "relative_path": "api/index.html",
+          "hash": "Lt9QHdGeANN05QJRDqlN+A=="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "articles/intro.md",
+      "output": {
+        ".html": {
+          "relative_path": "articles/intro.html",
+          "hash": "/RmNDD51CpsB5AsOiENDwA=="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "Toc",
+      "source_relative_path": "articles/toc.md",
+      "output": {
+        ".html": {
+          "relative_path": "articles/toc.html",
+          "hash": "xVlQaX7Tk85omoiWv3O+Ag=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "index.md",
+      "output": {
+        ".html": {
+          "relative_path": "index.html",
+          "hash": "Brg07vhIdFMZfW9ZW7sBNQ=="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/BatRecordingManager.AboutScreen.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/BatRecordingManager.AboutScreen.html",
+          "hash": "13cbQcqKyenhH5aYU9rCFg=="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/BatRecordingManager.AnalysingEventArgs.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/BatRecordingManager.AnalysingEventArgs.html",
+          "hash": "/Wa9tJAYeizB4nWvfvgdJw=="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/BatRecordingManager.App.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/BatRecordingManager.App.html",
+          "hash": "buyV/N4i/DcX6pGOWWARMQ=="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/BatRecordingManager.Bat.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/BatRecordingManager.Bat.html",
+          "hash": "0VqkpICH3iQo2hdPqbicRA=="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/BatRecordingManager.BatAndCallImageScrollerControl.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/BatRecordingManager.BatAndCallImageScrollerControl.html",
+          "hash": "sPwniftHmlPJK7CDawK32A=="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/BatRecordingManager.BatCall.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/BatRecordingManager.BatCall.html",
+          "hash": "B0QAMfaLUxIXUlHQBONKLA=="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/BatRecordingManager.BatCallControl.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/BatRecordingManager.BatCallControl.html",
+          "hash": "3s+BTE6HPlgj/0ZNfW3e/g=="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/BatRecordingManager.BatCallConverter.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/BatRecordingManager.BatCallConverter.html",
+          "hash": "17tphD8vjeMALTKoW6Scow=="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/BatRecordingManager.BatCallForm.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/BatRecordingManager.BatCallForm.html",
+          "hash": "CYhkF2o8V4wmxFYKeNIVJw=="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/BatRecordingManager.BatDetailControl.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/BatRecordingManager.BatDetailControl.html",
+          "hash": "Nh0QtohF0sgRgzKXhmBXyA=="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/BatRecordingManager.BatEditor.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/BatRecordingManager.BatEditor.html",
+          "hash": "WuZp8LWi4oTSRGd3akA9uA=="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/BatRecordingManager.BatLatinNameConverter.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/BatRecordingManager.BatLatinNameConverter.html",
+          "hash": "nAnCoOumxPQ8WSyck/I04g=="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/BatRecordingManager.BatListControl.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/BatRecordingManager.BatListControl.html",
+          "hash": "zwV/YUKkhNcWorh1iLt7AQ=="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/BatRecordingManager.BatPassSummaryControl.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/BatRecordingManager.BatPassSummaryControl.html",
+          "hash": "GkNNiDtli50ED1Z1yGqX/A=="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/BatRecordingManager.BatPicture.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/BatRecordingManager.BatPicture.html",
+          "hash": "UjKubIMCRQFTaPu/Uollnw=="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/BatRecordingManager.BatRecording.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/BatRecordingManager.BatRecording.html",
+          "hash": "GpxoIH+URtwG61PKf/Z/Uw=="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/BatRecordingManager.BatRecordingsListDetailControl.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/BatRecordingManager.BatRecordingsListDetailControl.html",
+          "hash": "SE1lAVDGwgECabl3BTWtKA=="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/BatRecordingManager.BatReferenceDBLinqDataContext.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/BatRecordingManager.BatReferenceDBLinqDataContext.html",
+          "hash": "YU6WHNb9NvRiL0XBqUmwXQ=="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/BatRecordingManager.BatSegmentLink.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/BatRecordingManager.BatSegmentLink.html",
+          "hash": "6xmQfo+h8SFzWo1/LoU0gQ=="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/BatRecordingManager.BatSession.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/BatRecordingManager.BatSession.html",
+          "hash": "P462viaxXEO6VBAsx3/kvA=="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/BatRecordingManager.BatStatistics.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/BatRecordingManager.BatStatistics.html",
+          "hash": "7hyrgFTe24wzeralEpdozA=="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/BatRecordingManager.BatStats.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/BatRecordingManager.BatStats.html",
+          "hash": "IOSAhZd8Zopq6KQ3khDruw=="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/BatRecordingManager.BatTag.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/BatRecordingManager.BatTag.html",
+          "hash": "+d+HxFB5+rm52/KQgJCW6g=="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/BatRecordingManager.BatTagSortConverter.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/BatRecordingManager.BatTagSortConverter.html",
+          "hash": "X1Bdmfhp/YAhEPx5UUITNQ=="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/BatRecordingManager.BinaryData.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/BatRecordingManager.BinaryData.html",
+          "hash": "fOQixwrRK0H8OMpileTC+A=="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/BatRecordingManager.ButtonBarControl.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/BatRecordingManager.ButtonBarControl.html",
+          "hash": "z2RLlFDqp+/oDyVyv4074g=="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/BatRecordingManager.ButtonPressedEventArgs.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/BatRecordingManager.ButtonPressedEventArgs.html",
+          "hash": "nH1b/Wa7/Pxo2bvDcgXVvg=="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/BatRecordingManager.Call.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/BatRecordingManager.Call.html",
+          "hash": "NwPPdq1p5UsPNZv9LRfKfg=="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/BatRecordingManager.CallParametersConverter.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/BatRecordingManager.CallParametersConverter.html",
+          "hash": "gtmfhlwOHy5bZOAHBfMyyw=="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/BatRecordingManager.CallPicture.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/BatRecordingManager.CallPicture.html",
+          "hash": "xKuTEUSbSTTGfIkIB0xKnQ=="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/BatRecordingManager.CommandExtensions.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/BatRecordingManager.CommandExtensions.html",
+          "hash": "AkZdvgMIzDoo9Ls6F26Pxg=="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/BatRecordingManager.ComparisonHost.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/BatRecordingManager.ComparisonHost.html",
+          "hash": "NosYY7wyoRDkQBo3F/16zQ=="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/BatRecordingManager.ComparisonWindow.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/BatRecordingManager.ComparisonWindow.html",
+          "hash": "i+xpJL+yP9UyW589uumYnw=="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/BatRecordingManager.ConvertGetNumberOfImages.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/BatRecordingManager.ConvertGetNumberOfImages.html",
+          "hash": "Wlh/41zblAIbsal3ELwMYA=="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/BatRecordingManager.DBAccess.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/BatRecordingManager.DBAccess.html",
+          "hash": "L/cGT2/QqRQQ8MsRKBGfPg=="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/BatRecordingManager.DebugBreak.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/BatRecordingManager.DebugBreak.html",
+          "hash": "rLiRNne9kd4q5HhVCHjh5Q=="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/BatRecordingManager.DisplayStoredImageControl.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/BatRecordingManager.DisplayStoredImageControl.html",
+          "hash": "Ye2tD/gICVfyza+z5vb3vA=="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/BatRecordingManager.DivideBy2Converter.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/BatRecordingManager.DivideBy2Converter.html",
+          "hash": "J2Dl7x07d9JZqDXUYKVFQQ=="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/BatRecordingManager.DivideConverter.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/BatRecordingManager.DivideConverter.html",
+          "hash": "+QK9FT2GBH31wt+oEVdtuQ=="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/BatRecordingManager.DoubleStringConverter.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/BatRecordingManager.DoubleStringConverter.html",
+          "hash": "3Me7csqkG00JbWGtSZffbw=="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/BatRecordingManager.EditBatForm.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/BatRecordingManager.EditBatForm.html",
+          "hash": "CaeqzqZeSL+tZHUX3d1N7w=="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/BatRecordingManager.FileBrowser.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/BatRecordingManager.FileBrowser.html",
+          "hash": "4luZdXsbl09Pnspb/MaRww=="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/BatRecordingManager.FileOrderDialog.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/BatRecordingManager.FileOrderDialog.html",
+          "hash": "tO47QgJKmJ2BvT12Ba49hQ=="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/BatRecordingManager.FolderSelectionDialog.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/BatRecordingManager.FolderSelectionDialog.html",
+          "hash": "o7q1srYHsHBW5WTfd74zgw=="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/BatRecordingManager.FrequencyData.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/BatRecordingManager.FrequencyData.html",
+          "hash": "TryBwqgXdk/+ijP1RFUtuQ=="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/BatRecordingManager.Guano.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/BatRecordingManager.Guano.html",
+          "hash": "auRDrdcH9IJ6h+iufc+HlQ=="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/BatRecordingManager.ImageConverter.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/BatRecordingManager.ImageConverter.html",
+          "hash": "0mNGKBHgFfl6rNs1/jN+RQ=="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/BatRecordingManager.ImageDialog.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/BatRecordingManager.ImageDialog.html",
+          "hash": "9MRwj9DhUl7f7LLLH4kekA=="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/BatRecordingManager.ImageDialogControl.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/BatRecordingManager.ImageDialogControl.html",
+          "hash": "wQQ5HwpXCrOHKc6OAhK3lw=="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/BatRecordingManager.ImageExtensions.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/BatRecordingManager.ImageExtensions.html",
+          "hash": "Lvv1BRyaZhDLIu19/fm03w=="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/BatRecordingManager.ImageListEventArgs.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/BatRecordingManager.ImageListEventArgs.html",
+          "hash": "UCVTVs6fgujQ0hXxF2c+WA=="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/BatRecordingManager.ImageScrollerControl.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/BatRecordingManager.ImageScrollerControl.html",
+          "hash": "43p/DZa6YSX4DezKyVJtwg=="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/BatRecordingManager.ImageWithGridConverter.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/BatRecordingManager.ImageWithGridConverter.html",
+          "hash": "mf7PjEgAPapln4u9RZl+nw=="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/BatRecordingManager.ImagesForAllRecordingsConverter.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/BatRecordingManager.ImagesForAllRecordingsConverter.html",
+          "hash": "jxvTl2DeTqDKWF3TQFetqg=="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/BatRecordingManager.Imaging.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/BatRecordingManager.Imaging.html",
+          "hash": "GI0tjsLzmX62IY0IPrHC8Q=="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/BatRecordingManager.ImportControl.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/BatRecordingManager.ImportControl.html",
+          "hash": "rqYKo2DV2IJtSu9xZc1FnQ=="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/BatRecordingManager.ImportPictureControl.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/BatRecordingManager.ImportPictureControl.html",
+          "hash": "ZZy25WFcs4vplq8cgZACyg=="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/BatRecordingManager.ImportPictureDialog.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/BatRecordingManager.ImportPictureDialog.html",
+          "hash": "jByaXXrfjUhKVKawCoMLqw=="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/BatRecordingManager.LabelledSegment.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/BatRecordingManager.LabelledSegment.html",
+          "hash": "VaRQ+pfC1kJmhodDG3V1pQ=="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/BatRecordingManager.LabelledSegmentControl.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/BatRecordingManager.LabelledSegmentControl.html",
+          "hash": "tDEJY9Or0ePOc90Usoc1RA=="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/BatRecordingManager.LabelledSegmentConverter.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/BatRecordingManager.LabelledSegmentConverter.html",
+          "hash": "cvLwCqutAlGdHW9Jsjp0eg=="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/BatRecordingManager.LabelledSegmentForm.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/BatRecordingManager.LabelledSegmentForm.html",
+          "hash": "rkp1DryuLxuP31cRZTjdpA=="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/BatRecordingManager.MainWindow.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/BatRecordingManager.MainWindow.html",
+          "hash": "5U8Xq/40UvNqjsxDS23JsA=="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/BatRecordingManager.MapControl.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/BatRecordingManager.MapControl.html",
+          "hash": "X0JJHOo/zIBS7rEaPD+Bbg=="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/BatRecordingManager.MapWindow.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/BatRecordingManager.MapWindow.html",
+          "hash": "6T1OTcqG2hfHQ6kW6zcT8g=="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/BatRecordingManager.MyNewObject.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/BatRecordingManager.MyNewObject.html",
+          "hash": "UbDHCZrYmjNbm/Ef3OeEBA=="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/BatRecordingManager.NewTagForm.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/BatRecordingManager.NewTagForm.html",
+          "hash": "VG4QuJSQIimHfOhvrYqVGA=="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/BatRecordingManager.NumberOfImagesConverter.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/BatRecordingManager.NumberOfImagesConverter.html",
+          "hash": "cbmnzoXQbu/E06P1GqCuYQ=="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/BatRecordingManager.Recording.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/BatRecordingManager.Recording.html",
+          "hash": "LlDaDAuGIRmnFugmWKitYA=="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/BatRecordingManager.RecordingDetailsConverter.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/BatRecordingManager.RecordingDetailsConverter.html",
+          "hash": "qtdeiDOc7PtYRLhh5WJ1JA=="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/BatRecordingManager.RecordingForm.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/BatRecordingManager.RecordingForm.html",
+          "hash": "GMDAVW6dnxB0RrilITeWEQ=="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/BatRecordingManager.RecordingItemControl.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/BatRecordingManager.RecordingItemControl.html",
+          "hash": "dmNUKLyR6g0cKeiDa7sSGA=="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/BatRecordingManager.RecordingPassSummaryConverter.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/BatRecordingManager.RecordingPassSummaryConverter.html",
+          "hash": "A0PEp/nI6f6CR2n41T3l8g=="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/BatRecordingManager.RecordingReportData.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/BatRecordingManager.RecordingReportData.html",
+          "hash": "PxkSU6j91RVR/aqvabcoAA=="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/BatRecordingManager.RecordingSession.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/BatRecordingManager.RecordingSession.html",
+          "hash": "kcwXT+pxd2q59qQW25gTHQ=="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/BatRecordingManager.RecordingSessionControl.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/BatRecordingManager.RecordingSessionControl.html",
+          "hash": "AYeQT1mSfxsBHazIvEywBA=="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/BatRecordingManager.RecordingSessionForm.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/BatRecordingManager.RecordingSessionForm.html",
+          "hash": "NNvvcjYjAGWx9fXaWqYuKw=="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/BatRecordingManager.RecordingSessionListDetailControl.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/BatRecordingManager.RecordingSessionListDetailControl.html",
+          "hash": "Ogrc8yCgVIJM18FnggKiYA=="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/BatRecordingManager.RecordingSessionViewControl.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/BatRecordingManager.RecordingSessionViewControl.html",
+          "hash": "+gl0KMtMUc/tMXpffn6dpw=="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/BatRecordingManager.RecordingToGPSConverter.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/BatRecordingManager.RecordingToGPSConverter.html",
+          "hash": "idbOEVgGjUMG7hetS6blYA=="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/BatRecordingManager.RecordingsDetailListControl.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/BatRecordingManager.RecordingsDetailListControl.html",
+          "hash": "/z8Cg+R9YFjrs87J28CR1w=="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/BatRecordingManager.ReportByFrequency.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/BatRecordingManager.ReportByFrequency.html",
+          "hash": "Cpny32tz4nZU+bEdVy5w9A=="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/BatRecordingManager.ReportData.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/BatRecordingManager.ReportData.html",
+          "hash": "AE10CYd4V08uuq0jRHDizg=="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/BatRecordingManager.ReportMainWindow.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/BatRecordingManager.ReportMainWindow.html",
+          "hash": "+Ye0yLbEk+3Xb9gkS/S3YQ=="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/BatRecordingManager.ReportMaster.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/BatRecordingManager.ReportMaster.html",
+          "hash": "SiqKZJyeH2ZrvY8sddhELQ=="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/BatRecordingManager.SearchDialog.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/BatRecordingManager.SearchDialog.html",
+          "hash": "498piJCAYotspKCfELGdUA=="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/BatRecordingManager.SearchedEventArgs.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/BatRecordingManager.SearchedEventArgs.html",
+          "hash": "wzQDg5EO2a8IuuL4zdWUhQ=="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/BatRecordingManager.SegmentAndBatList.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/BatRecordingManager.SegmentAndBatList.html",
+          "hash": "7Yu9EVjNA65TiJq5foU1Ew=="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/BatRecordingManager.SegmentCall.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/BatRecordingManager.SegmentCall.html",
+          "hash": "0IqcW8ME9r3KFV7dgPc8yA=="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/BatRecordingManager.SegmentData.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/BatRecordingManager.SegmentData.html",
+          "hash": "E7MZRl6+lJTXMRVrkp0O1w=="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/BatRecordingManager.SegmentToTextConverter.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/BatRecordingManager.SegmentToTextConverter.html",
+          "hash": "/tcC6YIxmmHuGwFOKK0aGA=="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/BatRecordingManager.SessionActionEventArgs.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/BatRecordingManager.SessionActionEventArgs.html",
+          "hash": "BDQnbUO053mLgL0aVZwK5Q=="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/BatRecordingManager.SessionManager.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/BatRecordingManager.SessionManager.html",
+          "hash": "93a8wGCt+UxqbgUDFbUnwA=="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/BatRecordingManager.SessionsAndRecordingsControl.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/BatRecordingManager.SessionsAndRecordingsControl.html",
+          "hash": "gG4vl8VJkJn6hV0splTvYA=="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/BatRecordingManager.ShortDateConverter.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/BatRecordingManager.ShortDateConverter.html",
+          "hash": "v+iAbQApi0ArmJ15U4711Q=="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/BatRecordingManager.ShortTimeConverter.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/BatRecordingManager.ShortTimeConverter.html",
+          "hash": "Dmrod/v2pA7t3ifSx8W7Zw=="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/BatRecordingManager.StoredImage.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/BatRecordingManager.StoredImage.html",
+          "hash": "trsLvWv5BuCLanPCLPayAw=="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/BatRecordingManager.StringExtensions.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/BatRecordingManager.StringExtensions.html",
+          "hash": "CznH6vK4DjIbYme4dYl3ig=="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/BatRecordingManager.TextColourConverter.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/BatRecordingManager.TextColourConverter.html",
+          "hash": "rgHIDadSjnw5Zikb1STAtQ=="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/BatRecordingManager.TimePicker.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/BatRecordingManager.TimePicker.html",
+          "hash": "G0Fa8TpZfBWzK7/o0PmKYQ=="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/BatRecordingManager.TimeSpanConverter.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/BatRecordingManager.TimeSpanConverter.html",
+          "hash": "r5bS2hdoy5b+DFcrBzVIYg=="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/BatRecordingManager.TimeSpanDateConverter.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/BatRecordingManager.TimeSpanDateConverter.html",
+          "hash": "426w+MWlSItpUxfcK3mdZQ=="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/BatRecordingManager.Times2Converter.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/BatRecordingManager.Times2Converter.html",
+          "hash": "8UscohhZQFQnoSsYRmSYEQ=="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/BatRecordingManager.Tools.BlobType.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/BatRecordingManager.Tools.BlobType.html",
+          "hash": "rVZTz0nosmw4wI35AyEtPw=="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/BatRecordingManager.Tools.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/BatRecordingManager.Tools.html",
+          "hash": "jUeLnC3rQ1V0UozeTywTNg=="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/BatRecordingManager.Version.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/BatRecordingManager.Version.html",
+          "hash": "NsJxBFZbOnTA7sgGXy+5Aw=="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/BatRecordingManager.WAMD_Data.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/BatRecordingManager.WAMD_Data.html",
+          "hash": "3YBZZOeE7XpVacQ5tK4CUQ=="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/BatRecordingManager.WaitCursor.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/BatRecordingManager.WaitCursor.html",
+          "hash": "DLHbJnMYDygpiCc8lys6pA=="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/BatRecordingManager.multiscaleConverter.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/BatRecordingManager.multiscaleConverter.html",
+          "hash": "A/DR4YW5Lcr6VGYxpkpm5g=="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/BatRecordingManager.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/BatRecordingManager.html",
+          "hash": "a8izrtJV0C06y250ANvxNg=="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "Toc",
+      "source_relative_path": "obj/api/toc.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/toc.html",
+          "hash": "xUiBKUHJD9/H+6T/ZQgk+w=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Toc",
+      "source_relative_path": "toc.yml",
+      "output": {
+        ".html": {
+          "relative_path": "toc.html",
+          "hash": "frPdeW5hGroGiyexwMQIhg=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    }
+  ],
+  "incremental_info": [
+    {
+      "status": {
+        "can_incremental": true,
+        "incrementalPhase": "build"
+      },
+      "processors": {
+        "TocDocumentProcessor": {
+          "can_incremental": false,
+          "details": "Processor TocDocumentProcessor cannot suppport incremental build because the processor doesn't implement ISupportIncrementalDocumentProcessor interface.",
+          "incrementalPhase": "build"
+        },
+        "ConceptualDocumentProcessor": {
+          "can_incremental": true,
+          "incrementalPhase": "build"
+        },
+        "ManagedReferenceDocumentProcessor": {
+          "can_incremental": true,
+          "incrementalPhase": "build"
+        }
+      }
+    },
+    {
+      "status": {
+        "can_incremental": true,
+        "details": "Can support incremental post processing.",
+        "incrementalPhase": "postProcessing"
+      },
+      "processors": {}
+    }
+  ],
+  "version_info": {},
+  "groups": [
+    {
+      "xrefmap": "xrefmap.yml"
+    }
+  ]
+}

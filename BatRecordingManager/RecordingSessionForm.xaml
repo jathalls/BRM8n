@@ -1,0 +1,45 @@
+﻿<Window x:Class="BatRecordingManager.RecordingSessionForm"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:BatRecordingManager"
+        mc:Ignorable="d"
+        Title="RecordingSessionForm" Height="550" Width="1000">
+
+    <Grid Background="{StaticResource WindowBackgroundBrush}">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="490*" />
+            <RowDefinition Height="50" />
+        </Grid.RowDefinitions>
+        <local:RecordingSessionEditableControl
+            x:Name="recordingSessionControl"
+            Grid.Row="0"
+            ></local:RecordingSessionEditableControl>
+        <StackPanel
+            x:Name="ButtonBarStackPanel"
+            Orientation="Horizontal"
+            Background="{StaticResource BlueGradientBackground}"
+            Grid.Row="1" HorizontalAlignment="Right" Margin="10,0">
+            <Button
+                x:Name="OKButton"
+                Style="{StaticResource SimpleButton}"
+                Width="100"
+                Height="30"
+                Content="OK" IsDefault="True" Click="OKButton_Click" />
+            <Button
+                x:Name="CancelButton"
+                Style="{StaticResource SimpleButton}"
+                Width="100"
+                Height="30"
+                Content="CANCEL" IsCancel="True" Click="CancelButton_Click" />
+            <Button
+                x:Name="AutoButton"
+                Style="{StaticResource SimpleButton}"
+                Width="60"
+                Height="30"
+                Content="AUTO"
+                ToolTip="Uses Notes field to populate Recording and Sessions Forms" Click="AutoButton_Click" />
+        </StackPanel>
+    </Grid>
+</Window>

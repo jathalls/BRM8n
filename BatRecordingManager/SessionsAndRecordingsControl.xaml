@@ -1,0 +1,105 @@
+﻿<UserControl x:Class="BatRecordingManager.SessionsAndRecordingsControl"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+             xmlns:local="clr-namespace:BatRecordingManager"
+             mc:Ignorable="d"
+             d:DesignHeight="600" d:DesignWidth="700">
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="300*" />
+            <RowDefinition Height="5" />
+            <RowDefinition Height="300*" />
+        </Grid.RowDefinitions>
+        <GridSplitter Grid.Row="1" />
+        <!--<Button Visibility="Hidden" Content="{Binding selectedBat}" x:Name="BatButton" />/!-->
+
+
+        <DataGrid
+            x:Name="SessionsDataGrid"
+            Style="{StaticResource vdgStyle}"
+            AutoGenerateColumns="False"
+            CanUserReorderColumns="False"
+            CanUserAddRows="False"
+            CanUserDeleteRows="False"
+            Background="{StaticResource WindowBackgroundBrush}"
+            ItemsSource="{Binding Path=matchingSessionData,IsAsync=True}"
+            Grid.Row="0"
+            SelectionChanged="SessionsDataGrid_SelectionChanged"
+            MouseDoubleClick="SessionsDataGrid_MouseDoubleClick"
+            IsReadOnly="True"
+            RowHeight="23"
+            HorizontalScrollBarVisibility="Visible"
+            VerticalScrollBarVisibility="Visible"
+            EnableColumnVirtualization="True"
+            EnableRowVirtualization="True"
+            VirtualizingPanel.VirtualizationMode="Recycling"
+            ToolTip="Double-click to Open Recording-sessions view">
+
+            <DataGrid.Columns>
+                <DataGridTextColumn Width="100*" Binding="{Binding SessionTag}" Header="Tag" />
+                <DataGridTextColumn Width="180*" Binding="{Binding Location}" Header="Location" />
+                <DataGridTextColumn Width="60*" Binding="{Binding SessionDate, Converter={StaticResource ShortDate_Converter}}" Header="Date" />
+                <DataGridTextColumn Width="60*" Binding="{Binding SessionStartTime}" Header="Time" />
+                <DataGridTextColumn Width="100*" Binding="{Binding BatName}" Header="Bat" />
+                <DataGridTextColumn Width="50*" Binding="{Binding ImageCount}" Header="Images" />
+                <DataGridTextColumn Width="60*" Binding="{Binding BatRecordingsCount}" Header="Recordings" />
+            </DataGrid.Columns>
+        </DataGrid>
+
+        <Grid
+            Grid.Row="2"
+            x:Name="RecordingsAndImagesGrid">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="50*" />
+                <ColumnDefinition Width="5" />
+                <ColumnDefinition Width="50*" />
+            </Grid.ColumnDefinitions>
+
+            <GridSplitter
+                Grid.Column="1"
+                HorizontalAlignment="Stretch"
+                VerticalAlignment="Stretch" />
+
+            
+            <DataGrid
+                x:Name="RecordingsDataGrid"
+                Style="{StaticResource vdgStyle}"
+                AutoGenerateColumns="False"
+                CanUserReorderColumns="False"
+                CanUserAddRows="False"
+                CanUserDeleteRows="False"
+                
+                Grid.Column="0"
+                MouseDoubleClick="RecordingsDataGrid_MouseDoubleClick"
+                IsReadOnly="True"
+                SelectionChanged="RecordingsDataGrid_SelectionChanged"
+                ItemsSource="{Binding Path=matchingRecordingData,IsAsync=True,UpdateSourceTrigger=PropertyChanged}"
+                ToolTip="Double-click to open .wav file, Right-click to open Import Picture Dialog "
+                RowHeight="23"
+                HorizontalScrollBarVisibility="Visible"
+                VerticalScrollBarVisibility="Visible"
+                
+                
+                MouseRightButtonUp="RecordingsDataGrid_MouseRightButtonUp" 
+                IsSynchronizedWithCurrentItem="True"
+                >
+            
+                <DataGrid.Columns>
+                    <DataGridTextColumn Width="180*" Binding="{Binding RecordingName,IsAsync=True}" Header="File" SortDirection="Ascending" CanUserSort="True" />
+                    <DataGridTextColumn Width="60*" Binding="{Binding RecordingDate,IsAsync=True,Converter={StaticResource ShortDate_Converter}}" Header="Date" SortDirection="Ascending" CanUserSort="True" />
+                    <DataGridTextColumn Width="60*" Binding="{Binding RecordingStartTime,IsAsync=True,Converter={StaticResource ShortTime_Converter}}" Header="Start" SortDirection="Ascending" CanUserSort="True" />
+
+                    <DataGridTextColumn Width="40*" Binding="{Binding SegmentCountForBat,IsAsync=True}" Header="Segments" SortDirection="Ascending" CanUserSort="True" />
+                    <DataGridTextColumn Width="40*" Binding="{Binding ImageCount,IsAsync=True}" Header="Images" SortDirection="Ascending" CanUserSort="True" />
+                </DataGrid.Columns>
+            </DataGrid>
+            
+
+            <local:ImageScrollerControl
+                Grid.Column="2"
+                x:Name="RecordingImageScroller" />
+        </Grid>
+    </Grid>
+</UserControl>

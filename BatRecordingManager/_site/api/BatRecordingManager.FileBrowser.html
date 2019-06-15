@@ -1,0 +1,707 @@
+﻿<!DOCTYPE html>
+<!--[if IE]><![endif]-->
+<html>
+  
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>Class FileBrowser
+   </title>
+    <meta name="viewport" content="width=device-width">
+    <meta name="title" content="Class FileBrowser
+   ">
+    <meta name="generator" content="docfx 2.29.1.0">
+    
+    <link rel="shortcut icon" href="../favicon.ico">
+    <link rel="stylesheet" href="../styles/docfx.vendor.css">
+    <link rel="stylesheet" href="../styles/docfx.css">
+    <link rel="stylesheet" href="../styles/main.css">
+    <meta property="docfx:navrel" content="../toc.html">
+    <meta property="docfx:tocrel" content="toc.html">
+    
+    
+    
+  </head>
+  <body data-spy="scroll" data-target="#affix">
+    <div id="wrapper">
+      <header>
+        
+        <nav id="autocollapse" class="navbar navbar-inverse ng-scope" role="navigation">
+          <div class="container">
+            <div class="navbar-header">
+              <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+              </button>
+              
+              <a class="navbar-brand" href="../index.html">
+                <img id="logo" class="svg" src="../logo.svg" alt="">
+              </a>
+            </div>
+            <div class="collapse navbar-collapse" id="navbar">
+              <form class="navbar-form navbar-right" role="search" id="search">
+                <div class="form-group">
+                  <input type="text" class="form-control" id="search-query" placeholder="Search" autocomplete="off">
+                </div>
+              </form>
+            </div>
+          </div>
+        </nav>
+        
+        <div class="subnav navbar navbar-default">
+          <div class="container hide-when-search" id="breadcrumb">
+            <ul class="breadcrumb">
+              <li></li>
+            </ul>
+          </div>
+        </div>
+      </header>
+      <div role="main" class="container body-content hide-when-search">
+        
+        <div class="sidenav hide-when-search">
+          <a class="btn toc-toggle collapse" data-toggle="collapse" href="#sidetoggle" aria-expanded="false" aria-controls="sidetoggle">Show / Hide Table of Contents</a>
+          <div class="sidetoggle collapse" id="sidetoggle">
+            <div id="sidetoc"></div>
+          </div>
+        </div>
+        <div class="article row grid-right">
+          <div class="col-md-10">
+            <article class="content wrap" id="_content" data-uid="BatRecordingManager.FileBrowser">
+  
+  
+  <h1 id="BatRecordingManager_FileBrowser" data-uid="BatRecordingManager.FileBrowser" class="text-break">Class FileBrowser
+  </h1>
+  <div class="markdown level0 summary"><p>Class to handle selection of input, and by derivation or selection, and output file, the
+names of which are made available publicly Public functions:- Select folder Select
+Manual Log File Create Output File</p>
+</div>
+  <div class="markdown level0 conceptual"></div>
+  <div class="inheritance">
+    <h5>Inheritance</h5>
+    <div class="level0"><span class="xref">System.Object</span></div>
+    <div class="level1"><span class="xref">FileBrowser</span></div>
+  </div>
+  <div class="inheritedMembers">
+    <h5>Inherited Members</h5>
+    <div>
+      <span class="xref">System.Object.ToString()</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.Equals(System.Object)</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.Equals(System.Object, System.Object)</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.ReferenceEquals(System.Object, System.Object)</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.GetHashCode()</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.GetType()</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.MemberwiseClone()</span>
+    </div>
+  </div>
+  <h6><strong>Namespace</strong>: <a class="xref" href="BatRecordingManager.html">BatRecordingManager</a></h6>
+  <h6><strong>Assembly</strong>: BatRecordingManager.dll</h6>
+  <h5 id="BatRecordingManager_FileBrowser_syntax">Syntax</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public class FileBrowser</code></pre>
+  </div>
+  <h3 id="constructors">Constructors
+  </h3>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/jathalls/BRM_v5.4-Alpha/new/master/apiSpec/new?filename=BatRecordingManager_FileBrowser__ctor.md&amp;value=---%0Auid%3A%20BatRecordingManager.FileBrowser.%23ctor%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/jathalls/BRM_v5.4-Alpha/blob/master/BatRecordingManager/FileBrowser.cs/#L57">View Source</a>
+  </span>
+  <a id="BatRecordingManager_FileBrowser__ctor_" data-uid="BatRecordingManager.FileBrowser.#ctor*"></a>
+  <h4 id="BatRecordingManager_FileBrowser__ctor" data-uid="BatRecordingManager.FileBrowser.#ctor">FileBrowser()</h4>
+  <div class="markdown level1 summary"><p>Initializes a new instance of the <a class="xref" href="BatRecordingManager.FileBrowser.html">FileBrowser</a> class.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public FileBrowser()</code></pre>
+  </div>
+  <h3 id="fields">Fields
+  </h3>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/jathalls/BRM_v5.4-Alpha/new/master/apiSpec/new?filename=BatRecordingManager_FileBrowser_rootFolder.md&amp;value=---%0Auid%3A%20BatRecordingManager.FileBrowser.rootFolder%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/jathalls/BRM_v5.4-Alpha/blob/master/BatRecordingManager/FileBrowser.cs/#L22">View Source</a>
+  </span>
+  <h4 id="BatRecordingManager_FileBrowser_rootFolder" data-uid="BatRecordingManager.FileBrowser.rootFolder">rootFolder</h4>
+  <div class="markdown level1 summary"><p>The root folder</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public string rootFolder</code></pre>
+  </div>
+  <h5 class="fieldValue">Field Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/jathalls/BRM_v5.4-Alpha/new/master/apiSpec/new?filename=BatRecordingManager_FileBrowser_wavFileFolders.md&amp;value=---%0Auid%3A%20BatRecordingManager.FileBrowser.wavFileFolders%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/jathalls/BRM_v5.4-Alpha/blob/master/BatRecordingManager/FileBrowser.cs/#L27">View Source</a>
+  </span>
+  <h4 id="BatRecordingManager_FileBrowser_wavFileFolders" data-uid="BatRecordingManager.FileBrowser.wavFileFolders">wavFileFolders</h4>
+  <div class="markdown level1 summary"><p>The wav file folders</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public BulkObservableCollection&lt;string&gt; wavFileFolders</code></pre>
+  </div>
+  <h5 class="fieldValue">Field Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">Microsoft.VisualStudio.Language.Intellisense.BulkObservableCollection</span>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/jathalls/BRM_v5.4-Alpha/new/master/apiSpec/new?filename=BatRecordingManager_FileBrowser_WavFileNames.md&amp;value=---%0Auid%3A%20BatRecordingManager.FileBrowser.WavFileNames%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/jathalls/BRM_v5.4-Alpha/blob/master/BatRecordingManager/FileBrowser.cs/#L47">View Source</a>
+  </span>
+  <h4 id="BatRecordingManager_FileBrowser_WavFileNames" data-uid="BatRecordingManager.FileBrowser.WavFileNames">WavFileNames</h4>
+  <div class="markdown level1 summary"><p>The text file names</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public BulkObservableCollection&lt;string&gt; WavFileNames</code></pre>
+  </div>
+  <h5 class="fieldValue">Field Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">Microsoft.VisualStudio.Language.Intellisense.BulkObservableCollection</span>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h3 id="properties">Properties
+  </h3>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/jathalls/BRM_v5.4-Alpha/new/master/apiSpec/new?filename=BatRecordingManager_FileBrowser_ExistingLogFileName.md&amp;value=---%0Auid%3A%20BatRecordingManager.FileBrowser.ExistingLogFileName%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/jathalls/BRM_v5.4-Alpha/blob/master/BatRecordingManager/FileBrowser.cs/#L68">View Source</a>
+  </span>
+  <a id="BatRecordingManager_FileBrowser_ExistingLogFileName_" data-uid="BatRecordingManager.FileBrowser.ExistingLogFileName*"></a>
+  <h4 id="BatRecordingManager_FileBrowser_ExistingLogFileName" data-uid="BatRecordingManager.FileBrowser.ExistingLogFileName">ExistingLogFileName</h4>
+  <div class="markdown level1 summary"><p>Accessor for existingLogFileName. existingLogFileName contains the fully qualified
+file name of a pre-existing log file.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public string ExistingLogFileName { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td><p>The name of the existing log file.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/jathalls/BRM_v5.4-Alpha/new/master/apiSpec/new?filename=BatRecordingManager_FileBrowser_HeaderFileName.md&amp;value=---%0Auid%3A%20BatRecordingManager.FileBrowser.HeaderFileName%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/jathalls/BRM_v5.4-Alpha/blob/master/BatRecordingManager/FileBrowser.cs/#L80">View Source</a>
+  </span>
+  <a id="BatRecordingManager_FileBrowser_HeaderFileName_" data-uid="BatRecordingManager.FileBrowser.HeaderFileName*"></a>
+  <h4 id="BatRecordingManager_FileBrowser_HeaderFileName" data-uid="BatRecordingManager.FileBrowser.HeaderFileName">HeaderFileName</h4>
+  <div class="markdown level1 summary"><p>Gets or sets the name of the header file.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public string HeaderFileName { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td><p>The name of the header file.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/jathalls/BRM_v5.4-Alpha/new/master/apiSpec/new?filename=BatRecordingManager_FileBrowser_OutputLogFileName.md&amp;value=---%0Auid%3A%20BatRecordingManager.FileBrowser.OutputLogFileName%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/jathalls/BRM_v5.4-Alpha/blob/master/BatRecordingManager/FileBrowser.cs/#L89">View Source</a>
+  </span>
+  <a id="BatRecordingManager_FileBrowser_OutputLogFileName_" data-uid="BatRecordingManager.FileBrowser.OutputLogFileName*"></a>
+  <h4 id="BatRecordingManager_FileBrowser_OutputLogFileName" data-uid="BatRecordingManager.FileBrowser.OutputLogFileName">OutputLogFileName</h4>
+  <div class="markdown level1 summary"><p>Accessor for outputLogFileName. outputLogFileName contains the manufactured, fully
+qualified path and file name to which the concatenation of log files will be written.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public string OutputLogFileName { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td><p>The name of the output log file.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/jathalls/BRM_v5.4-Alpha/new/master/apiSpec/new?filename=BatRecordingManager_FileBrowser_TextFileNames.md&amp;value=---%0Auid%3A%20BatRecordingManager.FileBrowser.TextFileNames%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/jathalls/BRM_v5.4-Alpha/blob/master/BatRecordingManager/FileBrowser.cs/#L134">View Source</a>
+  </span>
+  <a id="BatRecordingManager_FileBrowser_TextFileNames_" data-uid="BatRecordingManager.FileBrowser.TextFileNames*"></a>
+  <h4 id="BatRecordingManager_FileBrowser_TextFileNames" data-uid="BatRecordingManager.FileBrowser.TextFileNames">TextFileNames</h4>
+  <div class="markdown level1 summary"><p>public accessor for textFileNames. textFileNames lists all the files to be processed
+and concatenated into a single log file.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public BulkObservableCollection&lt;string&gt; TextFileNames { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">Microsoft.VisualStudio.Language.Intellisense.BulkObservableCollection</span>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><p>The text file names.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/jathalls/BRM_v5.4-Alpha/new/master/apiSpec/new?filename=BatRecordingManager_FileBrowser_WorkingFolder.md&amp;value=---%0Auid%3A%20BatRecordingManager.FileBrowser.WorkingFolder%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/jathalls/BRM_v5.4-Alpha/blob/master/BatRecordingManager/FileBrowser.cs/#L156">View Source</a>
+  </span>
+  <a id="BatRecordingManager_FileBrowser_WorkingFolder_" data-uid="BatRecordingManager.FileBrowser.WorkingFolder*"></a>
+  <h4 id="BatRecordingManager_FileBrowser_WorkingFolder" data-uid="BatRecordingManager.FileBrowser.WorkingFolder">WorkingFolder</h4>
+  <div class="markdown level1 summary"><p>Gets or sets the working folder.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public string WorkingFolder { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td><p>The working folder.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h3 id="methods">Methods
+  </h3>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/jathalls/BRM_v5.4-Alpha/new/master/apiSpec/new?filename=BatRecordingManager_FileBrowser_PopWavFolder.md&amp;value=---%0Auid%3A%20BatRecordingManager.FileBrowser.PopWavFolder%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/jathalls/BRM_v5.4-Alpha/blob/master/BatRecordingManager/FileBrowser.cs/#L180">View Source</a>
+  </span>
+  <a id="BatRecordingManager_FileBrowser_PopWavFolder_" data-uid="BatRecordingManager.FileBrowser.PopWavFolder*"></a>
+  <h4 id="BatRecordingManager_FileBrowser_PopWavFolder" data-uid="BatRecordingManager.FileBrowser.PopWavFolder">PopWavFolder()</h4>
+  <div class="markdown level1 summary"><p>Pops the wav folder. Returns the next wav file folder from the list and removes it
+from the list.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public string PopWavFolder()</code></pre>
+  </div>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/jathalls/BRM_v5.4-Alpha/new/master/apiSpec/new?filename=BatRecordingManager_FileBrowser_ProcessFolder_System_String_.md&amp;value=---%0Auid%3A%20BatRecordingManager.FileBrowser.ProcessFolder(System.String)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/jathalls/BRM_v5.4-Alpha/blob/master/BatRecordingManager/FileBrowser.cs/#L207">View Source</a>
+  </span>
+  <a id="BatRecordingManager_FileBrowser_ProcessFolder_" data-uid="BatRecordingManager.FileBrowser.ProcessFolder*"></a>
+  <h4 id="BatRecordingManager_FileBrowser_ProcessFolder_System_String_" data-uid="BatRecordingManager.FileBrowser.ProcessFolder(System.String)">ProcessFolder(String)</h4>
+  <div class="markdown level1 summary"><p>Processes the folder. Called when a new folder is to be dealt with. If there is a
+manifest file, copies the file names from that into the file list. if not, then
+copies names of all .txt files except .log.txt files. if there are still just 0 or 1
+file in the list, try to extract comment files from a log file</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public string ProcessFolder(string folder)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td><span class="parametername">folder</span></td>
+        <td><p>The folder.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/jathalls/BRM_v5.4-Alpha/new/master/apiSpec/new?filename=BatRecordingManager_FileBrowser_SelectFile_System_String_System_String_System_String_System_Boolean_.md&amp;value=---%0Auid%3A%20BatRecordingManager.FileBrowser.SelectFile(System.String%2CSystem.String%2CSystem.String%2CSystem.Boolean)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/jathalls/BRM_v5.4-Alpha/blob/master/BatRecordingManager/FileBrowser.cs/#L451">View Source</a>
+  </span>
+  <a id="BatRecordingManager_FileBrowser_SelectFile_" data-uid="BatRecordingManager.FileBrowser.SelectFile*"></a>
+  <h4 id="BatRecordingManager_FileBrowser_SelectFile_System_String_System_String_System_String_System_Boolean_" data-uid="BatRecordingManager.FileBrowser.SelectFile(System.String,System.String,System.String,System.Boolean)">SelectFile(String, String, String, Boolean)</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static List&lt;string&gt; SelectFile(string title, string initialPath, string fileTypeFilter, bool multiSelect)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td><span class="parametername">title</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td><span class="parametername">initialPath</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td><span class="parametername">fileTypeFilter</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.Boolean</span></td>
+        <td><span class="parametername">multiSelect</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Collections.Generic.List</span>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/jathalls/BRM_v5.4-Alpha/new/master/apiSpec/new?filename=BatRecordingManager_FileBrowser_SelectFolder.md&amp;value=---%0Auid%3A%20BatRecordingManager.FileBrowser.SelectFolder%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/jathalls/BRM_v5.4-Alpha/blob/master/BatRecordingManager/FileBrowser.cs/#L273">View Source</a>
+  </span>
+  <a id="BatRecordingManager_FileBrowser_SelectFolder_" data-uid="BatRecordingManager.FileBrowser.SelectFolder*"></a>
+  <h4 id="BatRecordingManager_FileBrowser_SelectFolder" data-uid="BatRecordingManager.FileBrowser.SelectFolder">SelectFolder()</h4>
+  <div class="markdown level1 summary"><p>Selects the folder.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public string SelectFolder()</code></pre>
+  </div>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/jathalls/BRM_v5.4-Alpha/new/master/apiSpec/new?filename=BatRecordingManager_FileBrowser_SelectLogFiles.md&amp;value=---%0Auid%3A%20BatRecordingManager.FileBrowser.SelectLogFiles%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/jathalls/BRM_v5.4-Alpha/blob/master/BatRecordingManager/FileBrowser.cs/#L303">View Source</a>
+  </span>
+  <a id="BatRecordingManager_FileBrowser_SelectLogFiles_" data-uid="BatRecordingManager.FileBrowser.SelectLogFiles*"></a>
+  <h4 id="BatRecordingManager_FileBrowser_SelectLogFiles" data-uid="BatRecordingManager.FileBrowser.SelectLogFiles">SelectLogFiles()</h4>
+  <div class="markdown level1 summary"><p>Selects the log files.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public string SelectLogFiles()</code></pre>
+  </div>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/jathalls/BRM_v5.4-Alpha/new/master/apiSpec/new?filename=BatRecordingManager_FileBrowser_SelectRootFolder.md&amp;value=---%0Auid%3A%20BatRecordingManager.FileBrowser.SelectRootFolder%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/jathalls/BRM_v5.4-Alpha/blob/master/BatRecordingManager/FileBrowser.cs/#L342">View Source</a>
+  </span>
+  <a id="BatRecordingManager_FileBrowser_SelectRootFolder_" data-uid="BatRecordingManager.FileBrowser.SelectRootFolder*"></a>
+  <h4 id="BatRecordingManager_FileBrowser_SelectRootFolder" data-uid="BatRecordingManager.FileBrowser.SelectRootFolder">SelectRootFolder()</h4>
+  <div class="markdown level1 summary"><p>Selects the root folder using the FolderBrowserDialog and puts all the folders with
+both .wav and .txt files</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public string SelectRootFolder()</code></pre>
+  </div>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/jathalls/BRM_v5.4-Alpha/new/master/apiSpec/new?filename=BatRecordingManager_FileBrowser_SelectWavFile.md&amp;value=---%0Auid%3A%20BatRecordingManager.FileBrowser.SelectWavFile%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/jathalls/BRM_v5.4-Alpha/blob/master/BatRecordingManager/FileBrowser.cs/#L406">View Source</a>
+  </span>
+  <a id="BatRecordingManager_FileBrowser_SelectWavFile_" data-uid="BatRecordingManager.FileBrowser.SelectWavFile*"></a>
+  <h4 id="BatRecordingManager_FileBrowser_SelectWavFile" data-uid="BatRecordingManager.FileBrowser.SelectWavFile">SelectWavFile()</h4>
+  <div class="markdown level1 summary"><p>Selects the wav file. Uses the OpenFileDialog to allow the user to select a single
+.wav file and returns places that name in as the only entry in the textFileNames
+list and also returns the name</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public string SelectWavFile()</code></pre>
+  </div>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+</article>
+          </div>
+          
+          <div class="hidden-sm col-md-2" role="complementary">
+            <div class="sideaffix">
+              <div class="contribution">
+                <ul class="nav">
+                  <li>
+                    <a href="https://github.com/jathalls/BRM_v5.4-Alpha/new/master/apiSpec/new?filename=BatRecordingManager_FileBrowser.md&amp;value=---%0Auid%3A%20BatRecordingManager.FileBrowser%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A" class="contribution-link">Improve this Doc</a>
+                  </li>
+                  <li>
+                    <a href="https://github.com/jathalls/BRM_v5.4-Alpha/blob/master/BatRecordingManager/FileBrowser.cs/#L17" class="contribution-link">View Source</a>
+                  </li>
+                </ul>
+              </div>
+              <nav class="bs-docs-sidebar hidden-print hidden-xs hidden-sm affix" id="affix">
+              <!-- <p><a class="back-to-top" href="#top">Back to top</a><p> -->
+              </nav>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <footer>
+        <div class="grad-bottom"></div>
+        <div class="footer">
+          <div class="container">
+            <span class="pull-right">
+              <a href="#top">Back to top</a>
+            </span>
+            
+            <span>Copyright © 2015-2017 Microsoft<br>Generated by <strong>DocFX</strong></span>
+          </div>
+        </div>
+      </footer>
+    </div>
+    
+    <script type="text/javascript" src="../styles/docfx.vendor.js"></script>
+    <script type="text/javascript" src="../styles/docfx.js"></script>
+    <script type="text/javascript" src="../styles/main.js"></script>
+  </body>
+</html>

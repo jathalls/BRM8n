@@ -1,0 +1,171 @@
+﻿<UserControl x:Class="BatRecordingManager.RecordingsDetailListControl"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+             xmlns:local="clr-namespace:BatRecordingManager"
+             mc:Ignorable="d"
+             d:DesignHeight="300" d:DesignWidth="600">
+
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="28" />
+            <RowDefinition Height="100*" />
+        </Grid.RowDefinitions>
+
+        <Border BorderBrush="Black" BorderThickness="0,3,0,0" Grid.Row="0">
+            <!-- A line separates the details from the list of recordings/-->
+
+            <StackPanel Orientation="Horizontal" Background="{StaticResource BlueGradientBackground}">
+                <!-- A button bar allows manipulation of the recording list /-->
+                <Label
+                    Style="{StaticResource SimpleLabel}"
+                    Content="Recording:- " />
+                <Button
+                    x:Name="AddRecordingButton"
+                    Content="ADD"
+                    Width="50"
+                    IsEnabled="False"
+                    ToolTip="Manually create a new recording item within the selected recording session"
+                    Style="{StaticResource SimpleButton}" Click="AddRecordingButton_Click" />
+                <Button
+                    x:Name="EditRecordingButton"
+                    Content="EDIT"
+                    Width="50"
+                    IsEnabled="False"
+                    ToolTip="Edit the details of the selected recording item"
+                    Style="{StaticResource SimpleButton}" Click="EditRecordingButton_Click" />
+                <Button
+                    x:Name="DeleteRecordingButton"
+                    Content="DEL"
+                    Width="50"
+                    IsEnabled="False"
+                    ToolTip="Delete the selected recording from the database"
+                    Style="{StaticResource SimpleButton}" Click="DeleteRecordingButton_Click" />
+                <Button
+                    Name="AddSegImgButton"
+                    Content="Add Segment"
+                    Width="80"
+                    IsEnabled="False"
+                    ToolTip="Add a Segment To the Recording"
+                    Style="{StaticResource SimpleButton}"
+                    Click="AddSegImgButton_Click" />
+                <ToggleButton
+                    x:Name="CallsToggleButton"
+                    Content="Calls"
+                    Width="50"
+                    IsEnabled="True"
+                    IsChecked="False"
+                    Style="{StaticResource ToggleButton}"
+
+                    ToolTip="View/Hide the call parameter data" Checked="CallsToggleButton_Checked" Unchecked="CallsToggleButton_Unchecked" />
+                <Button
+                    x:Name="SearchButton"
+                    Content="SEARCH"
+                    Width="50"
+                    IsEnabled="True"
+                    ToolTip="searches through the comments for a matching string"
+                    Style="{StaticResource SimpleButton}" Click="SearchButton_Click" />
+                <Button
+                    x:Name="PlayButton"
+                    Content="Play"
+                    Style="{StaticResource SimpleButton}"
+                    ToolTip="Opens a player window and adds the selected segment to the play list" Click="PlayButton_Click"/>
+            </StackPanel>
+        </Border>
+
+        <!-- Scrolling for the listbox of recordings MUST be false as the header sections can take up the whole screen and if set to true
+        i.e. scroll in logical rather than physical units, then the labelled segments cannot be scrolled into view-->
+        <ListBox
+            x:Name="RecordingsListView"
+            Grid.Row="1"
+
+            Style="{StaticResource SimpleListBox}"
+            SelectionChanged="RecordingsListView_SelectionChanged"
+
+            ScrollViewer.CanContentScroll="False"
+
+            ItemsSource="{Binding Path=recordingsList}"
+            ScrollViewer.VerticalScrollBarVisibility="Visible" IsSynchronizedWithCurrentItem="True">
+
+            <ListBox.ItemTemplate>
+                <DataTemplate>
+                    <StackPanel
+                        Orientation="Vertical"
+                        x:Name="RecordingStackPanel"
+                        Background="{StaticResource WindowBackgroundBrush}"
+
+                        
+                        Focusable="True">
+
+                        <Label
+                            Style="{StaticResource SimpleLabel}"
+                            x:Name="RecordingNameLabel"
+                            BorderThickness="0,2,0,0"
+                            Content="{Binding Converter={StaticResource recordingDetailsConverter}}"
+                            BorderBrush="Black" MouseDoubleClick="RecordingNameLabel_MouseDoubleClick" />
+                        <Label
+                            Style="{StaticResource SimpleLabel}"
+                            x:Name="GPSLabel"
+                            Content="{Binding Converter={StaticResource recordingToGPSConverter}}"
+                            Focusable="True" MouseDoubleClick="GPSLabel_MouseDoubleClick" />
+                        <Label
+                            Style="{StaticResource SimpleLabel}"
+                            Content="{Binding RecordingNotes}"
+                            x:Name="RecordingNotesLabel" />
+                        <Border>
+                            <StackPanel Orientation="Vertical" ScrollViewer.CanContentScroll="True">
+                                <TextBlock
+                                    x:Name="RecordingPassSummaryListView"
+                                    Text="{Binding Converter={StaticResource recordingPassSummaryConverter}}"
+                                    ></TextBlock>
+
+                                <ListView
+                                    x:Name="LabelledSegmentListView"
+                                    ItemsSource="{Binding LabelledSegments}"
+                                    Style="{StaticResource SimpleListView}"
+                                    ScrollViewer.CanContentScroll="False"
+                                    SelectionChanged="LabelledSegmentListView_SelectionChanged"
+                                    PreviewMouseWheel="LabelledSegmentListView_PreviewMouseWheel"
+                                    SelectionMode="Single">
+
+                                    <ListView.ItemTemplate>
+                                        <DataTemplate>
+                                            <Border BorderThickness="0,0,0,2" BorderBrush="Black">
+                                                <StackPanel Orientation="Vertical">
+                                                <!-- Stack panel required to hold call parameters if the text block is hovered over
+                                                    and the Calls button has been clicked-->
+                                                    <ContentControl MouseDoubleClick="ContentControl_MouseDoubleClick">
+                                                    <TextBlock
+                                                        Text="{Binding Converter={StaticResource labelledSegmentConverter}}"
+                                                        x:Name="LabelledSegmentTextBlock"
+                                                        TextWrapping="Wrap"
+                                                        Background="{Binding Path=Comment, Converter={StaticResource TextColourConverter}}"
+
+                                                        MouseRightButtonUp="LabelledSegmentTextBlock_MouseRightButtonUp"
+                                                        MouseEnter="LabelledSegmentTextBlock_MouseEnter" 
+                                                        MouseLeave="LabelledSegmentTextBlock_MouseLeave">
+                                                        <TextBlock.ToolTip>
+                                                            <ToolTip Placement="Top">
+                                                                <TextBlock>
+                                                                    Double-click to open segment in Audacity
+                                                                </TextBlock>
+                                                            </ToolTip>
+                                                        </TextBlock.ToolTip>
+                                                    </TextBlock>
+                                                    </ContentControl>
+                                                </StackPanel>
+                                            </Border>
+                                        </DataTemplate>
+                                    </ListView.ItemTemplate>
+                                </ListView>
+                            </StackPanel>
+                        </Border>
+                    </StackPanel>
+                </DataTemplate>
+            </ListBox.ItemTemplate>
+        </ListBox>
+
+        <!-- The recordings list is populated from code -->
+    </Grid>
+</UserControl>

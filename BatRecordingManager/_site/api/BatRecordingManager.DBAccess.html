@@ -1,0 +1,1300 @@
+﻿<!DOCTYPE html>
+<!--[if IE]><![endif]-->
+<html>
+  
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>Class DBAccess
+   </title>
+    <meta name="viewport" content="width=device-width">
+    <meta name="title" content="Class DBAccess
+   ">
+    <meta name="generator" content="docfx 2.29.1.0">
+    
+    <link rel="shortcut icon" href="../favicon.ico">
+    <link rel="stylesheet" href="../styles/docfx.vendor.css">
+    <link rel="stylesheet" href="../styles/docfx.css">
+    <link rel="stylesheet" href="../styles/main.css">
+    <meta property="docfx:navrel" content="../toc.html">
+    <meta property="docfx:tocrel" content="toc.html">
+    
+    
+    
+  </head>
+  <body data-spy="scroll" data-target="#affix">
+    <div id="wrapper">
+      <header>
+        
+        <nav id="autocollapse" class="navbar navbar-inverse ng-scope" role="navigation">
+          <div class="container">
+            <div class="navbar-header">
+              <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+              </button>
+              
+              <a class="navbar-brand" href="../index.html">
+                <img id="logo" class="svg" src="../logo.svg" alt="">
+              </a>
+            </div>
+            <div class="collapse navbar-collapse" id="navbar">
+              <form class="navbar-form navbar-right" role="search" id="search">
+                <div class="form-group">
+                  <input type="text" class="form-control" id="search-query" placeholder="Search" autocomplete="off">
+                </div>
+              </form>
+            </div>
+          </div>
+        </nav>
+        
+        <div class="subnav navbar navbar-default">
+          <div class="container hide-when-search" id="breadcrumb">
+            <ul class="breadcrumb">
+              <li></li>
+            </ul>
+          </div>
+        </div>
+      </header>
+      <div role="main" class="container body-content hide-when-search">
+        
+        <div class="sidenav hide-when-search">
+          <a class="btn toc-toggle collapse" data-toggle="collapse" href="#sidetoggle" aria-expanded="false" aria-controls="sidetoggle">Show / Hide Table of Contents</a>
+          <div class="sidetoggle collapse" id="sidetoggle">
+            <div id="sidetoc"></div>
+          </div>
+        </div>
+        <div class="article row grid-right">
+          <div class="col-md-10">
+            <article class="content wrap" id="_content" data-uid="BatRecordingManager.DBAccess">
+  
+  
+  <h1 id="BatRecordingManager_DBAccess" data-uid="BatRecordingManager.DBAccess" class="text-break">Class DBAccess
+  </h1>
+  <div class="markdown level0 summary"><p>Static class of Database interface functions</p>
+</div>
+  <div class="markdown level0 conceptual"></div>
+  <div class="inheritance">
+    <h5>Inheritance</h5>
+    <div class="level0"><span class="xref">System.Object</span></div>
+    <div class="level1"><span class="xref">DBAccess</span></div>
+  </div>
+  <div class="inheritedMembers">
+    <h5>Inherited Members</h5>
+    <div>
+      <span class="xref">System.Object.ToString()</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.Equals(System.Object)</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.Equals(System.Object, System.Object)</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.ReferenceEquals(System.Object, System.Object)</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.GetHashCode()</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.GetType()</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.MemberwiseClone()</span>
+    </div>
+  </div>
+  <h6><strong>Namespace</strong>: <a class="xref" href="BatRecordingManager.html">BatRecordingManager</a></h6>
+  <h6><strong>Assembly</strong>: BatRecordingManager.dll</h6>
+  <h5 id="BatRecordingManager_DBAccess_syntax">Syntax</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static class DBAccess</code></pre>
+  </div>
+  <h3 id="methods">Methods
+  </h3>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/jathalls/BRM_v5.4-Alpha/new/master/apiSpec/new?filename=BatRecordingManager_DBAccess_AddImage_BatRecordingManager_Bat_BatRecordingManager_BinaryData_.md&amp;value=---%0Auid%3A%20BatRecordingManager.DBAccess.AddImage(BatRecordingManager.Bat%2CBatRecordingManager.BinaryData)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/jathalls/BRM_v5.4-Alpha/blob/master/BatRecordingManager/DBAccess.cs/#L1142">View Source</a>
+  </span>
+  <a id="BatRecordingManager_DBAccess_AddImage_" data-uid="BatRecordingManager.DBAccess.AddImage*"></a>
+  <h4 id="BatRecordingManager_DBAccess_AddImage_BatRecordingManager_Bat_BatRecordingManager_BinaryData_" data-uid="BatRecordingManager.DBAccess.AddImage(BatRecordingManager.Bat,BatRecordingManager.BinaryData)">AddImage(Bat, BinaryData)</h4>
+  <div class="markdown level1 summary"><p>Extension method ob Bat.AddImage
+Given an instance of a BinaryData holding an image, the image is linked to
+the Bat by an entry in the BatPictures link table</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static void AddImage(this Bat bat, BinaryData imageData)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="BatRecordingManager.Bat.html">Bat</a></td>
+        <td><span class="parametername">bat</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="BatRecordingManager.BinaryData.html">BinaryData</a></td>
+        <td><span class="parametername">imageData</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/jathalls/BRM_v5.4-Alpha/new/master/apiSpec/new?filename=BatRecordingManager_DBAccess_AddImage_BatRecordingManager_Recording_BatRecordingManager_BinaryData_.md&amp;value=---%0Auid%3A%20BatRecordingManager.DBAccess.AddImage(BatRecordingManager.Recording%2CBatRecordingManager.BinaryData)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/jathalls/BRM_v5.4-Alpha/blob/master/BatRecordingManager/DBAccess.cs/#L1167">View Source</a>
+  </span>
+  <a id="BatRecordingManager_DBAccess_AddImage_" data-uid="BatRecordingManager.DBAccess.AddImage*"></a>
+  <h4 id="BatRecordingManager_DBAccess_AddImage_BatRecordingManager_Recording_BatRecordingManager_BinaryData_" data-uid="BatRecordingManager.DBAccess.AddImage(BatRecordingManager.Recording,BatRecordingManager.BinaryData)">AddImage(Recording, BinaryData)</h4>
+  <div class="markdown level1 summary"><p>Extension method on Recording.AddImage(BinaryData)
+Given an instance of a BinaryData holding an image
+the image is linked to segmentzero of the recording.  If the
+recording does not have a segmentzero (i.e. a labelled segment with start
+and end offsets of zero) then one is created through the GetSegmentZero
+extension method.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static void AddImage(this Recording recording, BinaryData imageData)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="BatRecordingManager.Recording.html">Recording</a></td>
+        <td><span class="parametername">recording</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="BatRecordingManager.BinaryData.html">BinaryData</a></td>
+        <td><span class="parametername">imageData</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/jathalls/BRM_v5.4-Alpha/new/master/apiSpec/new?filename=BatRecordingManager_DBAccess_DeleteRecording_BatRecordingManager_Recording_.md&amp;value=---%0Auid%3A%20BatRecordingManager.DBAccess.DeleteRecording(BatRecordingManager.Recording)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/jathalls/BRM_v5.4-Alpha/blob/master/BatRecordingManager/DBAccess.cs/#L132">View Source</a>
+  </span>
+  <a id="BatRecordingManager_DBAccess_DeleteRecording_" data-uid="BatRecordingManager.DBAccess.DeleteRecording*"></a>
+  <h4 id="BatRecordingManager_DBAccess_DeleteRecording_BatRecordingManager_Recording_" data-uid="BatRecordingManager.DBAccess.DeleteRecording(BatRecordingManager.Recording)">DeleteRecording(Recording)</h4>
+  <div class="markdown level1 summary"><p>Deletes the recording supplied as a parameter and all LabelledSegments related to
+that recording.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static string DeleteRecording(Recording recording)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="BatRecordingManager.Recording.html">Recording</a></td>
+        <td><span class="parametername">recording</span></td>
+        <td><p>The recording.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/jathalls/BRM_v5.4-Alpha/new/master/apiSpec/new?filename=BatRecordingManager_DBAccess_GetImageCount_BatRecordingManager_Recording_BatRecordingManager_Bat_System_Boolean__.md&amp;value=---%0Auid%3A%20BatRecordingManager.DBAccess.GetImageCount(BatRecordingManager.Recording%2CBatRecordingManager.Bat%2CSystem.Boolean%40)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/jathalls/BRM_v5.4-Alpha/blob/master/BatRecordingManager/DBAccess.cs/#L399">View Source</a>
+  </span>
+  <a id="BatRecordingManager_DBAccess_GetImageCount_" data-uid="BatRecordingManager.DBAccess.GetImageCount*"></a>
+  <h4 id="BatRecordingManager_DBAccess_GetImageCount_BatRecordingManager_Recording_BatRecordingManager_Bat_System_Boolean__" data-uid="BatRecordingManager.DBAccess.GetImageCount(BatRecordingManager.Recording,BatRecordingManager.Bat,System.Boolean@)">GetImageCount(Recording, Bat, out Boolean)</h4>
+  <div class="markdown level1 summary"><p>Extension Method on Recording.GetImageCount(bat)
+returns the number of images in every segment of the recording
+in which the specified bat is tagged.  If bat is null returns the
+image count for all segments in the recording.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static int GetImageCount(this Recording recording, Bat bat, out bool recordingHasBat)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="BatRecordingManager.Recording.html">Recording</a></td>
+        <td><span class="parametername">recording</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="BatRecordingManager.Bat.html">Bat</a></td>
+        <td><span class="parametername">bat</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.Boolean</span></td>
+        <td><span class="parametername">recordingHasBat</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Int32</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/jathalls/BRM_v5.4-Alpha/new/master/apiSpec/new?filename=BatRecordingManager_DBAccess_GetImageList_BatRecordingManager_Bat_.md&amp;value=---%0Auid%3A%20BatRecordingManager.DBAccess.GetImageList(BatRecordingManager.Bat)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/jathalls/BRM_v5.4-Alpha/blob/master/BatRecordingManager/DBAccess.cs/#L462">View Source</a>
+  </span>
+  <a id="BatRecordingManager_DBAccess_GetImageList_" data-uid="BatRecordingManager.DBAccess.GetImageList*"></a>
+  <h4 id="BatRecordingManager_DBAccess_GetImageList_BatRecordingManager_Bat_" data-uid="BatRecordingManager.DBAccess.GetImageList(BatRecordingManager.Bat)">GetImageList(Bat)</h4>
+  <div class="markdown level1 summary"><p>Extension method Bat.GetImageList()
+returns a collection of images for the Bat.  If Bat is null
+returns a null, otherwise returns a collection, empty if necessary.
+It is assumed that all stored blobs in BinaryDatas are images.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static BulkObservableCollection&lt;StoredImage&gt; GetImageList(this Bat bat)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="BatRecordingManager.Bat.html">Bat</a></td>
+        <td><span class="parametername">bat</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">Microsoft.VisualStudio.Language.Intellisense.BulkObservableCollection</span>&lt;<a class="xref" href="BatRecordingManager.StoredImage.html">StoredImage</a>&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/jathalls/BRM_v5.4-Alpha/new/master/apiSpec/new?filename=BatRecordingManager_DBAccess_GetImageList_BatRecordingManager_Call_.md&amp;value=---%0Auid%3A%20BatRecordingManager.DBAccess.GetImageList(BatRecordingManager.Call)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/jathalls/BRM_v5.4-Alpha/blob/master/BatRecordingManager/DBAccess.cs/#L217">View Source</a>
+  </span>
+  <a id="BatRecordingManager_DBAccess_GetImageList_" data-uid="BatRecordingManager.DBAccess.GetImageList*"></a>
+  <h4 id="BatRecordingManager_DBAccess_GetImageList_BatRecordingManager_Call_" data-uid="BatRecordingManager.DBAccess.GetImageList(BatRecordingManager.Call)">GetImageList(Call)</h4>
+  <div class="markdown level1 summary"><p>Extension Method on Call.GetImageList()
+returns a collection of StoredImage for the call.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static BulkObservableCollection&lt;StoredImage&gt; GetImageList(this Call call)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="BatRecordingManager.Call.html">Call</a></td>
+        <td><span class="parametername">call</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">Microsoft.VisualStudio.Language.Intellisense.BulkObservableCollection</span>&lt;<a class="xref" href="BatRecordingManager.StoredImage.html">StoredImage</a>&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/jathalls/BRM_v5.4-Alpha/new/master/apiSpec/new?filename=BatRecordingManager_DBAccess_GetImageList_BatRecordingManager_LabelledSegment_.md&amp;value=---%0Auid%3A%20BatRecordingManager.DBAccess.GetImageList(BatRecordingManager.LabelledSegment)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/jathalls/BRM_v5.4-Alpha/blob/master/BatRecordingManager/DBAccess.cs/#L166">View Source</a>
+  </span>
+  <a id="BatRecordingManager_DBAccess_GetImageList_" data-uid="BatRecordingManager.DBAccess.GetImageList*"></a>
+  <h4 id="BatRecordingManager_DBAccess_GetImageList_BatRecordingManager_LabelledSegment_" data-uid="BatRecordingManager.DBAccess.GetImageList(BatRecordingManager.LabelledSegment)">GetImageList(LabelledSegment)</h4>
+  <div class="markdown level1 summary"><p>Returns a BulkObservableCollection of stored images belonging to the segment
+Extension method for LabelledSegment</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static BulkObservableCollection&lt;StoredImage&gt; GetImageList(this LabelledSegment segment)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="BatRecordingManager.LabelledSegment.html">LabelledSegment</a></td>
+        <td><span class="parametername">segment</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">Microsoft.VisualStudio.Language.Intellisense.BulkObservableCollection</span>&lt;<a class="xref" href="BatRecordingManager.StoredImage.html">StoredImage</a>&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/jathalls/BRM_v5.4-Alpha/new/master/apiSpec/new?filename=BatRecordingManager_DBAccess_GetImageList_BatRecordingManager_Recording_BatRecordingManager_Bat_.md&amp;value=---%0Auid%3A%20BatRecordingManager.DBAccess.GetImageList(BatRecordingManager.Recording%2CBatRecordingManager.Bat)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/jathalls/BRM_v5.4-Alpha/blob/master/BatRecordingManager/DBAccess.cs/#L310">View Source</a>
+  </span>
+  <a id="BatRecordingManager_DBAccess_GetImageList_" data-uid="BatRecordingManager.DBAccess.GetImageList*"></a>
+  <h4 id="BatRecordingManager_DBAccess_GetImageList_BatRecordingManager_Recording_BatRecordingManager_Bat_" data-uid="BatRecordingManager.DBAccess.GetImageList(BatRecordingManager.Recording,BatRecordingManager.Bat)">GetImageList(Recording, Bat)</h4>
+  <div class="markdown level1 summary"><p>Extension method on Recording.GetImageList(Bat)
+returns a collection of StoredImage of all the images for all the segments
+of the recording.  If Bat is not null then aonly includes images for segments
+that tag the specifried bat, otherwise returns images for all segments.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static BulkObservableCollection&lt;StoredImage&gt; GetImageList(this Recording recording, Bat bat)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="BatRecordingManager.Recording.html">Recording</a></td>
+        <td><span class="parametername">recording</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="BatRecordingManager.Bat.html">Bat</a></td>
+        <td><span class="parametername">bat</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">Microsoft.VisualStudio.Language.Intellisense.BulkObservableCollection</span>&lt;<a class="xref" href="BatRecordingManager.StoredImage.html">StoredImage</a>&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/jathalls/BRM_v5.4-Alpha/new/master/apiSpec/new?filename=BatRecordingManager_DBAccess_GetImageList_BatRecordingManager_RecordingSession_.md&amp;value=---%0Auid%3A%20BatRecordingManager.DBAccess.GetImageList(BatRecordingManager.RecordingSession)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/jathalls/BRM_v5.4-Alpha/blob/master/BatRecordingManager/DBAccess.cs/#L977">View Source</a>
+  </span>
+  <a id="BatRecordingManager_DBAccess_GetImageList_" data-uid="BatRecordingManager.DBAccess.GetImageList*"></a>
+  <h4 id="BatRecordingManager_DBAccess_GetImageList_BatRecordingManager_RecordingSession_" data-uid="BatRecordingManager.DBAccess.GetImageList(BatRecordingManager.RecordingSession)">GetImageList(RecordingSession)</h4>
+  <div class="markdown level1 summary"><p>Extension Methid on RecordingSession.GetImageList()
+returns a collection of all the images for all the segments
+in all the recordings for the RecordingSession.
+Returns at least an empty list.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static BulkObservableCollection&lt;StoredImage&gt; GetImageList(this RecordingSession session)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="BatRecordingManager.RecordingSession.html">RecordingSession</a></td>
+        <td><span class="parametername">session</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">Microsoft.VisualStudio.Language.Intellisense.BulkObservableCollection</span>&lt;<a class="xref" href="BatRecordingManager.StoredImage.html">StoredImage</a>&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/jathalls/BRM_v5.4-Alpha/new/master/apiSpec/new?filename=BatRecordingManager_DBAccess_GetMatchingBat_BatRecordingManager_Bat_.md&amp;value=---%0Auid%3A%20BatRecordingManager.DBAccess.GetMatchingBat(BatRecordingManager.Bat)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/jathalls/BRM_v5.4-Alpha/blob/master/BatRecordingManager/DBAccess.cs/#L913">View Source</a>
+  </span>
+  <a id="BatRecordingManager_DBAccess_GetMatchingBat_" data-uid="BatRecordingManager.DBAccess.GetMatchingBat*"></a>
+  <h4 id="BatRecordingManager_DBAccess_GetMatchingBat_BatRecordingManager_Bat_" data-uid="BatRecordingManager.DBAccess.GetMatchingBat(BatRecordingManager.Bat)">GetMatchingBat(Bat)</h4>
+  <div class="markdown level1 summary"><p>Gets the matching bat.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static Bat GetMatchingBat(Bat bat)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="BatRecordingManager.Bat.html">Bat</a></td>
+        <td><span class="parametername">bat</span></td>
+        <td><p>The bat.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="BatRecordingManager.Bat.html">Bat</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/jathalls/BRM_v5.4-Alpha/new/master/apiSpec/new?filename=BatRecordingManager_DBAccess_GetNamedBat_System_String_.md&amp;value=---%0Auid%3A%20BatRecordingManager.DBAccess.GetNamedBat(System.String)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/jathalls/BRM_v5.4-Alpha/blob/master/BatRecordingManager/DBAccess.cs/#L930">View Source</a>
+  </span>
+  <a id="BatRecordingManager_DBAccess_GetNamedBat_" data-uid="BatRecordingManager.DBAccess.GetNamedBat*"></a>
+  <h4 id="BatRecordingManager_DBAccess_GetNamedBat_System_String_" data-uid="BatRecordingManager.DBAccess.GetNamedBat(System.String)">GetNamedBat(String)</h4>
+  <div class="markdown level1 summary"><p>Gets the named bat. Returns the bat identified by a specified Name or null if the bat
+does not exist in the database</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static Bat GetNamedBat(string newBatName)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td><span class="parametername">newBatName</span></td>
+        <td><p>New name of the bat.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="BatRecordingManager.Bat.html">Bat</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="exceptions">Exceptions</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Condition</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.NotImplementedException</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/jathalls/BRM_v5.4-Alpha/new/master/apiSpec/new?filename=BatRecordingManager_DBAccess_GetSegmentZero_BatRecordingManager_Recording_BatRecordingManager_BatReferenceDBLinqDataContext_.md&amp;value=---%0Auid%3A%20BatRecordingManager.DBAccess.GetSegmentZero(BatRecordingManager.Recording%2CBatRecordingManager.BatReferenceDBLinqDataContext)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/jathalls/BRM_v5.4-Alpha/blob/master/BatRecordingManager/DBAccess.cs/#L1189">View Source</a>
+  </span>
+  <a id="BatRecordingManager_DBAccess_GetSegmentZero_" data-uid="BatRecordingManager.DBAccess.GetSegmentZero*"></a>
+  <h4 id="BatRecordingManager_DBAccess_GetSegmentZero_BatRecordingManager_Recording_BatRecordingManager_BatReferenceDBLinqDataContext_" data-uid="BatRecordingManager.DBAccess.GetSegmentZero(BatRecordingManager.Recording,BatRecordingManager.BatReferenceDBLinqDataContext)">GetSegmentZero(Recording, BatReferenceDBLinqDataContext)</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static LabelledSegment GetSegmentZero(this Recording recording, BatReferenceDBLinqDataContext dc)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="BatRecordingManager.Recording.html">Recording</a></td>
+        <td><span class="parametername">recording</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="BatRecordingManager.BatReferenceDBLinqDataContext.html">BatReferenceDBLinqDataContext</a></td>
+        <td><span class="parametername">dc</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="BatRecordingManager.LabelledSegment.html">LabelledSegment</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/jathalls/BRM_v5.4-Alpha/new/master/apiSpec/new?filename=BatRecordingManager_DBAccess_GetSortedBatList.md&amp;value=---%0Auid%3A%20BatRecordingManager.DBAccess.GetSortedBatList%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/jathalls/BRM_v5.4-Alpha/blob/master/BatRecordingManager/DBAccess.cs/#L941">View Source</a>
+  </span>
+  <a id="BatRecordingManager_DBAccess_GetSortedBatList_" data-uid="BatRecordingManager.DBAccess.GetSortedBatList*"></a>
+  <h4 id="BatRecordingManager_DBAccess_GetSortedBatList" data-uid="BatRecordingManager.DBAccess.GetSortedBatList">GetSortedBatList()</h4>
+  <div class="markdown level1 summary"><p>Returns a list of all known bats sorted on SortOrder</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static BulkObservableCollection&lt;Bat&gt; GetSortedBatList()</code></pre>
+  </div>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">Microsoft.VisualStudio.Language.Intellisense.BulkObservableCollection</span>&lt;<a class="xref" href="BatRecordingManager.Bat.html">Bat</a>&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/jathalls/BRM_v5.4-Alpha/new/master/apiSpec/new?filename=BatRecordingManager_DBAccess_InsertBat_BatRecordingManager_Bat_.md&amp;value=---%0Auid%3A%20BatRecordingManager.DBAccess.InsertBat(BatRecordingManager.Bat)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/jathalls/BRM_v5.4-Alpha/blob/master/BatRecordingManager/DBAccess.cs/#L961">View Source</a>
+  </span>
+  <a id="BatRecordingManager_DBAccess_InsertBat_" data-uid="BatRecordingManager.DBAccess.InsertBat*"></a>
+  <h4 id="BatRecordingManager_DBAccess_InsertBat_BatRecordingManager_Bat_" data-uid="BatRecordingManager.DBAccess.InsertBat(BatRecordingManager.Bat)">InsertBat(Bat)</h4>
+  <div class="markdown level1 summary"><p>Inserts the bat.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static string InsertBat(Bat bat)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="BatRecordingManager.Bat.html">Bat</a></td>
+        <td><span class="parametername">bat</span></td>
+        <td><p>The bat.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/jathalls/BRM_v5.4-Alpha/new/master/apiSpec/new?filename=BatRecordingManager_DBAccess_InsertImage_BatRecordingManager_StoredImage_.md&amp;value=---%0Auid%3A%20BatRecordingManager.DBAccess.InsertImage(BatRecordingManager.StoredImage)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/jathalls/BRM_v5.4-Alpha/blob/master/BatRecordingManager/DBAccess.cs/#L883">View Source</a>
+  </span>
+  <a id="BatRecordingManager_DBAccess_InsertImage_" data-uid="BatRecordingManager.DBAccess.InsertImage*"></a>
+  <h4 id="BatRecordingManager_DBAccess_InsertImage_BatRecordingManager_StoredImage_" data-uid="BatRecordingManager.DBAccess.InsertImage(BatRecordingManager.StoredImage)">InsertImage(StoredImage)</h4>
+  <div class="markdown level1 summary"><p>Inserts a new StoredImage into the database without any links to other objects.
+If the image already exists then calls UpdateImage(image) instead.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static StoredImage InsertImage(StoredImage image)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="BatRecordingManager.StoredImage.html">StoredImage</a></td>
+        <td><span class="parametername">image</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="BatRecordingManager.StoredImage.html">StoredImage</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/jathalls/BRM_v5.4-Alpha/new/master/apiSpec/new?filename=BatRecordingManager_DBAccess_MergeBat_BatRecordingManager_Bat_BatRecordingManager_BatReferenceDBLinqDataContext_.md&amp;value=---%0Auid%3A%20BatRecordingManager.DBAccess.MergeBat(BatRecordingManager.Bat%2CBatRecordingManager.BatReferenceDBLinqDataContext)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/jathalls/BRM_v5.4-Alpha/blob/master/BatRecordingManager/DBAccess.cs/#L1033">View Source</a>
+  </span>
+  <a id="BatRecordingManager_DBAccess_MergeBat_" data-uid="BatRecordingManager.DBAccess.MergeBat*"></a>
+  <h4 id="BatRecordingManager_DBAccess_MergeBat_BatRecordingManager_Bat_BatRecordingManager_BatReferenceDBLinqDataContext_" data-uid="BatRecordingManager.DBAccess.MergeBat(BatRecordingManager.Bat,BatRecordingManager.BatReferenceDBLinqDataContext)">MergeBat(Bat, BatReferenceDBLinqDataContext)</h4>
+  <div class="markdown level1 summary"><p>Merges the bat. The supplied bat is either inserted into the database if it is not
+already there, or, if a bat with the same genus and species is present then the data
+in this bat is added to and merged with the data for the existing bat. Sort orders
+are taken from the new bat and duplicate tags or common names are removed, otherwise
+any tag or common name differing ins pelling or capitalization will be treated as a
+new item. Existing tags or common names which do not exist in the new bat will be
+removed. Notes from the new bat will replace notes in the existing bat. The bat
+&apos;name&apos; will be updated to reflect the common name with the lowest sort index. Returns
+a suitable error message if the process failed, or an empty string if the process was successful;</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static string MergeBat(Bat bat, BatReferenceDBLinqDataContext dataContext)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="BatRecordingManager.Bat.html">Bat</a></td>
+        <td><span class="parametername">bat</span></td>
+        <td><p>The bat.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="BatRecordingManager.BatReferenceDBLinqDataContext.html">BatReferenceDBLinqDataContext</a></td>
+        <td><span class="parametername">dataContext</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/jathalls/BRM_v5.4-Alpha/new/master/apiSpec/new?filename=BatRecordingManager_DBAccess_MergeBat_BatRecordingManager_Bat_BatRecordingManager_BatReferenceDBLinqDataContext_BatRecordingManager_Bat__.md&amp;value=---%0Auid%3A%20BatRecordingManager.DBAccess.MergeBat(BatRecordingManager.Bat%2CBatRecordingManager.BatReferenceDBLinqDataContext%2CBatRecordingManager.Bat%40)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/jathalls/BRM_v5.4-Alpha/blob/master/BatRecordingManager/DBAccess.cs/#L1039">View Source</a>
+  </span>
+  <a id="BatRecordingManager_DBAccess_MergeBat_" data-uid="BatRecordingManager.DBAccess.MergeBat*"></a>
+  <h4 id="BatRecordingManager_DBAccess_MergeBat_BatRecordingManager_Bat_BatRecordingManager_BatReferenceDBLinqDataContext_BatRecordingManager_Bat__" data-uid="BatRecordingManager.DBAccess.MergeBat(BatRecordingManager.Bat,BatRecordingManager.BatReferenceDBLinqDataContext,BatRecordingManager.Bat@)">MergeBat(Bat, BatReferenceDBLinqDataContext, out Bat)</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static string MergeBat(Bat bat, BatReferenceDBLinqDataContext dataContext, out Bat newBat)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="BatRecordingManager.Bat.html">Bat</a></td>
+        <td><span class="parametername">bat</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="BatRecordingManager.BatReferenceDBLinqDataContext.html">BatReferenceDBLinqDataContext</a></td>
+        <td><span class="parametername">dataContext</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="BatRecordingManager.Bat.html">Bat</a></td>
+        <td><span class="parametername">newBat</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/jathalls/BRM_v5.4-Alpha/new/master/apiSpec/new?filename=BatRecordingManager_DBAccess_UpdateLabelledSegment_BatRecordingManager_SegmentAndBatList_System_Int32_Microsoft_VisualStudio_Language_Intellisense_BulkObservableCollection_BatRecordingManager_StoredImage__BatRecordingManager_BatReferenceDBLinqDataContext_.md&amp;value=---%0Auid%3A%20BatRecordingManager.DBAccess.UpdateLabelledSegment(BatRecordingManager.SegmentAndBatList%2CSystem.Int32%2CMicrosoft.VisualStudio.Language.Intellisense.BulkObservableCollection%7BBatRecordingManager.StoredImage%7D%2CBatRecordingManager.BatReferenceDBLinqDataContext)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/jathalls/BRM_v5.4-Alpha/blob/master/BatRecordingManager/DBAccess.cs/#L4585">View Source</a>
+  </span>
+  <a id="BatRecordingManager_DBAccess_UpdateLabelledSegment_" data-uid="BatRecordingManager.DBAccess.UpdateLabelledSegment*"></a>
+  <h4 id="BatRecordingManager_DBAccess_UpdateLabelledSegment_BatRecordingManager_SegmentAndBatList_System_Int32_Microsoft_VisualStudio_Language_Intellisense_BulkObservableCollection_BatRecordingManager_StoredImage__BatRecordingManager_BatReferenceDBLinqDataContext_" data-uid="BatRecordingManager.DBAccess.UpdateLabelledSegment(BatRecordingManager.SegmentAndBatList,System.Int32,Microsoft.VisualStudio.Language.Intellisense.BulkObservableCollection{BatRecordingManager.StoredImage},BatRecordingManager.BatReferenceDBLinqDataContext)">UpdateLabelledSegment(SegmentAndBatList, Int32, BulkObservableCollection&lt;StoredImage&gt;, BatReferenceDBLinqDataContext)</h4>
+  <div class="markdown level1 summary"><p>Updates the labelled segments. using the data in the combinedSgementsAndPasses and
+linked to the recording identified by the Id. Also adds data to the extendedBatPasses table.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static void UpdateLabelledSegment(SegmentAndBatList segmentAndBatList, int recordingId, BulkObservableCollection&lt;StoredImage&gt; ListOfSegmentImages, BatReferenceDBLinqDataContext dc)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="BatRecordingManager.SegmentAndBatList.html">SegmentAndBatList</a></td>
+        <td><span class="parametername">segmentAndBatList</span></td>
+        <td><p>The combined segments and passes.</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.Int32</span></td>
+        <td><span class="parametername">recordingId</span></td>
+        <td><p>The identifier.</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">Microsoft.VisualStudio.Language.Intellisense.BulkObservableCollection</span>&lt;<a class="xref" href="BatRecordingManager.StoredImage.html">StoredImage</a>&gt;</td>
+        <td><span class="parametername">ListOfSegmentImages</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="BatRecordingManager.BatReferenceDBLinqDataContext.html">BatReferenceDBLinqDataContext</a></td>
+        <td><span class="parametername">dc</span></td>
+        <td><p>The dc.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="exceptions">Exceptions</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Condition</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.NotImplementedException</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/jathalls/BRM_v5.4-Alpha/new/master/apiSpec/new?filename=BatRecordingManager_DBAccess_UpdateLabelledSegments_BatRecordingManager_Recording_Microsoft_VisualStudio_Language_Intellisense_BulkObservableCollection_Microsoft_VisualStudio_Language_Intellisense_BulkObservableCollection_BatRecordingManager_StoredImage___BatRecordingManager_BatReferenceDBLinqDataContext_.md&amp;value=---%0Auid%3A%20BatRecordingManager.DBAccess.UpdateLabelledSegments(BatRecordingManager.Recording%2CMicrosoft.VisualStudio.Language.Intellisense.BulkObservableCollection%7BMicrosoft.VisualStudio.Language.Intellisense.BulkObservableCollection%7BBatRecordingManager.StoredImage%7D%7D%2CBatRecordingManager.BatReferenceDBLinqDataContext)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/jathalls/BRM_v5.4-Alpha/blob/master/BatRecordingManager/DBAccess.cs/#L1234">View Source</a>
+  </span>
+  <a id="BatRecordingManager_DBAccess_UpdateLabelledSegments_" data-uid="BatRecordingManager.DBAccess.UpdateLabelledSegments*"></a>
+  <h4 id="BatRecordingManager_DBAccess_UpdateLabelledSegments_BatRecordingManager_Recording_Microsoft_VisualStudio_Language_Intellisense_BulkObservableCollection_Microsoft_VisualStudio_Language_Intellisense_BulkObservableCollection_BatRecordingManager_StoredImage___BatRecordingManager_BatReferenceDBLinqDataContext_" data-uid="BatRecordingManager.DBAccess.UpdateLabelledSegments(BatRecordingManager.Recording,Microsoft.VisualStudio.Language.Intellisense.BulkObservableCollection{Microsoft.VisualStudio.Language.Intellisense.BulkObservableCollection{BatRecordingManager.StoredImage}},BatRecordingManager.BatReferenceDBLinqDataContext)">UpdateLabelledSegments(Recording, BulkObservableCollection&lt;BulkObservableCollection&lt;StoredImage&gt;&gt;, BatReferenceDBLinqDataContext)</h4>
+  <div class="markdown level1 summary"><p>Updates the labelled segments. Given an entity set of LabelledSegments (from a
+Recording instance) updates the full set in the database, inserting where necessary
+and parsing the comments for bat names and Updating all BatSegment links as required.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static void UpdateLabelledSegments(this Recording recording, BulkObservableCollection&lt;BulkObservableCollection&lt;StoredImage&gt;&gt; ListOfSegmentImageLists, BatReferenceDBLinqDataContext dc)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="BatRecordingManager.Recording.html">Recording</a></td>
+        <td><span class="parametername">recording</span></td>
+        <td><p>The recording.</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">Microsoft.VisualStudio.Language.Intellisense.BulkObservableCollection</span>&lt;<span class="xref">Microsoft.VisualStudio.Language.Intellisense.BulkObservableCollection</span>&lt;<a class="xref" href="BatRecordingManager.StoredImage.html">StoredImage</a>&gt;&gt;</td>
+        <td><span class="parametername">ListOfSegmentImageLists</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="BatRecordingManager.BatReferenceDBLinqDataContext.html">BatReferenceDBLinqDataContext</a></td>
+        <td><span class="parametername">dc</span></td>
+        <td><p>The dc.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/jathalls/BRM_v5.4-Alpha/new/master/apiSpec/new?filename=BatRecordingManager_DBAccess_Validate_BatRecordingManager_Bat_.md&amp;value=---%0Auid%3A%20BatRecordingManager.DBAccess.Validate(BatRecordingManager.Bat)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/jathalls/BRM_v5.4-Alpha/blob/master/BatRecordingManager/DBAccess.cs/#L1333">View Source</a>
+  </span>
+  <a id="BatRecordingManager_DBAccess_Validate_" data-uid="BatRecordingManager.DBAccess.Validate*"></a>
+  <h4 id="BatRecordingManager_DBAccess_Validate_BatRecordingManager_Bat_" data-uid="BatRecordingManager.DBAccess.Validate(BatRecordingManager.Bat)">Validate(Bat)</h4>
+  <div class="markdown level1 summary"><p>Validates the bat. Checkes to see if the required fields exist and are valid in
+format and if so returns an empty string. Otherwise returns a string identifying
+which fields are missing or incorrect.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static string Validate(this Bat newBat)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="BatRecordingManager.Bat.html">Bat</a></td>
+        <td><span class="parametername">newBat</span></td>
+        <td><p>The new bat.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/jathalls/BRM_v5.4-Alpha/new/master/apiSpec/new?filename=BatRecordingManager_DBAccess_Validate_BatRecordingManager_Call_.md&amp;value=---%0Auid%3A%20BatRecordingManager.DBAccess.Validate(BatRecordingManager.Call)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/jathalls/BRM_v5.4-Alpha/blob/master/BatRecordingManager/DBAccess.cs/#L4961">View Source</a>
+  </span>
+  <a id="BatRecordingManager_DBAccess_Validate_" data-uid="BatRecordingManager.DBAccess.Validate*"></a>
+  <h4 id="BatRecordingManager_DBAccess_Validate_BatRecordingManager_Call_" data-uid="BatRecordingManager.DBAccess.Validate(BatRecordingManager.Call)">Validate(Call)</h4>
+  <div class="markdown level1 summary"><p>Validates the call.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static bool Validate(this Call newCall)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="BatRecordingManager.Call.html">Call</a></td>
+        <td><span class="parametername">newCall</span></td>
+        <td><p>The new call.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Boolean</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/jathalls/BRM_v5.4-Alpha/new/master/apiSpec/new?filename=BatRecordingManager_DBAccess_Validate_BatRecordingManager_Recording_.md&amp;value=---%0Auid%3A%20BatRecordingManager.DBAccess.Validate(BatRecordingManager.Recording)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/jathalls/BRM_v5.4-Alpha/blob/master/BatRecordingManager/DBAccess.cs/#L1366">View Source</a>
+  </span>
+  <a id="BatRecordingManager_DBAccess_Validate_" data-uid="BatRecordingManager.DBAccess.Validate*"></a>
+  <h4 id="BatRecordingManager_DBAccess_Validate_BatRecordingManager_Recording_" data-uid="BatRecordingManager.DBAccess.Validate(BatRecordingManager.Recording)">Validate(Recording)</h4>
+  <div class="markdown level1 summary"><p>Validates the recording.  Confirms that the recording structure
+contains valid and complete data, or returns a suitable
+and informative error message.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static string Validate(this Recording recording)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="BatRecordingManager.Recording.html">Recording</a></td>
+        <td><span class="parametername">recording</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="exceptions">Exceptions</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Condition</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.NotImplementedException</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+</article>
+          </div>
+          
+          <div class="hidden-sm col-md-2" role="complementary">
+            <div class="sideaffix">
+              <div class="contribution">
+                <ul class="nav">
+                  <li>
+                    <a href="https://github.com/jathalls/BRM_v5.4-Alpha/new/master/apiSpec/new?filename=BatRecordingManager_DBAccess.md&amp;value=---%0Auid%3A%20BatRecordingManager.DBAccess%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A" class="contribution-link">Improve this Doc</a>
+                  </li>
+                  <li>
+                    <a href="https://github.com/jathalls/BRM_v5.4-Alpha/blob/master/BatRecordingManager/DBAccess.cs/#L20" class="contribution-link">View Source</a>
+                  </li>
+                </ul>
+              </div>
+              <nav class="bs-docs-sidebar hidden-print hidden-xs hidden-sm affix" id="affix">
+              <!-- <p><a class="back-to-top" href="#top">Back to top</a><p> -->
+              </nav>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <footer>
+        <div class="grad-bottom"></div>
+        <div class="footer">
+          <div class="container">
+            <span class="pull-right">
+              <a href="#top">Back to top</a>
+            </span>
+            
+            <span>Copyright © 2015-2017 Microsoft<br>Generated by <strong>DocFX</strong></span>
+          </div>
+        </div>
+      </footer>
+    </div>
+    
+    <script type="text/javascript" src="../styles/docfx.vendor.js"></script>
+    <script type="text/javascript" src="../styles/docfx.js"></script>
+    <script type="text/javascript" src="../styles/main.js"></script>
+  </body>
+</html>

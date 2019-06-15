@@ -1,0 +1,138 @@
+﻿<Window x:Class="BatRecordingManager.AudioPlayer"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:xctk="http://schemas.xceed.com/wpf/xaml/toolkit"
+        xmlns:local="clr-namespace:BatRecordingManager"
+        mc:Ignorable="d"
+        Title="AudioPlayer" Height="450" Width="900" Background="{StaticResource BlueGradientBackground}" Closing="Window_Closing">
+    <Grid
+        Background="{StaticResource BlueGradientBackground}"
+        >
+        <Grid.RowDefinitions>
+            <RowDefinition Height="30"/>
+            <RowDefinition Height="328*"/>
+            <RowDefinition Height="30"/>
+        </Grid.RowDefinitions>
+
+        <StackPanel
+            x:Name="UpperButtonPanel"
+            Orientation="Horizontal"
+            Background="{StaticResource ButtonBarBackground}"
+            Grid.Row="0" Grid.Column="0">
+            <StackPanel
+                x:Name="PlayButtonsPanel"
+                Orientation="Horizontal">
+                <Button
+                    x:Name="RewindButton"
+                    Style="{StaticResource SimpleButton}"
+                    Visibility="Hidden"
+                    Content="&lt;&lt;"/>
+                <Button
+                    x:Name="PlayButton"
+                    Style="{StaticResource SimpleButton}"
+                    Content="PLAY" Click="PlayButton_Click"/>
+                <Button
+                    x:Name="PlayLoopedButton"
+                    Style="{StaticResource SimpleButton}"
+                    Content="LOOP" Click="PlayButton_Click"/>
+                <Button
+                    x:Name="ForwardButton"
+                    Visibility="Hidden"
+                    Style="{StaticResource SimpleButton}"
+                    Content="&gt;&gt;"/>
+
+            </StackPanel>
+            <StackPanel
+                x:Name="ParameterButtonsPanel"
+                Orientation="Horizontal" >
+                <RadioButton
+                    x:Name="fullSpeedButton"
+                    Style="{StaticResource SimpleRadioButton}"
+                    IsChecked="false"
+                    Content="1/1" Margin="0,0,5,0"/>
+                <RadioButton
+                    x:Name="tenthButton"
+                    Style="{StaticResource SimpleRadioButton}"
+                    IsChecked="true"
+                    Content="1/10" Margin="0,0,5,0"/>
+                <RadioButton
+                    x:Name="fifthButton"
+                    Style="{StaticResource SimpleRadioButton}"
+                    Content="1/5" Margin="0,0,5,0"/>
+                <RadioButton
+                    x:Name="twentiethButton"
+                    Style="{StaticResource SimpleRadioButton}"
+                    Content="1/20" Margin="0,0,5,0"/>
+                <RadioButton
+                    x:Name="TunedButton"
+                    Style="{StaticResource SimpleRadioButton}"
+                    Content="Tuned" Margin="0,0,5,0"/>
+                
+            </StackPanel>
+            <Slider 
+                x:Name="FrequencySlider"
+                HorizontalAlignment="Stretch"
+                HorizontalContentAlignment="Stretch"
+                Width="200" 
+                LargeChange="10" 
+                SmallChange="5" 
+                Value="{Binding Path=Frequency, Mode=OneWayToSource,FallbackValue=50}"
+                Maximum="150" 
+                Minimum="15" 
+                TickFrequency="10" 
+                ToolTip="Select tuned frequency in kHz" ValueChanged="FrequencySlider_ValueChanged" 
+                
+                />
+            <xctk:DoubleUpDown
+                x:Name="FrequencyUpDown"
+                Width="100"
+                Text="kHz"
+                Value="{Binding ElementName=FrequencySlider,Path=Value, Mode=TwoWay}" 
+                DefaultValue="50" 
+                DisplayDefaultValueOnEmptyText="True" 
+                CultureInfo="en-GB" 
+                FormatString="{}{0:#,0.0}"
+                />
+            <Label
+                Content="kHz"/>
+
+
+        </StackPanel>
+        <DataGrid
+            x:Name="PlayListDatagrid"
+            Grid.Row="1"
+            Background="{StaticResource WindowBackgroundBrushLight}"
+            ItemsSource="{Binding Path=PlayList}" 
+            AutoGenerateColumns="False" 
+            MinHeight="45"
+            AlternatingRowBackground="{StaticResource WindowBackgroundBrush}"
+            AlternationCount="1" 
+            RowBackground="{StaticResource WindowBackgroundBrushLight}"
+            HorizontalAlignment="Stretch"
+            HorizontalContentAlignment="Stretch"
+            ColumnWidth="*"
+            
+            >
+            <DataGrid.Columns>
+                <DataGridTextColumn Binding="{Binding filename}" ClipboardContentBinding="{x:Null}" Header="File" IsReadOnly="True"/>
+                <DataGridTextColumn Binding="{Binding startOffset, Converter={StaticResource ConvertTimeSpan}}" Width="100" ClipboardContentBinding="{x:Null}" Header="Start" IsReadOnly="True"/>
+                <DataGridTextColumn Binding="{Binding playLength, Converter={StaticResource ConvertTimeSpan}}" Width="100" ClipboardContentBinding="{x:Null}" Header="Duration" IsReadOnly="True"/>
+                <DataGridTextColumn Binding="{Binding label}"  ClipboardContentBinding="{x:Null}" Header="Comments" IsReadOnly="True"/>
+            </DataGrid.Columns>
+
+        </DataGrid>
+        <StackPanel
+            x:Name="LowerButtonsPanel"
+            Orientation="Horizontal"
+            Background="{StaticResource ButtonBarBackground}"
+            Grid.Row="2">
+            <Button
+                x:Name="CloseButton"
+                Style="{StaticResource SimpleButton}"
+                Content="Close"
+                IsCancel="True" Click="CloseButton_Click"/>
+        </StackPanel>
+    </Grid>
+</Window>

@@ -1,0 +1,101 @@
+﻿<UserControl x:Class="BatRecordingManager.BatRecordingsListDetailControl"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+             xmlns:local="clr-namespace:BatRecordingManager"
+             
+             mc:Ignorable="d"
+             d:DesignHeight="700" d:DesignWidth="1000">
+    <Grid
+        Background="{StaticResource WindowBackgroundBrush}">
+
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="25*" />
+            <ColumnDefinition Width="5" />
+            <ColumnDefinition Width="25*" />
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="25" />
+            <RowDefinition Height="314*" />
+            
+        </Grid.RowDefinitions>
+        <GridSplitter Grid.Column="1" Grid.Row="0" Grid.RowSpan="3" HorizontalAlignment="Stretch" />
+        <StackPanel
+            Orientation="Horizontal"
+            Grid.Row="0" Grid.Column="0"
+            Background="{StaticResource BlueGradientBackground}">
+            <Button
+                x:Name="BatListReportButton"
+                Style="{StaticResource SimpleButton}"
+                Content="Report" Click="BatListReportButton_Click"
+                ToolTip="Select Bats, sessions and recordings to export a .csv report" />
+            <Button
+                x:Name="CompareImagesButton"
+                Style="{StaticResource SimpleButton}"
+                Width="70"
+                Content="COMP-ALL"
+                ToolTip="Add all images for this type of bat to the comparison window" Click="CompareImagesButton_Click"/>
+            <!--  For Buttons and Headers-->
+        </StackPanel>
+
+        <Grid
+            Grid.Row="1">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="150*" />
+                <RowDefinition Height="5" />
+                <RowDefinition Height="150*" />
+            </Grid.RowDefinitions>
+            <GridSplitter Grid.Row="1"  Height="5" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" />
+
+            <DataGrid
+                x:Name="BatStatsDataGrid"
+                Grid.Row="0"
+                Background="{StaticResource WindowBackgroundBrush}"
+
+                AutoGenerateColumns="False"
+                CanUserAddRows="False"
+                CanUserDeleteRows="False"
+                ItemsSource="{Binding Path=BatStatisticsList}"
+                 AlternatingRowBackground="{StaticResource WindowBackgroundBrushLight}"
+                SelectionChanged="BatStatsDataGrid_SelectionChanged"
+                IsReadOnly="True"
+                MouseDoubleClick="BatStatsDataGrid_MouseDoubleClick"
+                EnableColumnVirtualization="True"
+                EnableRowVirtualization="True"
+                VirtualizingPanel.VirtualizationMode="Recycling"
+                ToolTip="Double-click to compare all recording images for this bat">
+
+                <DataGrid.Columns>
+                    <DataGridTextColumn Width="120*"  Binding="{Binding Path=displayable.Name}" Header="Name"  CanUserSort="True" />
+
+                    <DataGridTextColumn Width="60*" Binding="{Binding Path=displayable.Genus}" Header="Genus" FontStyle="Italic"  CanUserSort="True" />
+                    <DataGridTextColumn Width="60*" Binding="{Binding Path=displayable.Species}" Header="Species" FontStyle="Italic"  CanUserSort="True" />
+
+                    <DataGridTextColumn Width="40*" Binding="{Binding displayable.Sessions,IsAsync=True}" Header="Sessions"  CanUserSort="True" />
+                    <DataGridTextColumn Width="40*" Binding="{Binding displayable.Recordings,IsAsync=True}" Header="Recordings"  CanUserSort="True" />
+                    <DataGridTextColumn Width="40*" Binding="{Binding displayable.Passes,IsAsync=True}" Header="Passes"  CanUserSort="True" />
+                    <DataGridTextColumn Width="40*" Binding="{Binding displayable.BatImages}" Header="Bat Images"  CanUserSort="True" />
+                    <DataGridTextColumn Width="40*" Binding="{Binding displayable.RecImages,IsAsync=True}" Header="Rec. Images"  CanUserSort="True" />
+                </DataGrid.Columns>
+            </DataGrid>
+
+            <local:BatAndCallImageScrollerControl
+                Grid.Row="2"
+                x:Name="ListByBatsImageScroller"
+                HorizontalAlignment="Stretch"
+                VerticalAlignment="Stretch" />
+        </Grid>
+
+        <!--
+        _________________________________________________________________________
+        =================================RIGHT PANE==============================
+        -->
+        <GridSplitter Grid.Column="1" Grid.RowSpan="3" />
+        <local:SessionsAndRecordingsControl
+            x:Name="sessionsAndRecordings"
+            Grid.Column="2"
+            Grid.Row="0"
+            Background="{StaticResource WindowBackgroundBrush}"  Grid.RowSpan="3" />
+    </Grid>
+</UserControl>

@@ -1,0 +1,67 @@
+﻿<Window
+		xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+		xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+		xmlns:local="clr-namespace:BatRecordingManager" x:Class="BatRecordingManager.MainWindow"
+		Title="{Binding windowTitle}"  
+    Height="768" 
+    Width="1026" 
+    Closing="Window_Closing" 
+    WindowState="Maximized" 
+    
+    SizeToContent="Manual" Closed="Window_Closed">
+
+	<DockPanel Background="{StaticResource WindowBackgroundBrush}">
+		<StackPanel
+			Orientation="Horizontal"
+			Height="25"
+			DockPanel.Dock="Top">
+			<Menu
+				x:Name="MainMenu"
+				Style="{StaticResource SimpleMenu}"
+				Width="150">
+
+                <MenuItem x:Name="FileMenu" Header="File">
+                    
+                    <MenuItem x:Name="miCreateDatabase" Header="Create Database" ToolTip="Create a new empty database" Click="miCreateDatabase_Click" />
+                    <MenuItem x:Name="miDatabase" Header="Choose Database" ToolTip="Open an alternate database" Click="miDatabase_Click" />
+                    <MenuItem x:Name="miSetToDefaultDatabase" Header="Use Default Database" ToolTip="Return to the normal default database" Click="miSetToDefaultDatabase_Click" />
+                
+                    <Separator />
+                    <MenuItem x:Name="miImportBatData" Header="Import Bat Data" Click="miImportBatData_Click"/>
+                    <Separator/>
+                    <MenuItem x:Name="miExit" Header="Exit" Click="miExit_Click" />
+                </MenuItem>
+                <MenuItem x:Name="MainMenuView" Header="View">
+                    <MenuItem x:Name="miNewLogFile" Header="Import" ToolTip="Import data from a folder of .wav or .txt files"  Click="miNewLogFile_Click" />
+                    <MenuItem x:Name="miAnalyseFiles" Header="Analyse and Import"   Click="miAnalyseFiles_Click" >
+                        <MenuItem.ToolTip>
+                            <TextBlock>
+                            "Open a folder of files to Analyse sequentially using Audacity"<LineBreak/>
+                            "CTRL-CLICK to open a folder of files to analyse using Kaleidoscope"
+                            </TextBlock>
+                            </MenuItem.ToolTip>
+                    </MenuItem>
+                    <MenuItem x:Name="miBatReference" Header="Bat Reference" ToolTip="List reference data for all known species of bats" Click="miBatReference_Click" />
+                    <MenuItem x:Name="miBatSearch" Header="List By Bats" ToolTip="List all recordings ordered by types of bat present" Click="miBatSearch_Click" />
+                    <MenuItem x:Name="miRecordingSearch" Header="List Recordings" ToolTip="List all recording sessions" Click="miRecordingSearch_Click" />
+                </MenuItem>
+                <MenuItem x:Name="MainMenuHelp" Header="Help">
+                    <MenuItem x:Name="miHelp" Header="Help" Click="miHelp_Click" />
+                    <MenuItem x:Name="miAbout" Header="About" Click="miAbout_Click" />
+                    <MenuItem 
+                        x:Name="miDatabaseDisplay" 
+                        Header="Database" 
+                        Click="MiDatabaseDisplay_Click" 
+                        IsEnabled="{Binding Path=ShowDatabase,FallbackValue=false}"
+                        />
+                </MenuItem>
+            </Menu>
+			<Label x:Name="OutputLocationLabel" HorizontalContentAlignment="Stretch" Style="{StaticResource SimpleLabel}" />
+            <TextBox x:Name="StatusText" Text="" Width="800" HorizontalContentAlignment="Stretch" Style="{StaticResource SimpleTextBox}" IsReadOnly="True"/>
+        </StackPanel>
+		<Grid x:Name="MainWindowPaneGrid" Background="{StaticResource WindowBackgroundBrush}">
+
+            <!--<local:RecordingSessionListDetailControl x:Name="recordingSessionListControl" Visibility="Visible" />-->
+        </Grid>
+	</DockPanel>
+</Window>

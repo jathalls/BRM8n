@@ -1,0 +1,235 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ordesignerObjectsDiagram dslVersion="1.0.0.0" absoluteBounds="0, 0, 11.375, 10.625" name="BatReferenceDBLinq">
+  <DataContextMoniker Name="/BatReferenceDBLinqDataContext" />
+  <nestedChildShapes>
+    <classShape Id="5d05cb56-62cf-43a6-b214-6530e19f7d6f" absoluteBounds="5.875, 7.375, 2, 1.9631982421874987">
+      <DataClassMoniker Name="/BatReferenceDBLinqDataContext/Bat" />
+      <nestedChildShapes>
+        <elementListCompartment Id="8de5906d-4fa1-467f-8d8c-f9ca742dbf05" absoluteBounds="5.89, 7.8350000000000009, 1.9700000000000002, 1.4031982421875" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="348daa51-5688-42d2-9fd5-a01a2d890cbb" absoluteBounds="0.5, 0.875, 2, 1.1939925130208344">
+      <DataClassMoniker Name="/BatReferenceDBLinqDataContext/Version" />
+      <nestedChildShapes>
+        <elementListCompartment Id="9daa7d33-ba48-409e-b4a0-bea8409e6c79" absoluteBounds="0.51500000000000012, 1.3350000000000009, 1.9700000000000002, 0.63399251302083326" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="406a02dd-872b-4183-84c2-3bce7b2167c2" absoluteBounds="3.5, 7.25, 2, 1.3862939453124987">
+      <DataClassMoniker Name="/BatReferenceDBLinqDataContext/BatCall" />
+      <nestedChildShapes>
+        <elementListCompartment Id="ce23d986-3914-4a23-9ef7-f90a7d39f315" absoluteBounds="3.5150000000000006, 7.7100000000000009, 1.9700000000000002, 0.8262939453125" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="6018fa27-a88e-4663-8b2f-2b0625d41e3e" absoluteBounds="8.5, 5.75, 2, 1.3862939453124987">
+      <DataClassMoniker Name="/BatReferenceDBLinqDataContext/BatPicture" />
+      <nestedChildShapes>
+        <elementListCompartment Id="66a857e2-552e-4d75-b2f4-344c652ea69b" absoluteBounds="8.515, 6.2100000000000009, 1.9700000000000002, 0.8262939453125" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="c07815af-e68d-4d5a-9006-4b7b55ab3ee9" absoluteBounds="5.875, 5.25, 2, 1.5785953776041657">
+      <DataClassMoniker Name="/BatReferenceDBLinqDataContext/BatSegmentLink" />
+      <nestedChildShapes>
+        <elementListCompartment Id="4bf7d7e2-7e14-4b3e-b8aa-5cd39e302dc6" absoluteBounds="5.8900000000000006, 5.7100000000000009, 1.9700000000000002, 1.0185953776041665" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="bece0050-a04f-43b4-8466-91fcde2d9bb0" absoluteBounds="8.375, 8, 2, 1.5785953776041666">
+      <DataClassMoniker Name="/BatReferenceDBLinqDataContext/BatTag" />
+      <nestedChildShapes>
+        <elementListCompartment Id="207347df-877d-4df3-a6b8-b53b89af33d3" absoluteBounds="8.39, 8.46, 1.9700000000000002, 1.0185953776041665" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="bacc2198-15bb-44cf-a247-e9c53b12e97f" absoluteBounds="0.5, 6.625, 2, 3.5016097005208309">
+      <DataClassMoniker Name="/BatReferenceDBLinqDataContext/Call" />
+      <nestedChildShapes>
+        <elementListCompartment Id="44fa5b34-135b-4a9d-a0b2-b6ec635d207b" absoluteBounds="0.51499999999999968, 7.0850000000000009, 1.9700000000000002, 2.941609700520833" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="4a0e1d3c-0d8c-4b2a-8d7f-ae4e293c38f7" absoluteBounds="3.5, 9, 2, 1.3862939453125005">
+      <DataClassMoniker Name="/BatReferenceDBLinqDataContext/CallPicture" />
+      <nestedChildShapes>
+        <elementListCompartment Id="75f95a30-ba5b-47f1-890c-c710a0f64d8a" absoluteBounds="3.5150000000000006, 9.46, 1.9700000000000002, 0.8262939453125" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="268c709d-8f22-427e-b831-4ed7202929da" absoluteBounds="6, 3, 2, 1.7708968098958327">
+      <DataClassMoniker Name="/BatReferenceDBLinqDataContext/LabelledSegment" />
+      <nestedChildShapes>
+        <elementListCompartment Id="c8fab88a-01a2-4288-894c-cb3dd58ebb68" absoluteBounds="6.015, 3.46, 1.9700000000000002, 1.2108968098958333" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="665755d7-1daa-4b8e-8fbe-7e2995baeb2f" absoluteBounds="3.5, 2.625, 2, 2.5401025390625005">
+      <DataClassMoniker Name="/BatReferenceDBLinqDataContext/Recording" />
+      <nestedChildShapes>
+        <elementListCompartment Id="b18eff39-ff06-4aba-ab3a-02ba9f526e53" absoluteBounds="3.515, 3.085, 1.9700000000000002, 1.9801025390625" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="a38fc322-f03a-4978-b928-8b32e9f276a7" absoluteBounds="0.5, 2.25, 2, 4.0785139973958326">
+      <DataClassMoniker Name="/BatReferenceDBLinqDataContext/RecordingSession" />
+      <nestedChildShapes>
+        <elementListCompartment Id="27ec3a03-bd44-46e1-9326-9a65dfcde98e" absoluteBounds="0.515, 2.71, 1.9700000000000002, 3.518513997395833" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="9bdd5c86-7173-45d6-97b7-6831bdce6eff" absoluteBounds="3.5, 5.5, 2, 1.3862939453125005">
+      <DataClassMoniker Name="/BatReferenceDBLinqDataContext/SegmentCall" />
+      <nestedChildShapes>
+        <elementListCompartment Id="82e3d423-ca52-45ed-869f-46fe8ec8f1f2" absoluteBounds="3.5150000000000006, 5.96, 1.9700000000000002, 0.8262939453125" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="09a3efca-ed57-4143-be47-baca6b239475" absoluteBounds="9.125, 0.875, 2, 1.3862939453125">
+      <DataClassMoniker Name="/BatReferenceDBLinqDataContext/SegmentData" />
+      <nestedChildShapes>
+        <elementListCompartment Id="845a2979-4905-4943-bb6a-0ccc7c6db0ff" absoluteBounds="9.14, 1.335, 1.9700000000000002, 0.8262939453125" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <associationConnector edgePoints="[(5.875 : 8.00564697265625); (5.5 : 8.00564697265625)]" fixedFrom="Algorithm" fixedTo="Algorithm">
+      <AssociationMoniker Name="/BatReferenceDBLinqDataContext/Bat/Bat_BatCall" />
+      <nodes>
+        <classShapeMoniker Id="5d05cb56-62cf-43a6-b214-6530e19f7d6f" />
+        <classShapeMoniker Id="406a02dd-872b-4183-84c2-3bce7b2167c2" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(7.875 : 7.375); (8.5 : 7.1362939453125)]" fixedFrom="NotFixed" fixedTo="NotFixed">
+      <AssociationMoniker Name="/BatReferenceDBLinqDataContext/Bat/Bat_BatPicture" />
+      <nodes>
+        <classShapeMoniker Id="5d05cb56-62cf-43a6-b214-6530e19f7d6f" />
+        <classShapeMoniker Id="6018fa27-a88e-4663-8b2f-2b0625d41e3e" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(6.8437475 : 7.375); (6.8437475 : 6.82859537760417)]" fixedFrom="Algorithm" fixedTo="Algorithm">
+      <AssociationMoniker Name="/BatReferenceDBLinqDataContext/Bat/Bat_BatSegmentLink" />
+      <nodes>
+        <classShapeMoniker Id="5d05cb56-62cf-43a6-b214-6530e19f7d6f" />
+        <classShapeMoniker Id="c07815af-e68d-4d5a-9006-4b7b55ab3ee9" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(7.875 : 8.66909912109375); (8.375 : 8.66909912109375)]" fixedFrom="Algorithm" fixedTo="Algorithm">
+      <AssociationMoniker Name="/BatReferenceDBLinqDataContext/Bat/Bat_BatTag" />
+      <nodes>
+        <classShapeMoniker Id="5d05cb56-62cf-43a6-b214-6530e19f7d6f" />
+        <classShapeMoniker Id="bece0050-a04f-43b4-8466-91fcde2d9bb0" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(2.5 : 8.0112939453125); (3.19791666666667 : 8.0112939453125 : JumpStart); (3.36458333333333 : 8.0112939453125 : JumpEnd); (3.5 : 8.0112939453125)]" fixedFrom="Algorithm" fixedTo="Algorithm">
+      <AssociationMoniker Name="/BatReferenceDBLinqDataContext/Call/Call_BatCall" />
+      <nodes>
+        <classShapeMoniker Id="bacc2198-15bb-44cf-a247-e9c53b12e97f" />
+        <classShapeMoniker Id="406a02dd-872b-4183-84c2-3bce7b2167c2" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(2.5 : 9.56330485026042); (3.5 : 9.56330485026042)]" fixedFrom="Algorithm" fixedTo="Algorithm">
+      <AssociationMoniker Name="/BatReferenceDBLinqDataContext/Call/Call_CallPicture" />
+      <nodes>
+        <classShapeMoniker Id="bacc2198-15bb-44cf-a247-e9c53b12e97f" />
+        <classShapeMoniker Id="4a0e1d3c-0d8c-4b2a-8d7f-ae4e293c38f7" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(6.9687525 : 4.77089680989583); (6.9687525 : 5.25)]" fixedFrom="Algorithm" fixedTo="Algorithm">
+      <AssociationMoniker Name="/BatReferenceDBLinqDataContext/LabelledSegment/LabelledSegment_BatSegmentLink" />
+      <nodes>
+        <classShapeMoniker Id="268c709d-8f22-427e-b831-4ed7202929da" />
+        <classShapeMoniker Id="c07815af-e68d-4d5a-9006-4b7b55ab3ee9" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(5.5 : 3.85419590494792); (6 : 3.85419590494792)]" fixedFrom="Algorithm" fixedTo="Algorithm">
+      <AssociationMoniker Name="/BatReferenceDBLinqDataContext/Recording/Recording_LabelledSegment" />
+      <nodes>
+        <classShapeMoniker Id="665755d7-1daa-4b8e-8fbe-7e2995baeb2f" />
+        <classShapeMoniker Id="268c709d-8f22-427e-b831-4ed7202929da" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(2.5 : 3.89505126953125); (2.71666666666667 : 3.89505126953125 : JumpStart); (2.88333333333333 : 3.89505126953125 : JumpEnd); (3.19791666666667 : 3.89505126953125 : JumpStart); (3.36458333333333 : 3.89505126953125 : JumpEnd); (3.5 : 3.89505126953125)]" fixedFrom="Algorithm" fixedTo="Algorithm">
+      <AssociationMoniker Name="/BatReferenceDBLinqDataContext/RecordingSession/RecordingSession_Recording" />
+      <nodes>
+        <classShapeMoniker Id="a38fc322-f03a-4978-b928-8b32e9f276a7" />
+        <classShapeMoniker Id="665755d7-1daa-4b8e-8fbe-7e2995baeb2f" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(2.5 : 7.34306798190935); (3.19791666666667 : 7.34306798190935 : JumpStart); (3.36458333333333 : 7.34306798190935 : JumpEnd); (3.4375 : 7.34306798190935); (3.4375 : 7.1875); (4.5 : 7.1875); (4.5 : 6.8862939453125)]" manuallyRouted="true" fixedFrom="Caller" fixedTo="Algorithm">
+      <AssociationMoniker Name="/BatReferenceDBLinqDataContext/Call/Call_SegmentCall" />
+      <nodes>
+        <classShapeMoniker Id="bacc2198-15bb-44cf-a247-e9c53b12e97f" />
+        <classShapeMoniker Id="9bdd5c86-7173-45d6-97b7-6831bdce6eff" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(6 : 4.77089680989583); (5.5 : 5.5)]" manuallyRouted="true" fixedFrom="NotFixed" fixedTo="NotFixed">
+      <AssociationMoniker Name="/BatReferenceDBLinqDataContext/LabelledSegment/LabelledSegment_SegmentCall" />
+      <nodes>
+        <classShapeMoniker Id="268c709d-8f22-427e-b831-4ed7202929da" />
+        <classShapeMoniker Id="9bdd5c86-7173-45d6-97b7-6831bdce6eff" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(8 : 4.58099609375); (8.16666666666667 : 4.58099609375 : JumpStart); (8.33333333333333 : 4.58099609375 : JumpEnd); (9.47916666666667 : 4.58099609375 : JumpStart); (9.64583333333333 : 4.58099609375 : JumpEnd); (10.5104166666667 : 4.58099609375 : JumpStart); (10.6770833333333 : 4.58099609375 : JumpEnd); (10.90625 : 4.58099609375); (10.90625 : 2.2612939453125)]" fixedFrom="Algorithm" fixedTo="Algorithm">
+      <AssociationMoniker Name="/BatReferenceDBLinqDataContext/LabelledSegment/LabelledSegment_SegmentData" />
+      <nodes>
+        <classShapeMoniker Id="268c709d-8f22-427e-b831-4ed7202929da" />
+        <classShapeMoniker Id="09a3efca-ed57-4143-be47-baca6b239475" />
+      </nodes>
+    </associationConnector>
+    <classShape Id="8e17fe79-66b9-4082-940f-c546406eba17" absoluteBounds="8.625, 2.75, 2, 1.5785953776041666">
+      <DataClassMoniker Name="/BatReferenceDBLinqDataContext/BinaryData" />
+      <nestedChildShapes>
+        <elementListCompartment Id="bb6a58ab-9514-4891-a17e-474541a66bfa" absoluteBounds="8.64, 3.21, 1.9700000000000002, 1.0185953776041665" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <associationConnector edgePoints="[(9.5625 : 4.32859537760417); (9.5625 : 5.75)]" fixedFrom="Algorithm" fixedTo="Algorithm">
+      <AssociationMoniker Name="/BatReferenceDBLinqDataContext/BinaryData/BinaryData_BatPicture" />
+      <nodes>
+        <classShapeMoniker Id="8e17fe79-66b9-4082-940f-c546406eba17" />
+        <classShapeMoniker Id="6018fa27-a88e-4663-8b2f-2b0625d41e3e" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(10.59375 : 4.32859537760417); (10.59375 : 10.0136946614583); (5.5 : 10.0136946614583)]" fixedFrom="Algorithm" fixedTo="Algorithm">
+      <AssociationMoniker Name="/BatReferenceDBLinqDataContext/BinaryData/BinaryData_CallPicture" />
+      <nodes>
+        <classShapeMoniker Id="8e17fe79-66b9-4082-940f-c546406eba17" />
+        <classShapeMoniker Id="4a0e1d3c-0d8c-4b2a-8d7f-ae4e293c38f7" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(9.875 : 2.75); (9.875 : 2.2612939453125)]" fixedFrom="Algorithm" fixedTo="Algorithm">
+      <AssociationMoniker Name="/BatReferenceDBLinqDataContext/BinaryData/BinaryData_SegmentData" />
+      <nodes>
+        <classShapeMoniker Id="8e17fe79-66b9-4082-940f-c546406eba17" />
+        <classShapeMoniker Id="09a3efca-ed57-4143-be47-baca6b239475" />
+      </nodes>
+    </associationConnector>
+    <classShape Id="67b4829c-2701-447c-97f5-0b84ff465245" absoluteBounds="6.125, 0.875, 2, 1.3862939453125">
+      <DataClassMoniker Name="/BatReferenceDBLinqDataContext/BatRecordingLink" />
+      <nestedChildShapes>
+        <elementListCompartment Id="ad9beb84-2f65-4932-b457-727107f4a9b4" absoluteBounds="6.14, 1.335, 1.9700000000000002, 0.8262939453125" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <associationConnector edgePoints="[(7.35937375 : 7.375); (7.35937375 : 7.07859537760417); (8.25 : 7.07859537760417); (8.25 : 2.5112939453125); (8.375 : 2.5112939453125); (8.375 : 1.56814697265625); (8.125 : 1.56814697265625)]" fixedFrom="Algorithm" fixedTo="Algorithm">
+      <AssociationMoniker Name="/BatReferenceDBLinqDataContext/Bat/Bat_BatRecordingLink" />
+      <nodes>
+        <classShapeMoniker Id="5d05cb56-62cf-43a6-b214-6530e19f7d6f" />
+        <classShapeMoniker Id="67b4829c-2701-447c-97f5-0b84ff465245" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(5.5 : 2.625); (6.125 : 2.2612939453125)]" manuallyRouted="true" fixedFrom="NotFixed" fixedTo="NotFixed">
+      <AssociationMoniker Name="/BatReferenceDBLinqDataContext/Recording/Recording_BatRecordingLink" />
+      <nodes>
+        <classShapeMoniker Id="665755d7-1daa-4b8e-8fbe-7e2995baeb2f" />
+        <classShapeMoniker Id="67b4829c-2701-447c-97f5-0b84ff465245" />
+      </nodes>
+    </associationConnector>
+    <classShape Id="4d51abad-307d-4fbf-b983-ba1e54a2e334" absoluteBounds="3.125, 0.875, 2, 1.3862939453125">
+      <DataClassMoniker Name="/BatReferenceDBLinqDataContext/BatSessionLink" />
+      <nestedChildShapes>
+        <elementListCompartment Id="8b6b7310-589e-46f9-83a0-12a1300b6e1e" absoluteBounds="3.1399999999999997, 1.335, 1.9700000000000002, 0.8262939453125" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <associationConnector edgePoints="[(5.875 : 8.81814697265625); (3.28125 : 8.81814697265625); (3.28125 : 2.2612939453125)]" fixedFrom="Algorithm" fixedTo="Algorithm">
+      <AssociationMoniker Name="/BatReferenceDBLinqDataContext/Bat/Bat_BatSessionLink" />
+      <nodes>
+        <classShapeMoniker Id="5d05cb56-62cf-43a6-b214-6530e19f7d6f" />
+        <classShapeMoniker Id="4d51abad-307d-4fbf-b983-ba1e54a2e334" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(2.5 : 5.14303463346354); (2.8 : 5.14303463346354); (2.8 : 1.56814697265625); (3.125 : 1.56814697265625)]" fixedFrom="Algorithm" fixedTo="Algorithm">
+      <AssociationMoniker Name="/BatReferenceDBLinqDataContext/RecordingSession/RecordingSession_BatSessionLink" />
+      <nodes>
+        <classShapeMoniker Id="a38fc322-f03a-4978-b928-8b32e9f276a7" />
+        <classShapeMoniker Id="4d51abad-307d-4fbf-b983-ba1e54a2e334" />
+      </nodes>
+    </associationConnector>
+  </nestedChildShapes>
+</ordesignerObjectsDiagram>

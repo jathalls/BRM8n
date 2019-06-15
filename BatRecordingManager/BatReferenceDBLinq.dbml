@@ -1,0 +1,191 @@
+﻿<?xml version="1.0" encoding="utf-8"?><Database Name="BatReferenceDBv5.31" Class="BatReferenceDBLinqDataContext" xmlns="http://schemas.microsoft.com/linqtosql/dbml/2007">
+  <Connection Mode="AppSettings" ConnectionString="Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=C:\Users\justi\AppData\Roaming\Echolocation\WinBLP\Debug\BatReferenceDBv5.31.mdf;Integrated Security=True;Connect Timeout=30" SettingsObjectName="BatRecordingManager.Properties.Settings" SettingsPropertyName="BatReferenceDBv5_31ConnectionString" Provider="System.Data.SqlClient" />
+  <Table Name="dbo.Bat" Member="Bats">
+    <Type Name="Bat">
+      <Column Name="Id" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="Name" Type="System.String" DbType="VarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="Batgenus" Type="System.String" DbType="VarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="BatSpecies" Type="System.String" DbType="VarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="SortIndex" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="Notes" Type="System.String" DbType="VarChar(MAX)" CanBeNull="true" />
+      <Association Name="Bat_BatCall" Member="BatCalls" ThisKey="Id" OtherKey="BatID" Type="BatCall" />
+      <Association Name="Bat_BatPicture" Member="BatPictures" ThisKey="Id" OtherKey="BatId" Type="BatPicture" />
+      <Association Name="Bat_BatSegmentLink" Member="BatSegmentLinks" ThisKey="Id" OtherKey="BatID" Type="BatSegmentLink" />
+      <Association Name="Bat_BatTag" Member="BatTags" ThisKey="Id" OtherKey="BatID" Type="BatTag" />
+      <Association Name="Bat_BatRecordingLink" Member="BatRecordingLinks" ThisKey="Id" OtherKey="BatID" Type="BatRecordingLink" />
+      <Association Name="Bat_BatSessionLink" Member="BatSessionLinks" ThisKey="Id" OtherKey="BatID" Type="BatSessionLink" />
+    </Type>
+  </Table>
+  <Table Name="dbo.Version" Member="Versions">
+    <Type Name="Version">
+      <Column Name="Id" Type="System.Int32" DbType="Int NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="Version" Member="Version1" Type="System.Decimal" DbType="Decimal(6,2) NOT NULL" CanBeNull="false" />
+    </Type>
+  </Table>
+  <Table Name="dbo.BatCall" Member="BatCalls">
+    <Type Name="BatCall">
+      <Column Name="Id" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="CallID" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="BatID" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Association Name="Bat_BatCall" Member="Bat" ThisKey="BatID" OtherKey="Id" Type="Bat" IsForeignKey="true" />
+      <Association Name="Call_BatCall" Member="Call" ThisKey="CallID" OtherKey="Id" Type="Call" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.BatPicture" Member="BatPictures">
+    <Type Name="BatPicture">
+      <Column Name="Id" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="BatId" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="BinaryDataId" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Association Name="Bat_BatPicture" Member="Bat" ThisKey="BatId" OtherKey="Id" Type="Bat" IsForeignKey="true" />
+      <Association Name="BinaryData_BatPicture" Member="BinaryData" ThisKey="BinaryDataId" OtherKey="Id" Type="BinaryData" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.BatSegmentLink" Member="BatSegmentLinks">
+    <Type Name="BatSegmentLink">
+      <Column Name="Id" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="LabelledSegmentID" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="BatID" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="NumberOfPasses" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Association Name="Bat_BatSegmentLink" Member="Bat" ThisKey="BatID" OtherKey="Id" Type="Bat" IsForeignKey="true" />
+      <Association Name="LabelledSegment_BatSegmentLink" Member="LabelledSegment" ThisKey="LabelledSegmentID" OtherKey="Id" Type="LabelledSegment" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.BatTag" Member="BatTags">
+    <Type Name="BatTag">
+      <Column Name="Id" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="BatTag" Member="BatTag1" Type="System.String" DbType="NVarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="BatID" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="SortIndex" Type="System.Int16" DbType="SmallInt" CanBeNull="true" />
+      <Association Name="Bat_BatTag" Member="Bat" ThisKey="BatID" OtherKey="Id" Type="Bat" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.Call" Member="Calls">
+    <Type Name="Call">
+      <Column Name="Id" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="StartFrequency" Type="System.Double" DbType="Float" CanBeNull="true" />
+      <Column Name="StartFrequencyVariation" Type="System.Double" DbType="Float" CanBeNull="true" />
+      <Column Name="EndFrequency" Type="System.Double" DbType="Float" CanBeNull="true" />
+      <Column Name="EndFrequencyVariation" Type="System.Double" DbType="Float" CanBeNull="true" />
+      <Column Name="PeakFrequency" Type="System.Double" DbType="Float" CanBeNull="true" />
+      <Column Name="PeakFrequencyVariation" Type="System.Double" DbType="Float" CanBeNull="true" />
+      <Column Name="PulseDuration" Type="System.Double" DbType="Float" CanBeNull="true" />
+      <Column Name="PulseDurationVariation" Type="System.Double" DbType="Float" CanBeNull="true" />
+      <Column Name="PulseInterval" Type="System.Double" DbType="Float" CanBeNull="true" />
+      <Column Name="PulseIntervalVariation" Type="System.Double" DbType="Float" CanBeNull="true" />
+      <Column Name="CallType" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="CallFunction" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="CallNotes" Type="System.String" DbType="VarChar(MAX)" CanBeNull="true" />
+      <Association Name="Call_BatCall" Member="BatCalls" ThisKey="Id" OtherKey="CallID" Type="BatCall" />
+      <Association Name="Call_CallPicture" Member="CallPictures" ThisKey="Id" OtherKey="CallID" Type="CallPicture" />
+      <Association Name="Call_SegmentCall" Member="SegmentCalls" ThisKey="Id" OtherKey="CallID" Type="SegmentCall" />
+    </Type>
+  </Table>
+  <Table Name="dbo.CallPicture" Member="CallPictures">
+    <Type Name="CallPicture">
+      <Column Name="Id" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="CallID" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="BinaryDataID" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Association Name="Call_CallPicture" Member="Call" ThisKey="CallID" OtherKey="Id" Type="Call" IsForeignKey="true" />
+      <Association Name="BinaryData_CallPicture" Member="BinaryData" ThisKey="BinaryDataID" OtherKey="Id" Type="BinaryData" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.LabelledSegment" Member="LabelledSegments">
+    <Type Name="LabelledSegment">
+      <Column Name="Id" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="StartOffset" Type="System.TimeSpan" DbType="Time NOT NULL" CanBeNull="false" />
+      <Column Name="EndOffset" Type="System.TimeSpan" DbType="Time NOT NULL" CanBeNull="false" />
+      <Column Name="Comment" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
+      <Column Name="RecordingID" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Association Name="LabelledSegment_BatSegmentLink" Member="BatSegmentLinks" ThisKey="Id" OtherKey="LabelledSegmentID" Type="BatSegmentLink" />
+      <Association Name="LabelledSegment_SegmentCall" Member="SegmentCalls" ThisKey="Id" OtherKey="LabelledSegmentID" Type="SegmentCall" />
+      <Association Name="LabelledSegment_SegmentData" Member="SegmentDatas" ThisKey="Id" OtherKey="SegmentId" Type="SegmentData" />
+      <Association Name="Recording_LabelledSegment" Member="Recording" ThisKey="RecordingID" OtherKey="Id" Type="Recording" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.Recording" Member="Recordings">
+    <Type Name="Recording">
+      <Column Name="Id" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="RecordingName" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
+      <Column Name="RecordingStartTime" Type="System.TimeSpan" DbType="Time" CanBeNull="true" />
+      <Column Name="RecordingEndTime" Type="System.TimeSpan" DbType="Time" CanBeNull="true" />
+      <Column Name="RecordingGPSLongitude" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="RecordingGPSLatitude" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="RecordingSessionId" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="RecordingNotes" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
+      <Column Name="RecordingDate" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Association Name="Recording_LabelledSegment" Member="LabelledSegments" ThisKey="Id" OtherKey="RecordingID" Type="LabelledSegment" />
+      <Association Name="Recording_BatRecordingLink" Member="BatRecordingLinks" ThisKey="Id" OtherKey="RecordingID" Type="BatRecordingLink" />
+      <Association Name="RecordingSession_Recording" Member="RecordingSession" ThisKey="RecordingSessionId" OtherKey="Id" Type="RecordingSession" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.RecordingSession" Member="RecordingSessions">
+    <Type Name="RecordingSession">
+      <Column Name="Id" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="SessionTag" Type="System.String" DbType="NVarChar(120) NOT NULL" CanBeNull="false" />
+      <Column Name="SessionDate" Type="System.DateTime" DbType="DateTime NOT NULL" CanBeNull="false" />
+      <Column Name="SessionStartTime" Type="System.TimeSpan" DbType="Time" CanBeNull="true" />
+      <Column Name="SessionEndTime" Type="System.TimeSpan" DbType="Time" CanBeNull="true" />
+      <Column Name="Temp" Type="System.Int16" DbType="SmallInt" CanBeNull="true" />
+      <Column Name="Equipment" Type="System.String" DbType="NVarChar(120)" CanBeNull="true" />
+      <Column Name="Microphone" Type="System.String" DbType="NVarChar(120)" CanBeNull="true" />
+      <Column Name="Operator" Type="System.String" DbType="NVarChar(120)" CanBeNull="true" />
+      <Column Name="Location" Type="System.String" DbType="NVarChar(120)" CanBeNull="true" />
+      <Column Name="LocationGPSLongitude" Type="System.Decimal" DbType="Decimal(8,6)" CanBeNull="true" />
+      <Column Name="LocationGPSLatitude" Type="System.Decimal" DbType="Decimal(8,6)" CanBeNull="true" />
+      <Column Name="SessionNotes" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
+      <Column Name="OriginalFilePath" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
+      <Column Name="Sunset" Type="System.TimeSpan" DbType="Time" CanBeNull="true" />
+      <Column Name="Weather" Type="System.String" DbType="NVarChar(120)" CanBeNull="true" />
+      <Column Name="EndDate" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Association Name="RecordingSession_Recording" Member="Recordings" ThisKey="Id" OtherKey="RecordingSessionId" Type="Recording" />
+      <Association Name="RecordingSession_BatSessionLink" Member="BatSessionLinks" ThisKey="Id" OtherKey="SessionID" Type="BatSessionLink" />
+    </Type>
+  </Table>
+  <Table Name="dbo.SegmentCall" Member="SegmentCalls">
+    <Type Name="SegmentCall">
+      <Column Name="Id" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="CallID" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="LabelledSegmentID" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Association Name="Call_SegmentCall" Member="Call" ThisKey="CallID" OtherKey="Id" Type="Call" IsForeignKey="true" />
+      <Association Name="LabelledSegment_SegmentCall" Member="LabelledSegment" ThisKey="LabelledSegmentID" OtherKey="Id" Type="LabelledSegment" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.SegmentData" Member="SegmentDatas">
+    <Type Name="SegmentData">
+      <Column Name="Id" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="SegmentId" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="BinaryDataId" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Association Name="LabelledSegment_SegmentData" Member="LabelledSegment" ThisKey="SegmentId" OtherKey="Id" Type="LabelledSegment" IsForeignKey="true" />
+      <Association Name="BinaryData_SegmentData" Member="BinaryData" ThisKey="BinaryDataId" OtherKey="Id" Type="BinaryData" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.BinaryData" Member="BinaryDatas">
+    <Type Name="BinaryData">
+      <Column Name="Id" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="BinaryData" Member="BinaryData1" Type="System.Data.Linq.Binary" DbType="VarBinary(MAX) NOT NULL" CanBeNull="false" UpdateCheck="Never" />
+      <Column Name="BinaryDataType" Type="System.String" DbType="NChar(4) NOT NULL" CanBeNull="false" />
+      <Column Name="Description" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
+      <Association Name="BinaryData_BatPicture" Member="BatPictures" ThisKey="Id" OtherKey="BinaryDataId" Type="BatPicture" />
+      <Association Name="BinaryData_CallPicture" Member="CallPictures" ThisKey="Id" OtherKey="BinaryDataID" Type="CallPicture" />
+      <Association Name="BinaryData_SegmentData" Member="SegmentDatas" ThisKey="Id" OtherKey="BinaryDataId" Type="SegmentData" />
+    </Type>
+  </Table>
+  <Table Name="dbo.BatRecordingLink" Member="BatRecordingLinks">
+    <Type Name="BatRecordingLink">
+      <Column Name="Id" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="BatID" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="RecordingID" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Association Name="Bat_BatRecordingLink" Member="Bat" ThisKey="BatID" OtherKey="Id" Type="Bat" IsForeignKey="true" />
+      <Association Name="Recording_BatRecordingLink" Member="Recording" ThisKey="RecordingID" OtherKey="Id" Type="Recording" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.BatSessionLink" Member="BatSessionLinks">
+    <Type Name="BatSessionLink">
+      <Column Name="Id" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="SessionID" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="BatID" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Association Name="Bat_BatSessionLink" Member="Bat" ThisKey="BatID" OtherKey="Id" Type="Bat" IsForeignKey="true" />
+      <Association Name="RecordingSession_BatSessionLink" Member="RecordingSession" ThisKey="SessionID" OtherKey="Id" Type="RecordingSession" IsForeignKey="true" />
+    </Type>
+  </Table>
+</Database>

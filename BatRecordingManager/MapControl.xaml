@@ -1,0 +1,46 @@
+﻿<UserControl x:Class="BatRecordingManager.MapControl"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+             xmlns:m="clr-namespace:Microsoft.Maps.MapControl.WPF;assembly=Microsoft.Maps.MapControl.WPF"
+             xmlns:local="clr-namespace:BatRecordingManager"
+             mc:Ignorable="d"
+             d:DesignHeight="600" d:DesignWidth="600">
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="30" />
+            <RowDefinition Height="300*" />
+            <RowDefinition Height="30" />
+        </Grid.RowDefinitions>
+        <Canvas
+            Grid.Row="0"
+            Background="{StaticResource ButtonBarBackground}" />
+
+        <m:Map
+            x:Name="mapControl"
+            Grid.Row="1"
+            CredentialsProvider="AhhVL9x6bq6w0NbyqlwjmXDh3Qd64GbWowQQlFzrqx0ChD1MvaLkMTDQxuh2bhzh"
+            ZoomLevel="16"
+            Center="51.789845,-0.225125"
+
+            Mode="AerialWithLabels" MouseDoubleClick="mapControl_MouseDoubleClick" />
+
+        <StackPanel
+            Orientation="Horizontal"
+            Background="{StaticResource ButtonBarBackground}"
+            Grid.Row="2">
+            <Button
+                x:Name="OKButton"
+                Content="OK"
+                Width="50"
+                Height="25"
+                Style="{StaticResource SimpleButton}" IsDefault="True" />
+            <Button
+                Content="Cancel"
+                Width="50"
+                Height="25"
+                Style="{StaticResource SimpleButton}" IsCancel="True" />
+        </StackPanel>
+    </Grid>
+</UserControl>

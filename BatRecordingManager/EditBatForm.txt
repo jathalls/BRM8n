@@ -1,0 +1,84 @@
+﻿EditBatForm.xaml
+	<Grid>EditBatFormGrid { 3 columns 8 rows}
+		{ Lbels in Column 0, Text Boxes in Column 1;  OK and Cancel Buttons in Last Row;}
+		<local:BatCallControl>batCallControl { col 1 row 3}
+		<local:ImageScrollerControl>EditBatFormImageScroller { col 2 row 0-6}
+
+
+
+EditBatForm.xaml.cs
+	Property newBat {complex setter; \the bat to be edited or created}
+		Set
+			populates rawCallList and CallList from database
+			foreach call:-
+				create list 'imagesForCall', populate it and add it to 'CallListOfImageLists'
+			Initialise call details in form
+			populate 'rawImagesList' from Database.ImagesForBat
+			foreach image
+				add image to 'EditBatFormImageScroller'
+	CallList<Call> {the list of defined call types for this bat}
+	rawImageList<StoredImage> {the list of images for this bat}
+	callImageList<StoredImage> {the list of images for the currently selected call type}
+	CallListOfImageLists<List<StoredImage>> {the list of lists of images for all call types for this bat}
+	SelectedCallIndex {complex setter; int integer index of the currently selected call type}
+		Set
+			if NOT displaying bat images:-
+				populate callImageList from EditBatFormImageScroller (or new)
+				copy callImageList to CallListOfImageLists[old selected call index]
+			copy CallListOfImageLists[new selected call index] to callImageList
+			if NOT displaying bat images:-
+				copy callImageList to EditBatFormImageScroller
+			condition Next and Prev buttons and text boxes
+			copy CallList[new selected call index] to the batCallControl
+	ImageScrollerDisplaysBatImages {flag is set if ImageScroller displays bat images.  If clear displays call images}
+	-------------------------------------------------------------------------------------------
+	EditBatForm()
+		newBat set to a new empty bat with 1 Tag
+		Clear all lists
+		Initialize form components
+		Condition buttons
+		set DataContext to the newBat
+		Create Event Handler for EditBatFormImageScroller.ButtonPressed
+		Create Event Handler for batCallControl.ShowImageButtonPressed
+
+	BatCallControl_ShowImageButtonPressed {   /// Responds to an event raised by the BatCallControl in the BatDetail pane which toggles
+											 /// whether the local ImageScrollerControl should display the images associated with the
+											/// selected bat or the images associated with the selected BatCall.}
+		clear EditBatFormImageScroller {DOES NOT SAVE IMAGES FROM SCROLLER}
+		if displaying bat images:-
+			copy images (if any) from callList to EditBatFormImageScroller
+			clear ImageScrollerDisplaysBatImages flag
+		else
+			copy rawImageList images (if any) to EditBatFormImageScroller
+			set ImageScrollerDisplaysBatImages flag
+
+	EditBatFormImageScroller_ButtonPressed {/// Event Handler for any Button Pressed event in the ImageScroller.  Allows the
+											/// parent control to handle additions and deletions and ensure that sources are
+											/// updated as well as the display elements}
+		if DEL button call DeleteImage
+		if ADD button call AddImage
+		if PASTE button call AddImageFromClipboard
+
+	AddImageFromClipboard - NOT IMPLEMENTED
+
+	AddImage {/// Presents a file dialog for the user to select an image file, caption and description  and the image
+			 /// is displayed and added to the correct list}
+		Create and Display an ImageDialog
+		if OK pressed:-
+			create new StoredImage from the dialog data
+			Add the image to EditBatFormImageScroller
+			if displaying Bat images:-
+				Add the image to rawImageList
+			else
+				Add the image to batCallControl.CallImageList
+				Add the image to callImageList
+
+	DeleteImage {   .}
+		Display warning message 
+		Delete the image and associated links from the database
+		if displaying bat images:-
+			remove the image from rawImageList
+		else
+			remove the image from BatCallControl.CallList
+			remove the image from callImageList
+		call EditBatFormImageScroller.DeleteImage()

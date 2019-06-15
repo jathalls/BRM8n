@@ -1,0 +1,35 @@
+﻿Dynamic Import Worksheet
+Justin A T halls
+8 June 2018
+
+This file tracks the development of the Dynamic Import Process introduced in v 7.0
+
+Under the new scheme the user will open a folder (containing .wav files and a header file) and
+the program will open succesive .wav files in Audacity, adding the analysis results to the database
+when each file is closed.  it should be possible to re-open a partially analysed folder and continue
+with the next un-analysed .wav file.
+
+Access is by an Analyse entry in the View menu
+	brings up a folder selection dialog
+		if folder does not contain .wav files - whinge
+		Try to identify the session tag
+		Open the header file and establish the session details
+		Confirm/edit session details
+		Collect list  of .wav files with no matching .txt file
+		Open first .wav file in Audacity
+		Open Import picture dialog
+		wait... (processing any imported pictures as necessary)
+
+		On Click Next File Button...
+			if there is no matching .txt file for the analysed file - whinge
+			Create a Recording in the session for the new text file
+			Save it to the database
+			Remove the .wav file from the list
+			Open the next .wav file in Audacity...
+		After last file...
+			close and Update image Import Dialog
+			Goto Sessions/Recordings View
+			Select Imported session
+
+
+ImportAndAnalyse

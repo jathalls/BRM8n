@@ -1,0 +1,30 @@
+﻿<Window x:Class="BatRecordingManager.ImportPictureDialog"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:BatRecordingManager"
+        mc:Ignorable="d"
+        Title="ImportPictureDialog" Height="700" Width="800">
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="212*" />
+            <RowDefinition Height="30" />
+        </Grid.RowDefinitions>
+        <local:ImportPictureControl
+            x:Name="importPictureControl"
+            Grid.Row="0" />
+        <StackPanel
+            Grid.Row="1"
+            x:Name="ButtonPanel"
+            Orientation="Horizontal"
+            Background="{StaticResource ButtonBarBackground}">
+            <Button
+                x:Name="UpdateAndCloseButton"
+                Style="{StaticResource SimpleButton}"
+                Width="120"
+                Content="Update And Close"
+                ToolTip="Connects images to their recordings in the databse and closes the dialog" Click="UpdateAndCloseButton_Click" />
+        </StackPanel>
+    </Grid>
+</Window>

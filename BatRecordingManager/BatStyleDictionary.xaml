@@ -1,0 +1,130 @@
+﻿<ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+                    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+                    xmlns:local="clr-namespace:BatRecordingManager">
+    <!--
+    <SolidColorBrush x:Key="ButtonBarBackground" Color="#FF6358DA" />
+    -->
+
+    <LinearGradientBrush
+        x:Key="ButtonBarBackground"
+        EndPoint="0.5,1" StartPoint="0.5,0">
+        <GradientStop Color="#FF6080F0" Offset="0" />
+        <GradientStop Color="#FFB0C0F0" Offset="1" />
+    </LinearGradientBrush>
+
+    <LinearGradientBrush
+        x:Key="BlueGradientBackground"
+        EndPoint="0.5,1" StartPoint="0.5,0">
+        <GradientStop Color="#FF6081F3" Offset="0" />
+        <GradientStop Color="#FFB0C1F9" Offset="1" />
+    </LinearGradientBrush>
+
+    <Style x:Key="ButtonStyle" TargetType="Button">
+        <Setter Property="FrameworkElement.Margin" Value="5,2,5,2" />
+        <Setter Property="BorderThickness" Value="2" />
+        <Setter Property="Width" Value="50" />
+        <Setter Property="Effect">
+            <Setter.Value>
+                <DropShadowEffect ShadowDepth="3" />
+            </Setter.Value>
+        </Setter>
+    </Style>
+
+    <Style x:Key="vdgStyle" TargetType="{x:Type DataGrid}">
+        <Setter Property="VirtualizingStackPanel.IsVirtualizing" Value="True"/>
+        <Setter Property="VirtualizingStackPanel.VirtualizationMode" Value="Recycling"/>
+        <Setter Property="ScrollViewer.IsDeferredScrollingEnabled" Value="True"/>
+
+        <Setter Property="EnableRowVirtualization" Value="True"/>
+        <Setter Property="EnableColumnVirtualization" Value="True"/>
+
+        <Setter Property="Background" Value="{StaticResource WindowBackgroundBrush}"/>
+        <Setter Property="RowBackground" Value="{StaticResource WindowBackgroundBrush}"/>
+        <Setter Property="AlternatingRowBackground" Value="{StaticResource WindowBackgroundBrushLight}"/>
+
+<!--
+        <Style.Triggers>
+            <DataTrigger Binding="{Binding IsLoading}" Value="True">
+                <Setter Property="DataGrid.Cursor" Value="Wait"/>
+                <Setter Property="DataGrid.Background" Value="LightGray"/>
+                <Setter Property="RowBackground" Value="Coral"/>
+                <Setter Property="AlternatingRowBackground" Value="LightCoral"/>
+            </DataTrigger>
+            <DataTrigger Binding="{Binding IsLoading}" Value="False">
+                <Setter Property="RowBackground" Value="{StaticResource WindowBackgroundBrush}"/>
+                <Setter Property="AlternatingRowBackground" Value="{StaticResource WindowBackgroundBrushLight}"/>
+                <Setter Property="DataGrid.Cursor" Value="Arrow"/>
+            </DataTrigger>
+        </Style.Triggers>-->
+    </Style>
+
+    <Style x:Key="vlvStyle" TargetType="{x:Type ListView}">
+        <Setter Property="VirtualizingStackPanel.IsVirtualizing" Value="True"/>
+        <Setter Property="VirtualizingStackPanel.VirtualizationMode" Value="Recycling"/>
+        <Setter Property="ScrollViewer.IsDeferredScrollingEnabled" Value="True"/>
+
+        
+
+        <Setter Property="Background" Value="{StaticResource WindowBackgroundBrush}"/>
+
+
+
+        <Style.Triggers>
+            <DataTrigger Binding="{Binding IsLoading}" Value="True">
+                <Setter Property="ListView.Cursor" Value="Wait"/>
+                <Setter Property="ListView.Background" Value="LightGray"/>
+            </DataTrigger>
+        </Style.Triggers>
+    </Style>
+
+    <local:BatLatinNameConverter x:Key="ConvertLatinName" />
+
+    <local:ConvertGetNumberOfImages x:Key="ConvertGetNumberOfImages" />
+
+    <local:TimeSpanConverter x:Key="ConvertTimeSpan" />
+
+    <local:BatTagSortConverter x:Key="SortBatTags" />
+
+    <local:SegmentToTextConverter x:Key="ConvertSegmentToText" />
+
+    <local:ShortDateConverter x:Key="ShortDate_Converter" />
+
+    <local:ShortTimeConverter x:Key="ShortTime_Converter" />
+
+    <local:RecordingToGPSConverter x:Key="recordingToGPSConverter" />
+
+    <local:RecordingDetailsConverter x:Key="recordingDetailsConverter" />
+
+    <local:RecordingPassSummaryConverter x:Key="recordingPassSummaryConverter" />
+
+    <local:LabelledSegmentConverter x:Key="labelledSegmentConverter" />
+
+    <local:BatCallConverter x:Key="=batCallConverter" />
+
+    <local:DoubleStringConverter x:Key="DoubleToStringConverter" />
+
+    <local:CallParametersConverter x:Key="CallParametersConverter" />
+
+    <local:TextColourConverter x:Key="TextColourConverter" />
+
+    <local:ImageConverter x:Key="ImageConverter" />
+
+    <local:DebugBreak x:Key="DebugBreak" />
+
+    <local:DivideConverter x:Key="DivideConverter" />
+
+    <local:DivideBy2Converter x:Key="DivideBy2Converter" />
+
+    <local:Times2Converter x:Key="Times2Converter" />
+
+    <local:multiscaleConverter x:Key="multiscaleConverter" />
+
+    <local:NumberOfImagesConverter x:Key="NumberOfImagesConverter" />
+
+    <local:ImagesForAllRecordingsConverter x:Key="ImagesForAllRecordingsConverter" />
+
+    <DataTemplate x:Key="ImageTemplate">
+        <local:ImageScrollerControl
+            x:Name="imageScroller" />
+    </DataTemplate>
+</ResourceDictionary>
